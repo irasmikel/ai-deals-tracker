@@ -95,6 +95,7 @@ def send_telegram(formatted_text, link):
         requests.post(url, json=payload, timeout=10)
 
 def main():
+    send_telegram("🚨 *SISTEMA ACTIVO: Conexión completada*\n\n• *Servicio:* Bot de ofertas IA\n• *Estado:* Monitorizando cada 2 horas.", "https://github.com")
     if not BOT_TOKEN or not CHAT_ID or not GEMINI_API_KEY:
         print("Faltan variables de entorno necesarias.")
         return
