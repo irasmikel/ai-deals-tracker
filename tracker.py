@@ -7,7 +7,8 @@ import calendar
 import requests
 import feedparser
 from datetime import datetime, timedelta
-from urllib.parse import urlparse
+from types import SimpleNamespace
+from urllib.parse import urlparse, quote
 
 BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
@@ -45,34 +46,42 @@ DEDUP_DAYS = 14              # memoria de ofertas enviadas
 MAX_ATTEMPTS = 3             # intentos de IA por enlace
 SUMMARY_CHARS = 800          # caracteres de contenido enviados a Gemini
 
-# (url, nº de entradas recientes a revisar)
+# Cada feed es un dict:
+#   {"type": "rss", "url": ..., "limit": N}   -> feed RSS/Atom normal
+#   {"type": "hn",  "query": ..., "limit": N} -> búsqueda en HN vía API Algolia
 FEEDS = [
     # Chollometro / HotUKDeals: feed general (Pepper bloquea /rss/search a bots)
-    ("https://www.chollometro.com/rss", 30),
-    ("https://www.hotukdeals.com/rss", 30),
+    {"type": "rss", "url": "https://www.chollometro.com/rss", "limit": 30},
+    {"type": "rss", "url": "https://www.hotukdeals.com/rss", "limit": 30},
 
     # Slickdeals (EE.UU.)
-    ("https://slickdeals.net/newsearch.php?rss=1&q=chatgpt&searcharea=deals&searchin=first", 8),
-    ("https://slickdeals.net/newsearch.php?rss=1&q=gemini+ai&searcharea=deals&searchin=first", 8),
-    ("https://slickdeals.net/newsearch.php?rss=1&q=claude+ai&searcharea=deals&searchin=first", 8),
-    ("https://slickdeals.net/newsearch.php?rss=1&q=perplexity&searcharea=deals&searchin=first", 8),
-    ("https://slickdeals.net/newsearch.php?rss=1&q=copilot&searcharea=deals&searchin=first", 8),
+    {"type": "rss", "url": "https://slickdeals.net/newsearch.php?rss=1&q=chatgpt&searcharea=deals&searchin=first", "limit": 8},
+    {"type": "rss", "url": "https://slickdeals.net/newsearch.php?rss=1&q=gemini+ai&searcharea=deals&searchin=first", "limit": 8},
+    {"type": "rss", "url": "https://slickdeals.net/newsearch.php?rss=1&q=claude+ai&searcharea=deals&searchin=first", "limit": 8},
+    {"type": "rss", "url": "https://slickdeals.net/newsearch.php?rss=1&q=perplexity&searcharea=deals&searchin=first", "limit": 8},
+    {"type": "rss", "url": "https://slickdeals.net/newsearch.php?rss=1&q=copilot&searcharea=deals&searchin=first", "limit": 8},
 
-    # Hacker News
-    ("https://hnrss.org/newest?q=free%20chatgpt", 8),
-    ("https://hnrss.org/newest?q=free%20claude", 8),
-    ("https://hnrss.org/newest?q=free%20credits%20AI", 8),
+    # Hacker News — vía API oficial de Algolia (hn.algolia.com), en vez del
+    # proxy hnrss.org, que ha dado timeouts/502 repetidos. Es la misma API
+    # que usa el propio HN, mucho más estable.
+    {"type": "hn", "query": "free chatgpt", "limit": 8},
+    {"type": "hn", "query": "free claude", "limit": 8},
+    {"type": "hn", "query": "free credits AI", "limit": 8},
 
     # OpenAI News oficial
-    ("https://openai.com/news/rss.xml", 10),
+    {"type": "rss", "url": "https://openai.com/news/rss.xml", "limit": 10},
 
-    # Reddit (puede dar 403/429 desde IPs de datacenter)
-    ("https://www.reddit.com/r/ChatGPT/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1", 6),
-    ("https://www.reddit.com/r/OpenAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1", 6),
-    ("https://www.reddit.com/r/ClaudeAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1", 6),
-    ("https://www.reddit.com/r/PerplexityAI/search.rss?q=free+OR+discount+OR+promo+OR+pro&sort=new&restrict_sr=1", 6),
-    ("https://www.reddit.com/r/cursor/search.rss?q=free+OR+discount+OR+credits+OR+pro&sort=new&restrict_sr=1", 6),
-    ("https://www.reddit.com/r/ArtificialInteligence/search.rss?q=free+OR+discount+OR+promo&sort=new&restrict_sr=1", 6),
+    # Reddit: los 6 subreddits combinados en UNA sola petición (sintaxis
+    # r/sub1+sub2+.../search.rss de Reddit) en vez de 6 peticiones seguidas,
+    # que era lo que disparaba el 429 en la mayoría de ellas.
+    {
+        "type": "rss",
+        "url": (
+            "https://www.reddit.com/r/ChatGPT+OpenAI+ClaudeAI+PerplexityAI+cursor+ArtificialInteligence"
+            "/search.rss?q=free+OR+discount+OR+promo+OR+credits+OR+trial&sort=new&restrict_sr=1"
+        ),
+        "limit": 20,
+    },
 ]
 
 AI_BRANDS = {
@@ -210,16 +219,16 @@ def is_recent(entry):
     return age_hours <= MAX_ENTRY_AGE_HOURS
 
 
-def source_name(feed_url):
-    host = urlparse(feed_url).netloc.replace("www.", "")
+def source_name(feed):
+    if feed["type"] == "hn":
+        return "Hacker News"
+    host = urlparse(feed["url"]).netloc.replace("www.", "")
     if "reddit.com" in host:
-        m = re.search(r"/r/([^/]+)/", feed_url)
-        return f"Reddit r/{m.group(1)}" if m else "Reddit"
+        return "Reddit"
     return {
         "chollometro.com": "Chollometro",
         "hotukdeals.com": "HotUKDeals",
         "slickdeals.net": "Slickdeals",
-        "hnrss.org": "Hacker News",
         "openai.com": "OpenAI News",
     }.get(host, host)
 
@@ -235,7 +244,7 @@ def passes_region_filter(paises):
 
 
 def fetch_feed(feed_url):
-    """Descarga el feed con un reintento con backoff si hay 429/5xx."""
+    """Descarga el feed RSS con un reintento con backoff si hay 429/5xx."""
     for attempt in range(2):
         resp = requests.get(feed_url, headers=HEADERS, timeout=12)
         if resp.status_code == 429 or resp.status_code >= 500:
@@ -249,6 +258,54 @@ def fetch_feed(feed_url):
                 continue
         return resp
     return resp
+
+
+def fetch_hn_algolia(query, hits=8):
+    """Busca en Hacker News vía la API oficial de Algolia (más estable que
+    proxies RSS de terceros). Devuelve (ok, status, entradas_pseudo)."""
+    url = (
+        "https://hn.algolia.com/api/v1/search_by_date"
+        f"?query={quote(query)}&tags=story&hitsPerPage={hits}"
+    )
+    for attempt in range(2):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=12)
+        except requests.RequestException as e:
+            if attempt == 0:
+                print(f"   ⏳ error de red en Hacker News ({query})... reintento en 5s")
+                time.sleep(5)
+                continue
+            print(f"❌ Error de red en Hacker News (Algolia, {query}): {e}")
+            return False, "error", []
+
+        if resp.status_code == 429 or resp.status_code >= 500:
+            if attempt == 0:
+                print(f"   ⏳ {resp.status_code} en Hacker News ({query})... reintento en 8s")
+                time.sleep(8)
+                continue
+            return False, resp.status_code, []
+
+        if resp.status_code != 200:
+            return False, resp.status_code, []
+
+        try:
+            data = resp.json()
+        except ValueError:
+            return False, resp.status_code, []
+
+        entries = []
+        for hit in data.get("hits", []):
+            link = hit.get("url") or f"https://news.ycombinator.com/item?id={hit.get('objectID')}"
+            title = hit.get("title") or ""
+            summary = hit.get("story_text") or ""
+            created_at_i = hit.get("created_at_i")
+            published_parsed = time.gmtime(created_at_i) if created_at_i else None
+            entries.append(SimpleNamespace(
+                link=link, title=title, summary=summary, published_parsed=published_parsed
+            ))
+        return True, resp.status_code, entries
+
+    return False, "error", []
 
 
 # =========================================================
@@ -469,23 +526,30 @@ def main():
         save_link(link)
         seen_links.add(link)
 
-    for feed_url, entry_limit in FEEDS:
+    for feed in FEEDS:
         time.sleep(DELAY_BETWEEN_FEEDS)
-        source = source_name(feed_url)
+        source = source_name(feed)
+        entry_limit = feed["limit"]
         try:
-            resp = fetch_feed(feed_url)
-            feed = feedparser.parse(resp.content)
+            if feed["type"] == "hn":
+                ok, status, entries = fetch_hn_algolia(feed["query"], entry_limit)
+            else:
+                resp = fetch_feed(feed["url"])
+                parsed = feedparser.parse(resp.content)
+                ok = resp.status_code == 200 and bool(parsed.entries)
+                status = resp.status_code
+                entries = parsed.entries
 
-            if resp.status_code != 200 or not feed.entries:
+            if not ok:
                 stats["feeds_error"] += 1
-                print(f"⚠️ [{source}] status={resp.status_code} entradas={len(feed.entries)} "
+                print(f"⚠️ [{source}] status={status} entradas={len(entries)} "
                       f"→ posible bloqueo, endpoint incorrecto o feed vacío")
                 continue
 
             stats["feeds_ok"] += 1
             new_in_feed = 0
 
-            for entry in feed.entries[:entry_limit]:
+            for entry in entries[:entry_limit]:
                 link = getattr(entry, "link", "")
                 if not link or link in seen_links:
                     continue
@@ -565,11 +629,11 @@ def main():
 
                 mark_seen(link)
 
-            print(f"   → [{source}] {len(feed.entries)} entradas, {new_in_feed} nuevas")
+            print(f"   → [{source}] {len(entries)} entradas, {new_in_feed} nuevas")
 
         except Exception as e:
             stats["feeds_error"] += 1
-            print(f"❌ Error en feed [{source}] {feed_url}: {e}")
+            print(f"❌ Error en feed [{source}]: {e}")
 
     print(
         "\n📊 Resumen: "
