@@ -2,14 +2,14 @@ name: AI Deals Monitor
 
 on:
   schedule:
-    - cron: '23 */2 * * *'  # Ejecución automática cada 2 horas en punto
+    - cron: '23 */2 * * *'  # Ejecución automática cada 2 horas
   workflow_dispatch:        # Permite ejecutarlo manualmente desde GitHub
 
 jobs:
   check-deals:
     runs-on: ubuntu-latest
     permissions:
-      contents: write       # Permite actualizar sent_links.txt en el repo
+      contents: write       # Permite actualizar los ficheros de estado en el repo
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
@@ -27,11 +27,17 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Opcionales (descomenta si los quieres usar):
+          # MIN_CONFIDENCE: "0.7"
+          # MY_REGIONS: "españa,spain,europa,europe,eu,global,mundial,worldwide"
+          # SEND_SUMMARY: "1"
         run: python tracker.py
 
-      - name: Guardar histórico de enlaces vistos
+      - name: Guardar ficheros de estado
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add sent_links.txt || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "update history [skip ci]" && git push)
+          for f in sent_links.txt recent_deals.json failed_links.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          git diff --quiet && git diff --staged --quiet || (git commit -m "update state [skip ci]" && git push)
