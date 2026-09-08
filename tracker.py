@@ -31,6 +31,11 @@ FEEDS = [
     "https://www.reddit.com/r/ArtificialInteligence/search.rss?q=free+OR+discount+OR+promo&sort=new&restrict_sr=1",
 ]
 
+KEYWORDS = {
+    "free", "gratis", "discount", "descuento", "promo", "code", "código",
+    "coupon", "cupón", "credit", "crédito", "trial", "off", "oferta", "chollo"
+}
+
 def load_history():
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, "r", encoding="utf-8") as f:
@@ -41,35 +46,33 @@ def save_link(link):
     with open(HISTORY_FILE, "a", encoding="utf-8") as f:
         f.write(link + "\n")
 
-def get_active_model():
+def is_potential_deal(title, summary):
+    text = f"{title} {summary}".lower()
+    return any(kw in text for kw in KEYWORDS)
+
+def get_available_models():
     url = f"https://generativelanguage.googleapis.com/v1beta/models?key={GEMINI_API_KEY}"
     try:
         resp = requests.get(url, timeout=10)
         data = resp.json()
-        if "error" in data:
-            print(f"❌ Error de API: {data['error'].get('message')}")
-            return None
-        
         available = [
             m["name"] for m in data.get("models", [])
             if "generateContent" in m.get("supportedGenerationMethods", [])
         ]
-        
-        # Selección prioritaria con los modelos vigentes reportados por tu cuenta
-        for candidate in [
-            "models/gemini-3.6-flash",
+        priority = [
+            "models/gemini-3.7-flash",
             "models/gemini-3.5-flash",
+            "models/gemini-3.5-flash-lite",
             "models/gemini-flash-latest",
-            "models/gemini-pro-latest"
-        ]:
-            if candidate in available:
-                return candidate
-        return available[0] if available else None
+            "models/gemini-3.6-flash"
+        ]
+        models = [m for m in priority if m in available]
+        return models if models else available
     except Exception as e:
-        print(f"❌ Error al listar modelos: {e}")
-        return None
+        print(f"Error listando modelos: {e}")
+        return ["models/gemini-3.5-flash"]
 
-def analyze_deal(model_path, title, summary):
+def query_gemini(model_path, title, summary):
     url = f"https://generativelanguage.googleapis.com/v1beta/{model_path}:generateContent?key={GEMINI_API_KEY}"
     prompt = f"""
     Eres un detector de ofertas de Inteligencia Artificial (ChatGPT, Claude, Gemini, Grok, Perplexity, Cursor, Copilot, etc.).
@@ -93,16 +96,27 @@ def analyze_deal(model_path, title, summary):
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.1}
     }
-    try:
-        resp = requests.post(url, json=payload, timeout=15)
-        data = resp.json()
-        if "candidates" in data and len(data["candidates"]) > 0:
-            return data["candidates"][0]["content"]["parts"][0]["text"].strip()
-        print(f"Respuesta inesperada al analizar '{title[:30]}': {data.get('error', data)}")
-        return "ERROR"
-    except Exception as e:
-        print(f"Excepción en petición: {e}")
-        return "ERROR"
+    
+    resp = requests.post(url, json=payload, timeout=30)
+    data = resp.json()
+    
+    if resp.status_code == 429 or "RESOURCE_EXHAUSTED" in str(data):
+        return "QUOTA_EXCEEDED"
+
+    if "candidates" in data and len(data["candidates"]) > 0:
+        return data["candidates"][0]["content"]["parts"][0]["text"].strip()
+    
+    return "ERROR"
+
+def analyze_deal_with_fallback(models, title, summary):
+    for model in list(models):
+        res = query_gemini(model, title, summary)
+        if res == "QUOTA_EXCEEDED":
+            print(f"⚠️ Cuota agotada en {model}. Descartando este modelo...")
+            models.remove(model)
+            continue
+        return res
+    return "ERROR"
 
 def send_telegram(formatted_text, link):
     message = f"{formatted_text}\n\n🔗 [Ver publicación original]({link})"
@@ -121,14 +135,11 @@ def send_telegram(formatted_text, link):
 
 def main():
     if not BOT_TOKEN or not CHAT_ID or not GEMINI_API_KEY:
-        print("❌ Faltan variables de entorno necesarias.")
+        print("❌ Faltan variables de entorno.")
         return
 
-    model_path = get_active_model()
-    if not model_path:
-        print("❌ No se pudo determinar un modelo funcional. Abortando.")
-        return
-    print(f"🚀 Usando modelo: {model_path}")
+    models = get_available_models()
+    print(f"🚀 Modelos en cola de uso: {models}")
 
     seen_links = load_history()
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AIDealsTracker/1.0"}
@@ -138,7 +149,7 @@ def main():
             resp = requests.get(feed_url, headers=headers, timeout=12)
             feed = feedparser.parse(resp.content)
 
-            for entry in feed.entries[:8]:
+            for entry in feed.entries[:6]:
                 link = getattr(entry, "link", "")
                 if not link or link in seen_links:
                     continue
@@ -146,21 +157,29 @@ def main():
                 title = getattr(entry, "title", "")
                 summary = getattr(entry, "summary", "")
 
-                result = analyze_deal(model_path, title, summary)
+                # 1. Filtro previo sin gastar llamadas de IA
+                if not is_potential_deal(title, summary):
+                    save_link(link)
+                    seen_links.add(link)
+                    continue
 
-                # Si la llamada falló, no guarda el enlace para poder reintentarlo en la siguiente ejecución
+                # 2. Análisis con IA solo si tiene indicios de oferta
+                print(f"🔍 Analizando candidato: {title[:45]}...")
+                result = analyze_deal_with_fallback(models, title, summary)
+
                 if result == "ERROR":
                     continue
 
                 if "NO_OFERTA" not in result:
                     send_telegram(result, link)
-                    time.sleep(1)
+                    time.sleep(2)
 
                 save_link(link)
                 seen_links.add(link)
+                time.sleep(3)  # Pausa entre llamadas para no superar 5 peticiones/min
 
         except Exception as e:
-            print(f"Error procesando {feed_url}: {e}")
+            print(f"Error en feed {feed_url}: {e}")
 
 if __name__ == "__main__":
     main()
