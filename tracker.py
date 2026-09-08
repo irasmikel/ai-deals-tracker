@@ -1,6 +1,7 @@
 import os
 import re
 import time
+import calendar
 import requests
 import feedparser
 
@@ -10,6 +11,7 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 SEND_SUMMARY = os.environ.get("SEND_SUMMARY") == "1"  # heartbeat opcional por Telegram
 HISTORY_FILE = "sent_links.txt"
 DELAY_BETWEEN_FEEDS = 2  # segundos entre peticiones a feeds, para evitar 429 (esp. Reddit)
+MAX_ENTRY_AGE_HOURS = 72  # descarta entradas más viejas que esto (evita noticias obsoletas)
 
 # Cada feed es (url, nº de entradas recientes a revisar). Los feeds generales
 # (todo el sitio) rotan más rápido, así que se revisan más entradas.
@@ -17,11 +19,11 @@ FEEDS = [
     # Chollometro (España) — la red Pepper (Chollometro/HotUKDeals/Dealabs)
     # bloquea la búsqueda por palabra clave a bots (robots.txt) y no existe
     # endpoint /rss/search. Usamos el feed general y filtramos aquí por
-    # keywords (KEYWORD_PATTERN más abajo).
-    ("https://www.chollometro.com/rss", 20),
+    # marca de IA (BRAND_PATTERN más abajo).
+    ("https://www.chollometro.com/rss", 30),
 
     # HotUKDeals (UK / Global) — mismo motivo que arriba, feed general.
-    ("https://www.hotukdeals.com/rss", 20),
+    ("https://www.hotukdeals.com/rss", 30),
 
     # Slickdeals (EE.UU.) — SÍ soporta búsqueda real por RSS.
     ("https://slickdeals.net/newsearch.php?rss=1&q=chatgpt&searcharea=deals&searchin=first", 8),
@@ -38,7 +40,7 @@ FEEDS = [
 
     # OpenAI News oficial — bajo volumen, pero fuente de calidad para
     # anuncios oficiales de créditos/promos.
-    ("https://openai.com/news/rss.xml", 6),
+    ("https://openai.com/news/rss.xml", 10),
 
     # Reddit
     # NOTA: desde mayo de 2026 Reddit devuelve 403/429 con más facilidad a
@@ -54,16 +56,33 @@ FEEDS = [
     ("https://www.reddit.com/r/ArtificialInteligence/search.rss?q=free+OR+discount+OR+promo&sort=new&restrict_sr=1", 6),
 ]
 
-# Palabras completas (con límites de palabra) para evitar falsos positivos
-# tipo "off" -> "office", "coffee", "official"...
-KEYWORDS = {
-    "free", "gratis", "discount", "descuento", "promo", "code", "código",
-    "coupon", "cupón", "credit", "crédito", "credits", "trial", "off",
-    "oferta", "chollo", "chatgpt", "claude", "gemini", "perplexity",
-    "copilot", "cursor"
+# Marca/plataforma de IA: hace falta que aparezca al menos una para
+# considerar la entrada un candidato. Esto es lo que de verdad filtra el
+# ruido de chocolates, auriculares, TVs, etc.
+AI_BRANDS = {
+    "chatgpt", "chat gpt", "gpt-4", "gpt-5", "gpt4", "gpt5", "openai",
+    "claude", "anthropic", "gemini", "perplexity", "copilot", "cursor",
+    "grok", "midjourney", "deepseek", "chatbot"
 }
-KEYWORD_PATTERN = re.compile(
-    r"\b(" + "|".join(re.escape(k) for k in KEYWORDS) + r")\b",
+BRAND_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(k) for k in AI_BRANDS) + r")\b",
+    re.IGNORECASE
+)
+
+# Términos de hardware/gadget que descartan la entrada aunque mencione una
+# marca de IA (p.ej. "Copilot+ Laptop", "AI Smart Glasses"): el objetivo es
+# solo suscripciones/planes/créditos de plataformas de IA, no dispositivos.
+EXCLUDE_TERMS = {
+    "laptop", "portátil", "portatil", "ordenador", "pc", "tablet",
+    "chromebook", "tv", "televisor", "monitor", "auriculares",
+    "headphones", "earbuds", "earphone", "gafas", "glasses", "smartwatch",
+    "reloj", "watch", "dron", "drone", "aspirador", "vacuum", "batidora",
+    "blender", "cámara", "camara", "camera", "smartphone", "teléfono",
+    "telefono", "phone", "altavoz", "speaker", "ratón", "raton", "mouse",
+    "teclado", "keyboard", "zapatillas", "sneaker", "chocolate"
+}
+EXCLUDE_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(k) for k in EXCLUDE_TERMS) + r")\b",
     re.IGNORECASE
 )
 
@@ -86,7 +105,18 @@ def save_link(link):
 
 def is_potential_deal(title, summary):
     text = f"{title} {summary}"
-    return bool(KEYWORD_PATTERN.search(text))
+    if EXCLUDE_PATTERN.search(text):
+        return False
+    return bool(BRAND_PATTERN.search(text))
+
+
+def is_recent(entry):
+    struct = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
+    if not struct:
+        return True  # sin fecha fiable, no descartamos por antigüedad
+    entry_epoch = calendar.timegm(struct)
+    age_hours = (time.time() - entry_epoch) / 3600
+    return age_hours <= MAX_ENTRY_AGE_HOURS
 
 
 def get_available_models():
@@ -115,15 +145,20 @@ def get_available_models():
 def query_gemini(model_path, title, summary):
     url = f"https://generativelanguage.googleapis.com/v1beta/{model_path}:generateContent?key={GEMINI_API_KEY}"
     prompt = f"""
-    Eres un detector de ofertas de Inteligencia Artificial (ChatGPT, Claude, Gemini, Grok, Perplexity, Cursor, Copilot, etc.).
-    Analiza este post y determina si es una oferta/descuento/crédito real o solo una pregunta/duda/problema/spam.
+    Eres un detector de ofertas de plataformas y servicios de Inteligencia Artificial
+    (ChatGPT, Claude, Gemini, Grok, Perplexity, Cursor, Copilot, Midjourney, DeepSeek, etc.).
+    Analiza este post y determina si es una oferta/descuento/crédito real de una SUSCRIPCIÓN
+    o SERVICIO de IA, o solo una pregunta/duda/problema/spam/dispositivo físico.
 
     Título: {title}
     Contenido: {summary[:600]}
 
     REGLAS:
-    1. Si es una duda de usuario, consulta técnica, debate o reventa ilegal: responde ÚNICAMENTE con la palabra NO_OFERTA.
-    2. Si es una OFERTA REAL, DESCUENTO o CRÉDITO GRATIS, responde EXACTAMENTE con este formato:
+    1. Si es una duda de usuario, consulta técnica, debate, reventa ilegal, o trata de un
+       DISPOSITIVO/GADGET físico (portátil, móvil, gafas, TV...) aunque mencione una marca de IA:
+       responde ÚNICAMENTE con la palabra NO_OFERTA.
+    2. Si es una OFERTA REAL, DESCUENTO o CRÉDITO GRATIS de una suscripción/plan/servicio de IA,
+       responde EXACTAMENTE con este formato:
 
     🚨 *CHOLLO IA: [Título breve y directo]*
 
@@ -185,6 +220,7 @@ def send_summary(stats):
         f"• Feeds OK: {stats['feeds_ok']}/{stats['feeds_total']}\n"
         f"• Feeds con error/bloqueo: {stats['feeds_error']}\n"
         f"• Entradas nuevas revisadas: {stats['new_entries']}\n"
+        f"• Descartadas por antigüedad: {stats['stale_skipped']}\n"
         f"• Candidatos analizados con IA: {stats['candidates']}\n"
         f"• Fallos de análisis (IA): {stats['ai_errors']}\n"
         f"• Chollos enviados: {stats['deals_sent']}"
@@ -209,6 +245,7 @@ def main():
         "feeds_ok": 0,
         "feeds_error": 0,
         "new_entries": 0,
+        "stale_skipped": 0,
         "candidates": 0,
         "ai_errors": 0,
         "deals_sent": 0,
@@ -234,19 +271,27 @@ def main():
                 if not link or link in seen_links:
                     continue
 
+                # Descarta entradas viejas sin gastar análisis en ellas
+                if not is_recent(entry):
+                    save_link(link)
+                    seen_links.add(link)
+                    stats["stale_skipped"] += 1
+                    continue
+
                 new_in_feed += 1
                 stats["new_entries"] += 1
 
                 title = getattr(entry, "title", "")
                 summary = getattr(entry, "summary", "")
 
-                # 1. Filtro previo sin gastar llamadas de IA
+                # 1. Filtro previo sin gastar llamadas de IA: solo marcas de
+                #    IA, descartando dispositivos/hardware.
                 if not is_potential_deal(title, summary):
                     save_link(link)
                     seen_links.add(link)
                     continue
 
-                # 2. Análisis con IA solo si tiene indicios de oferta
+                # 2. Análisis con IA solo si es un candidato real
                 print(f"🔍 Analizando candidato: {title[:45]}...")
                 stats["candidates"] += 1
                 result = analyze_deal_with_fallback(models, title, summary)
@@ -278,6 +323,7 @@ def main():
         f"feeds_ok={stats['feeds_ok']}/{stats['feeds_total']}, "
         f"feeds_error={stats['feeds_error']}, "
         f"nuevas={stats['new_entries']}, "
+        f"antiguas_descartadas={stats['stale_skipped']}, "
         f"candidatos={stats['candidates']}, "
         f"errores_ia={stats['ai_errors']}, "
         f"chollos_enviados={stats['deals_sent']}"
