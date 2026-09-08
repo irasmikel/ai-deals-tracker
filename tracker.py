@@ -9,15 +9,20 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 HISTORY_FILE = "sent_links.txt"
 
 FEEDS = [
+    # Chollometro (España)
     "https://www.chollometro.com/rss/search?q=chatgpt",
     "https://www.chollometro.com/rss/search?q=claude",
     "https://www.chollometro.com/rss/search?q=gemini",
     "https://www.chollometro.com/rss/search?q=grok",
     "https://www.chollometro.com/rss/search?q=perplexity",
     "https://www.chollometro.com/rss/search?q=copilot",
+
+    # HotUKDeals (UK / Global)
     "https://www.hotukdeals.com/rss/search?q=chatgpt",
     "https://www.hotukdeals.com/rss/search?q=gemini",
     "https://www.hotukdeals.com/rss/search?q=perplexity",
+
+    # Reddit
     "https://www.reddit.com/r/ChatGPT/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1",
     "https://www.reddit.com/r/OpenAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1",
     "https://www.reddit.com/r/ClaudeAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1",
@@ -42,17 +47,21 @@ def get_active_model():
         resp = requests.get(url, timeout=10)
         data = resp.json()
         if "error" in data:
-            print(f"❌ Error de autenticación/API: {data['error'].get('message')}")
+            print(f"❌ Error de API: {data['error'].get('message')}")
             return None
         
         available = [
             m["name"] for m in data.get("models", [])
             if "generateContent" in m.get("supportedGenerationMethods", [])
         ]
-        print(f"ℹ️ Modelos disponibles en tu cuenta: {available}")
         
-        # Prioridad de selección
-        for candidate in ["models/gemini-1.5-flash", "models/gemini-1.5-flash-latest", "models/gemini-2.0-flash", "models/gemini-pro"]:
+        # Selección prioritaria con los modelos vigentes reportados por tu cuenta
+        for candidate in [
+            "models/gemini-3.6-flash",
+            "models/gemini-3.5-flash",
+            "models/gemini-flash-latest",
+            "models/gemini-pro-latest"
+        ]:
             if candidate in available:
                 return candidate
         return available[0] if available else None
@@ -112,12 +121,12 @@ def send_telegram(formatted_text, link):
 
 def main():
     if not BOT_TOKEN or not CHAT_ID or not GEMINI_API_KEY:
-        print("❌ Faltan variables de entorno.")
+        print("❌ Faltan variables de entorno necesarias.")
         return
 
     model_path = get_active_model()
     if not model_path:
-        print("❌ No se pudo determinar un modelo funcional para esta clave. Abortando ejecución.")
+        print("❌ No se pudo determinar un modelo funcional. Abortando.")
         return
     print(f"🚀 Usando modelo: {model_path}")
 
@@ -139,7 +148,7 @@ def main():
 
                 result = analyze_deal(model_path, title, summary)
 
-                # Si dio error, no guardamos el link para reintentarlo después
+                # Si la llamada falló, no guarda el enlace para poder reintentarlo en la siguiente ejecución
                 if result == "ERROR":
                     continue
 
