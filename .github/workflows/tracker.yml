@@ -2,7 +2,7 @@ name: AI Deals Monitor
 
 on:
   schedule:
-    - cron: '0 */2 * * *'  # Ejecución automática cada 2 horas en punto
+    - cron: '23 */2 * * *'  # Ejecución automática cada 2 horas en punto
   workflow_dispatch:        # Permite ejecutarlo manualmente desde GitHub
 
 jobs:
