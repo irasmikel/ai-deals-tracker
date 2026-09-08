@@ -9,20 +9,15 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 HISTORY_FILE = "sent_links.txt"
 
 FEEDS = [
-    # Chollometro (España)
     "https://www.chollometro.com/rss/search?q=chatgpt",
     "https://www.chollometro.com/rss/search?q=claude",
     "https://www.chollometro.com/rss/search?q=gemini",
     "https://www.chollometro.com/rss/search?q=grok",
     "https://www.chollometro.com/rss/search?q=perplexity",
     "https://www.chollometro.com/rss/search?q=copilot",
-
-    # HotUKDeals (UK / Global)
     "https://www.hotukdeals.com/rss/search?q=chatgpt",
     "https://www.hotukdeals.com/rss/search?q=gemini",
     "https://www.hotukdeals.com/rss/search?q=perplexity",
-
-    # Reddit
     "https://www.reddit.com/r/ChatGPT/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1",
     "https://www.reddit.com/r/OpenAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1",
     "https://www.reddit.com/r/ClaudeAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1",
@@ -41,10 +36,32 @@ def save_link(link):
     with open(HISTORY_FILE, "a", encoding="utf-8") as f:
         f.write(link + "\n")
 
-def analyze_deal_with_gemini(title, summary):
-    # Modelo oficial estable
-    url = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
-    
+def get_active_model():
+    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={GEMINI_API_KEY}"
+    try:
+        resp = requests.get(url, timeout=10)
+        data = resp.json()
+        if "error" in data:
+            print(f"❌ Error de autenticación/API: {data['error'].get('message')}")
+            return None
+        
+        available = [
+            m["name"] for m in data.get("models", [])
+            if "generateContent" in m.get("supportedGenerationMethods", [])
+        ]
+        print(f"ℹ️ Modelos disponibles en tu cuenta: {available}")
+        
+        # Prioridad de selección
+        for candidate in ["models/gemini-1.5-flash", "models/gemini-1.5-flash-latest", "models/gemini-2.0-flash", "models/gemini-pro"]:
+            if candidate in available:
+                return candidate
+        return available[0] if available else None
+    except Exception as e:
+        print(f"❌ Error al listar modelos: {e}")
+        return None
+
+def analyze_deal(model_path, title, summary):
+    url = f"https://generativelanguage.googleapis.com/v1beta/{model_path}:generateContent?key={GEMINI_API_KEY}"
     prompt = f"""
     Eres un detector de ofertas de Inteligencia Artificial (ChatGPT, Claude, Gemini, Grok, Perplexity, Cursor, Copilot, etc.).
     Analiza este post y determina si es una oferta/descuento/crédito real o solo una pregunta/duda/problema/spam.
@@ -63,31 +80,20 @@ def analyze_deal_with_gemini(title, summary):
     • *Requisitos:* [Condiciones, país o cupón]
     • *Instrucciones:* [Paso a paso para canjearlo]
     """
-
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.1}
     }
-
     try:
         resp = requests.post(url, json=payload, timeout=15)
         data = resp.json()
-        
-        if "error" in data:
-            print(f"Error API Gemini ({resp.status_code}): {data['error'].get('message', data['error'])}")
-            return "NO_OFERTA"
-
         if "candidates" in data and len(data["candidates"]) > 0:
-            candidate = data["candidates"][0]
-            if "content" in candidate and "parts" in candidate["content"]:
-                return candidate["content"]["parts"][0]["text"].strip()
-
-        print(f"Respuesta inesperada de Gemini: {data}")
-        return "NO_OFERTA"
-
+            return data["candidates"][0]["content"]["parts"][0]["text"].strip()
+        print(f"Respuesta inesperada al analizar '{title[:30]}': {data.get('error', data)}")
+        return "ERROR"
     except Exception as e:
-        print(f"Error con Gemini: {e}")
-        return "NO_OFERTA"
+        print(f"Excepción en petición: {e}")
+        return "ERROR"
 
 def send_telegram(formatted_text, link):
     message = f"{formatted_text}\n\n🔗 [Ver publicación original]({link})"
@@ -98,19 +104,22 @@ def send_telegram(formatted_text, link):
         "parse_mode": "Markdown",
         "disable_web_page_preview": False
     }
-    
     resp = requests.post(url, json=payload, timeout=10)
-    # Fallback si Telegram rechaza el formato Markdown por caracteres especiales
     if resp.status_code != 200:
-        plain_text = f"{formatted_text}\n\nEnlace: {link}".replace("*", "")
-        payload["text"] = plain_text
+        payload["text"] = f"{formatted_text}\n\nEnlace: {link}".replace("*", "")
         payload.pop("parse_mode", None)
         requests.post(url, json=payload, timeout=10)
 
 def main():
     if not BOT_TOKEN or not CHAT_ID or not GEMINI_API_KEY:
-        print("Faltan variables de entorno necesarias.")
+        print("❌ Faltan variables de entorno.")
         return
+
+    model_path = get_active_model()
+    if not model_path:
+        print("❌ No se pudo determinar un modelo funcional para esta clave. Abortando ejecución.")
+        return
+    print(f"🚀 Usando modelo: {model_path}")
 
     seen_links = load_history()
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AIDealsTracker/1.0"}
@@ -128,10 +137,14 @@ def main():
                 title = getattr(entry, "title", "")
                 summary = getattr(entry, "summary", "")
 
-                analysis = analyze_deal_with_gemini(title, summary)
+                result = analyze_deal(model_path, title, summary)
 
-                if "NO_OFERTA" not in analysis:
-                    send_telegram(analysis, link)
+                # Si dio error, no guardamos el link para reintentarlo después
+                if result == "ERROR":
+                    continue
+
+                if "NO_OFERTA" not in result:
+                    send_telegram(result, link)
                     time.sleep(1)
 
                 save_link(link)
