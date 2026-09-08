@@ -9,44 +9,67 @@ CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 SEND_SUMMARY = os.environ.get("SEND_SUMMARY") == "1"  # heartbeat opcional por Telegram
 HISTORY_FILE = "sent_links.txt"
+DELAY_BETWEEN_FEEDS = 2  # segundos entre peticiones a feeds, para evitar 429 (esp. Reddit)
 
+# Cada feed es (url, nº de entradas recientes a revisar). Los feeds generales
+# (todo el sitio) rotan más rápido, así que se revisan más entradas.
 FEEDS = [
-    # Chollometro (España)
-    "https://www.chollometro.com/rss/search?q=chatgpt",
-    "https://www.chollometro.com/rss/search?q=claude",
-    "https://www.chollometro.com/rss/search?q=gemini",
-    "https://www.chollometro.com/rss/search?q=grok",
-    "https://www.chollometro.com/rss/search?q=perplexity",
-    "https://www.chollometro.com/rss/search?q=copilot",
+    # Chollometro (España) — la red Pepper (Chollometro/HotUKDeals/Dealabs)
+    # bloquea la búsqueda por palabra clave a bots (robots.txt) y no existe
+    # endpoint /rss/search. Usamos el feed general y filtramos aquí por
+    # keywords (KEYWORD_PATTERN más abajo).
+    ("https://www.chollometro.com/rss", 20),
 
-    # HotUKDeals (UK / Global)
-    "https://www.hotukdeals.com/rss/search?q=chatgpt",
-    "https://www.hotukdeals.com/rss/search?q=gemini",
-    "https://www.hotukdeals.com/rss/search?q=perplexity",
+    # HotUKDeals (UK / Global) — mismo motivo que arriba, feed general.
+    ("https://www.hotukdeals.com/rss", 20),
+
+    # Slickdeals (EE.UU.) — SÍ soporta búsqueda real por RSS.
+    ("https://slickdeals.net/newsearch.php?rss=1&q=chatgpt&searcharea=deals&searchin=first", 8),
+    ("https://slickdeals.net/newsearch.php?rss=1&q=gemini+ai&searcharea=deals&searchin=first", 8),
+    ("https://slickdeals.net/newsearch.php?rss=1&q=claude+ai&searcharea=deals&searchin=first", 8),
+    ("https://slickdeals.net/newsearch.php?rss=1&q=perplexity&searcharea=deals&searchin=first", 8),
+    ("https://slickdeals.net/newsearch.php?rss=1&q=copilot&searcharea=deals&searchin=first", 8),
+
+    # Hacker News (vía hnrss.org, usa la API de Algolia por debajo — estable,
+    # sin bloqueo anti-bot).
+    ("https://hnrss.org/newest?q=free%20chatgpt", 8),
+    ("https://hnrss.org/newest?q=free%20claude", 8),
+    ("https://hnrss.org/newest?q=free%20credits%20AI", 8),
+
+    # OpenAI News oficial — bajo volumen, pero fuente de calidad para
+    # anuncios oficiales de créditos/promos.
+    ("https://openai.com/news/rss.xml", 6),
 
     # Reddit
-    # NOTA: desde mayo de 2026 Reddit bloquea con 403 el acceso anónimo a
-    # .json/.rss desde IPs de datacenter (incluidas las de GitHub Actions),
-    # incluso con headers de navegador. Si estos feeds fallan sistemáticamente
-    # en el log ("bloqueado/HTTP != 200"), es ese bloqueo y no un bug local.
-    "https://www.reddit.com/r/ChatGPT/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1",
-    "https://www.reddit.com/r/OpenAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1",
-    "https://www.reddit.com/r/ClaudeAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1",
-    "https://www.reddit.com/r/PerplexityAI/search.rss?q=free+OR+discount+OR+promo+OR+pro&sort=new&restrict_sr=1",
-    "https://www.reddit.com/r/cursor/search.rss?q=free+OR+discount+OR+credits+OR+pro&sort=new&restrict_sr=1",
-    "https://www.reddit.com/r/ArtificialInteligence/search.rss?q=free+OR+discount+OR+promo&sort=new&restrict_sr=1",
+    # NOTA: desde mayo de 2026 Reddit devuelve 403/429 con más facilidad a
+    # peticiones anónimas desde IPs de datacenter (como las de GitHub
+    # Actions). Con la pausa entre feeds (DELAY_BETWEEN_FEEDS) debería
+    # reducirse el 429, pero si sigue fallando de forma sistemática, es ese
+    # bloqueo y no un bug local.
+    ("https://www.reddit.com/r/ChatGPT/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1", 6),
+    ("https://www.reddit.com/r/OpenAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1", 6),
+    ("https://www.reddit.com/r/ClaudeAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1", 6),
+    ("https://www.reddit.com/r/PerplexityAI/search.rss?q=free+OR+discount+OR+promo+OR+pro&sort=new&restrict_sr=1", 6),
+    ("https://www.reddit.com/r/cursor/search.rss?q=free+OR+discount+OR+credits+OR+pro&sort=new&restrict_sr=1", 6),
+    ("https://www.reddit.com/r/ArtificialInteligence/search.rss?q=free+OR+discount+OR+promo&sort=new&restrict_sr=1", 6),
 ]
 
 # Palabras completas (con límites de palabra) para evitar falsos positivos
 # tipo "off" -> "office", "coffee", "official"...
 KEYWORDS = {
     "free", "gratis", "discount", "descuento", "promo", "code", "código",
-    "coupon", "cupón", "credit", "crédito", "trial", "off", "oferta", "chollo"
+    "coupon", "cupón", "credit", "crédito", "credits", "trial", "off",
+    "oferta", "chollo", "chatgpt", "claude", "gemini", "perplexity",
+    "copilot", "cursor"
 }
 KEYWORD_PATTERN = re.compile(
     r"\b(" + "|".join(re.escape(k) for k in KEYWORDS) + r")\b",
     re.IGNORECASE
 )
+
+# Errores de Gemini que merece la pena tratar cambiando de modelo
+# (cuota agotada o modelo saturado/caído temporalmente).
+RETRYABLE_MARKERS = ("RESOURCE_EXHAUSTED", "UNAVAILABLE", "INTERNAL")
 
 
 def load_history():
@@ -117,8 +140,8 @@ def query_gemini(model_path, title, summary):
     resp = requests.post(url, json=payload, timeout=30)
     data = resp.json()
 
-    if resp.status_code == 429 or "RESOURCE_EXHAUSTED" in str(data):
-        return "QUOTA_EXCEEDED"
+    if resp.status_code == 429 or any(m in str(data) for m in RETRYABLE_MARKERS):
+        return "RETRYABLE_ERROR"
 
     if "candidates" in data and len(data["candidates"]) > 0:
         return data["candidates"][0]["content"]["parts"][0]["text"].strip()
@@ -130,8 +153,8 @@ def query_gemini(model_path, title, summary):
 def analyze_deal_with_fallback(models, title, summary):
     for model in list(models):
         res = query_gemini(model, title, summary)
-        if res == "QUOTA_EXCEEDED":
-            print(f"⚠️ Cuota agotada en {model}. Descartando este modelo...")
+        if res == "RETRYABLE_ERROR":
+            print(f"⚠️ {model} no disponible ahora mismo (cuota/saturación). Probando siguiente modelo...")
             models.remove(model)
             continue
         return res
@@ -191,7 +214,8 @@ def main():
         "deals_sent": 0,
     }
 
-    for feed_url in FEEDS:
+    for feed_url, entry_limit in FEEDS:
+        time.sleep(DELAY_BETWEEN_FEEDS)  # evita ráfagas -> menos 429
         try:
             resp = requests.get(feed_url, headers=headers, timeout=12)
             feed = feedparser.parse(resp.content)
@@ -199,13 +223,13 @@ def main():
             if resp.status_code != 200 or not feed.entries:
                 stats["feeds_error"] += 1
                 print(f"⚠️ [{feed_url}] status={resp.status_code} entradas={len(feed.entries)} "
-                      f"→ posible bloqueo (403/anti-bot) o feed vacío")
+                      f"→ posible bloqueo (403/429/anti-bot), endpoint incorrecto o feed vacío")
                 continue
 
             stats["feeds_ok"] += 1
             new_in_feed = 0
 
-            for entry in feed.entries[:6]:
+            for entry in feed.entries[:entry_limit]:
                 link = getattr(entry, "link", "")
                 if not link or link in seen_links:
                     continue
@@ -241,7 +265,7 @@ def main():
 
                 save_link(link)
                 seen_links.add(link)
-                time.sleep(3)  # Pausa entre llamadas para no superar 5 peticiones/min
+                time.sleep(3)  # Pausa entre llamadas para no superar el rate limit de Gemini
 
             print(f"   → [{feed_url}] {len(feed.entries)} entradas, {new_in_feed} nuevas")
 
