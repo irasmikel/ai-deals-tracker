@@ -42,7 +42,8 @@ def save_link(link):
         f.write(link + "\n")
 
 def analyze_deal_with_gemini(title, summary):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
+    # Modelo oficial estable
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
     
     prompt = f"""
     Eres un detector de ofertas de Inteligencia Artificial (ChatGPT, Claude, Gemini, Grok, Perplexity, Cursor, Copilot, etc.).
@@ -71,7 +72,19 @@ def analyze_deal_with_gemini(title, summary):
     try:
         resp = requests.post(url, json=payload, timeout=15)
         data = resp.json()
-        return data["candidates"][0]["content"]["parts"][0]["text"].strip()
+        
+        if "error" in data:
+            print(f"Error API Gemini ({resp.status_code}): {data['error'].get('message', data['error'])}")
+            return "NO_OFERTA"
+
+        if "candidates" in data and len(data["candidates"]) > 0:
+            candidate = data["candidates"][0]
+            if "content" in candidate and "parts" in candidate["content"]:
+                return candidate["content"]["parts"][0]["text"].strip()
+
+        print(f"Respuesta inesperada de Gemini: {data}")
+        return "NO_OFERTA"
+
     except Exception as e:
         print(f"Error con Gemini: {e}")
         return "NO_OFERTA"
