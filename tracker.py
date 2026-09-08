@@ -1,53 +1,72 @@
 import os
 import re
+import json
+import html
 import time
 import calendar
 import requests
 import feedparser
+from datetime import datetime, timedelta
+from urllib.parse import urlparse
 
 BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-SEND_SUMMARY = os.environ.get("SEND_SUMMARY") == "1"  # heartbeat opcional por Telegram
-HISTORY_FILE = "sent_links.txt"
-DELAY_BETWEEN_FEEDS = 2  # segundos entre peticiones a feeds, para evitar 429 (esp. Reddit)
-MAX_ENTRY_AGE_HOURS = 72  # descarta entradas más viejas que esto (evita noticias obsoletas)
+SEND_SUMMARY = os.environ.get("SEND_SUMMARY") == "1"
 
-# Cada feed es (url, nº de entradas recientes a revisar). Los feeds generales
-# (todo el sitio) rotan más rápido, así que se revisan más entradas.
+# Confianza mínima (0-1) para enviar una oferta.
+MIN_CONFIDENCE = float(os.environ.get("MIN_CONFIDENCE", "0.7"))
+
+# Regiones de interés separadas por coma (ej. "españa,spain,europa,eu,global").
+# Vacío = no filtrar por región.
+MY_REGIONS = {
+    r.strip().lower()
+    for r in os.environ.get("MY_REGIONS", "").split(",")
+    if r.strip()
+}
+
+# Modelos preferidos en orden. Sobreescribible con GEMINI_MODELS="models/a,models/b".
+DEFAULT_MODEL_PRIORITY = [
+    "models/gemini-3.7-flash",
+    "models/gemini-3.5-flash",
+    "models/gemini-3.5-flash-lite",
+    "models/gemini-flash-latest",
+    "models/gemini-3.6-flash",
+]
+
+HISTORY_FILE = "sent_links.txt"          # enlaces ya procesados
+RECENT_DEALS_FILE = "recent_deals.json"  # ofertas recientes -> dedup semántica
+FAILED_FILE = "failed_links.json"        # enlaces fallidos en IA y nº intentos
+
+DELAY_BETWEEN_FEEDS = 2      # seg entre feeds (evita 429)
+GEMINI_PAUSE = 3             # seg entre llamadas a Gemini
+MAX_ENTRY_AGE_HOURS = 72     # descarta entradas más viejas
+DEDUP_DAYS = 14              # memoria de ofertas enviadas
+MAX_ATTEMPTS = 3             # intentos de IA por enlace
+SUMMARY_CHARS = 800          # caracteres de contenido enviados a Gemini
+
+# (url, nº de entradas recientes a revisar)
 FEEDS = [
-    # Chollometro (España) — la red Pepper (Chollometro/HotUKDeals/Dealabs)
-    # bloquea la búsqueda por palabra clave a bots (robots.txt) y no existe
-    # endpoint /rss/search. Usamos el feed general y filtramos aquí por
-    # marca de IA (BRAND_PATTERN más abajo).
+    # Chollometro / HotUKDeals: feed general (Pepper bloquea /rss/search a bots)
     ("https://www.chollometro.com/rss", 30),
-
-    # HotUKDeals (UK / Global) — mismo motivo que arriba, feed general.
     ("https://www.hotukdeals.com/rss", 30),
 
-    # Slickdeals (EE.UU.) — SÍ soporta búsqueda real por RSS.
+    # Slickdeals (EE.UU.)
     ("https://slickdeals.net/newsearch.php?rss=1&q=chatgpt&searcharea=deals&searchin=first", 8),
     ("https://slickdeals.net/newsearch.php?rss=1&q=gemini+ai&searcharea=deals&searchin=first", 8),
     ("https://slickdeals.net/newsearch.php?rss=1&q=claude+ai&searcharea=deals&searchin=first", 8),
     ("https://slickdeals.net/newsearch.php?rss=1&q=perplexity&searcharea=deals&searchin=first", 8),
     ("https://slickdeals.net/newsearch.php?rss=1&q=copilot&searcharea=deals&searchin=first", 8),
 
-    # Hacker News (vía hnrss.org, usa la API de Algolia por debajo — estable,
-    # sin bloqueo anti-bot).
+    # Hacker News
     ("https://hnrss.org/newest?q=free%20chatgpt", 8),
     ("https://hnrss.org/newest?q=free%20claude", 8),
     ("https://hnrss.org/newest?q=free%20credits%20AI", 8),
 
-    # OpenAI News oficial — bajo volumen, pero fuente de calidad para
-    # anuncios oficiales de créditos/promos.
+    # OpenAI News oficial
     ("https://openai.com/news/rss.xml", 10),
 
-    # Reddit
-    # NOTA: desde mayo de 2026 Reddit devuelve 403/429 con más facilidad a
-    # peticiones anónimas desde IPs de datacenter (como las de GitHub
-    # Actions). Con la pausa entre feeds (DELAY_BETWEEN_FEEDS) debería
-    # reducirse el 429, pero si sigue fallando de forma sistemática, es ese
-    # bloqueo y no un bug local.
+    # Reddit (puede dar 403/429 desde IPs de datacenter)
     ("https://www.reddit.com/r/ChatGPT/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1", 6),
     ("https://www.reddit.com/r/OpenAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1", 6),
     ("https://www.reddit.com/r/ClaudeAI/search.rss?q=free+OR+discount+OR+promo+OR+credits&sort=new&restrict_sr=1", 6),
@@ -56,22 +75,15 @@ FEEDS = [
     ("https://www.reddit.com/r/ArtificialInteligence/search.rss?q=free+OR+discount+OR+promo&sort=new&restrict_sr=1", 6),
 ]
 
-# Marca/plataforma de IA: hace falta que aparezca al menos una para
-# considerar la entrada un candidato. Esto es lo que de verdad filtra el
-# ruido de chocolates, auriculares, TVs, etc.
 AI_BRANDS = {
     "chatgpt", "chat gpt", "gpt-4", "gpt-5", "gpt4", "gpt5", "openai",
     "claude", "anthropic", "gemini", "perplexity", "copilot", "cursor",
-    "grok", "midjourney", "deepseek", "chatbot"
+    "grok", "midjourney", "deepseek", "chatbot", "mistral", "le chat",
 }
 BRAND_PATTERN = re.compile(
-    r"\b(" + "|".join(re.escape(k) for k in AI_BRANDS) + r")\b",
-    re.IGNORECASE
+    r"\b(" + "|".join(re.escape(k) for k in AI_BRANDS) + r")\b", re.IGNORECASE
 )
 
-# Términos de hardware/gadget que descartan la entrada aunque mencione una
-# marca de IA (p.ej. "Copilot+ Laptop", "AI Smart Glasses"): el objetivo es
-# solo suscripciones/planes/créditos de plataformas de IA, no dispositivos.
 EXCLUDE_TERMS = {
     "laptop", "portátil", "portatil", "ordenador", "pc", "tablet",
     "chromebook", "tv", "televisor", "monitor", "auriculares",
@@ -82,15 +94,32 @@ EXCLUDE_TERMS = {
     "teclado", "keyboard", "zapatillas", "sneaker", "chocolate"
 }
 EXCLUDE_PATTERN = re.compile(
-    r"\b(" + "|".join(re.escape(k) for k in EXCLUDE_TERMS) + r")\b",
-    re.IGNORECASE
+    r"\b(" + "|".join(re.escape(k) for k in EXCLUDE_TERMS) + r")\b", re.IGNORECASE
 )
 
-# Errores de Gemini que merece la pena tratar cambiando de modelo
-# (cuota agotada o modelo saturado/caído temporalmente).
 RETRYABLE_MARKERS = ("RESOURCE_EXHAUSTED", "UNAVAILABLE", "INTERNAL")
 
+RESPONSE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "es_oferta": {"type": "boolean"},
+        "confianza": {"type": "number"},
+        "es_duplicado": {"type": "boolean"},
+        "titulo": {"type": "string"},
+        "servicio": {"type": "string"},
+        "beneficio": {"type": "string"},
+        "requisitos": {"type": "string"},
+        "instrucciones": {"type": "string"},
+        "paises": {"type": "string"},
+        "caducidad": {"type": "string"},
+    },
+    "required": ["es_oferta", "confianza", "es_duplicado"],
+}
 
+HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AIDealsTracker/2.0"}
+# =========================================================
+# PERSISTENCIA
+# =========================================================
 def load_history():
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, "r", encoding="utf-8") as f:
@@ -103,6 +132,69 @@ def save_link(link):
         f.write(link + "\n")
 
 
+def load_json(path, default):
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"⚠️ No se pudo leer {path}: {e}")
+    return default
+
+
+def save_json(path, data):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def load_recent_deals():
+    """Ofertas enviadas en los últimos DEDUP_DAYS días (dedup semántica)."""
+    deals = load_json(RECENT_DEALS_FILE, [])
+    cutoff = datetime.utcnow() - timedelta(days=DEDUP_DAYS)
+    fresh = []
+    for d in deals:
+        try:
+            if datetime.fromisoformat(d["sent_at"]) >= cutoff:
+                fresh.append(d)
+        except Exception:
+            continue
+    return fresh
+
+
+def add_recent_deal(recent_deals, deal, link, source):
+    recent_deals.append({
+        "servicio": deal.get("servicio", ""),
+        "beneficio": deal.get("beneficio", ""),
+        "titulo": deal.get("titulo", ""),
+        "link": link,
+        "source": source,
+        "sent_at": datetime.utcnow().isoformat(),
+    })
+    save_json(RECENT_DEALS_FILE, recent_deals)
+
+
+def register_failure(failed, link):
+    """Suma un intento fallido. True si se agotaron los intentos."""
+    failed[link] = failed.get(link, 0) + 1
+    save_json(FAILED_FILE, failed)
+    return failed[link] >= MAX_ATTEMPTS
+
+
+def clear_failure(failed, link):
+    if link in failed:
+        del failed[link]
+        save_json(FAILED_FILE, failed)
+
+
+# =========================================================
+# FILTROS PREVIOS (sin gastar IA)
+# =========================================================
+def clean_html(text):
+    text = re.sub(r"<[^>]+>", " ", text or "")
+    text = html.unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def is_potential_deal(title, summary):
     text = f"{title} {summary}"
     if EXCLUDE_PATTERN.search(text):
@@ -113,122 +205,245 @@ def is_potential_deal(title, summary):
 def is_recent(entry):
     struct = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
     if not struct:
-        return True  # sin fecha fiable, no descartamos por antigüedad
-    entry_epoch = calendar.timegm(struct)
-    age_hours = (time.time() - entry_epoch) / 3600
+        return True
+    age_hours = (time.time() - calendar.timegm(struct)) / 3600
     return age_hours <= MAX_ENTRY_AGE_HOURS
 
 
+def source_name(feed_url):
+    host = urlparse(feed_url).netloc.replace("www.", "")
+    if "reddit.com" in host:
+        m = re.search(r"/r/([^/]+)/", feed_url)
+        return f"Reddit r/{m.group(1)}" if m else "Reddit"
+    return {
+        "chollometro.com": "Chollometro",
+        "hotukdeals.com": "HotUKDeals",
+        "slickdeals.net": "Slickdeals",
+        "hnrss.org": "Hacker News",
+        "openai.com": "OpenAI News",
+    }.get(host, host)
+
+
+def passes_region_filter(paises):
+    """Si MY_REGIONS está vacío, todo pasa. Si la oferta no indica país, pasa."""
+    if not MY_REGIONS:
+        return True
+    p = (paises or "").strip().lower()
+    if not p or p in {"desconocido", "unknown", "n/a", "-"}:
+        return True
+    return any(region in p for region in MY_REGIONS)
+
+
+def fetch_feed(feed_url):
+    """Descarga el feed con un reintento con backoff si hay 429/5xx."""
+    for attempt in range(2):
+        resp = requests.get(feed_url, headers=HEADERS, timeout=12)
+        if resp.status_code == 429 or resp.status_code >= 500:
+            if attempt == 0:
+                wait = 8
+                ra = resp.headers.get("Retry-After")
+                if ra and ra.isdigit():
+                    wait = min(int(ra), 30)
+                print(f"   ⏳ {resp.status_code} en {feed_url[:60]}... reintento en {wait}s")
+                time.sleep(wait)
+                continue
+        return resp
+    return resp
+
+
+# =========================================================
+# GEMINI
+# =========================================================
 def get_available_models():
     url = f"https://generativelanguage.googleapis.com/v1beta/models?key={GEMINI_API_KEY}"
+    env_models = [m.strip() for m in os.environ.get("GEMINI_MODELS", "").split(",") if m.strip()]
+    priority = env_models or DEFAULT_MODEL_PRIORITY
     try:
-        resp = requests.get(url, timeout=10)
-        data = resp.json()
+        data = requests.get(url, timeout=10).json()
         available = [
             m["name"] for m in data.get("models", [])
             if "generateContent" in m.get("supportedGenerationMethods", [])
         ]
-        priority = [
-            "models/gemini-3.7-flash",
-            "models/gemini-3.5-flash",
-            "models/gemini-3.5-flash-lite",
-            "models/gemini-flash-latest",
-            "models/gemini-3.6-flash"
-        ]
         models = [m for m in priority if m in available]
-        return models if models else available
+        if models:
+            return models
+        # Si ninguno de la lista existe, usa los flash disponibles
+        flash = [m for m in available if "flash" in m]
+        return flash or available or priority
     except Exception as e:
         print(f"Error listando modelos: {e}")
-        return ["models/gemini-3.5-flash"]
+        return priority
 
 
-def query_gemini(model_path, title, summary):
+def build_prompt(title, summary, recent_deals):
+    recientes = "\n".join(
+        f"- {d.get('servicio','?')}: {d.get('beneficio','?')} ({d.get('titulo','')})"
+        for d in recent_deals[-25:]
+    ) or "(ninguna)"
+    return f"""
+Eres un detector de ofertas de plataformas y servicios de Inteligencia Artificial
+(ChatGPT, Claude, Gemini, Grok, Perplexity, Cursor, Copilot, Midjourney, DeepSeek, Mistral, etc.).
+
+Analiza este post:
+Título: {title}
+Contenido: {summary[:SUMMARY_CHARS]}
+
+Ofertas YA ENVIADAS en los últimos {DEDUP_DAYS} días:
+{recientes}
+
+Devuelve un JSON con estos campos:
+- es_oferta: true SOLO si es una oferta real, legal y vigente de una SUSCRIPCIÓN, PLAN, CRÉDITOS
+  o SERVICIO de IA (gratis, descuento, meses gratis, créditos, programa de estudiantes, bundle con
+  operadora, etc.). false si es: duda, queja, debate, noticia sin promoción, tutorial, reventa de
+  cuentas, claves compartidas, spam, o un DISPOSITIVO físico (portátil, móvil, gafas, TV...).
+- confianza: número 0-1 de lo seguro que estás de que es una oferta real y aprovechable.
+- es_duplicado: true si es la MISMA oferta (mismo servicio y mismo beneficio) que alguna ya enviada.
+- titulo: máx 60 caracteres, directo (ej. "Perplexity Pro 1 año gratis con Movistar").
+- servicio: nombre de la plataforma.
+- beneficio: qué se consigue (meses gratis, % descuento, saldo de crédito...).
+- requisitos: condiciones, cupón, tipo de cuenta necesaria.
+- instrucciones: pasos breves para canjearlo.
+- paises: países/regiones donde aplica ("España", "UK", "EE.UU.", "Global"...) o "desconocido".
+- caducidad: fecha límite si se indica, o "desconocida".
+Responde en español.
+""".strip()
+
+
+def query_gemini(model_path, prompt):
+    """Devuelve dict con el JSON, o los strings 'RETRYABLE_ERROR' / 'ERROR'."""
     url = f"https://generativelanguage.googleapis.com/v1beta/{model_path}:generateContent?key={GEMINI_API_KEY}"
-    prompt = f"""
-    Eres un detector de ofertas de plataformas y servicios de Inteligencia Artificial
-    (ChatGPT, Claude, Gemini, Grok, Perplexity, Cursor, Copilot, Midjourney, DeepSeek, etc.).
-    Analiza este post y determina si es una oferta/descuento/crédito real de una SUSCRIPCIÓN
-    o SERVICIO de IA, o solo una pregunta/duda/problema/spam/dispositivo físico.
-
-    Título: {title}
-    Contenido: {summary[:600]}
-
-    REGLAS:
-    1. Si es una duda de usuario, consulta técnica, debate, reventa ilegal, o trata de un
-       DISPOSITIVO/GADGET físico (portátil, móvil, gafas, TV...) aunque mencione una marca de IA:
-       responde ÚNICAMENTE con la palabra NO_OFERTA.
-    2. Si es una OFERTA REAL, DESCUENTO o CRÉDITO GRATIS de una suscripción/plan/servicio de IA,
-       responde EXACTAMENTE con este formato:
-
-    🚨 *CHOLLO IA: [Título breve y directo]*
-
-    • *Servicio:* [Nombre de la plataforma]
-    • *Beneficio:* [Meses gratis, descuento o saldo de crédito]
-    • *Requisitos:* [Condiciones, país o cupón]
-    • *Instrucciones:* [Paso a paso para canjearlo]
-    """
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.1}
+        "generationConfig": {
+            "temperature": 0.1,
+            "responseMimeType": "application/json",
+            "responseSchema": RESPONSE_SCHEMA,
+        },
     }
+    try:
+        resp = requests.post(url, json=payload, timeout=30)
+    except requests.RequestException as e:
+        print(f"⚠️ Error de red con Gemini ({model_path}): {e}")
+        return "RETRYABLE_ERROR"
 
-    resp = requests.post(url, json=payload, timeout=30)
-    data = resp.json()
+    try:
+        data = resp.json()
+    except ValueError:
+        print(f"⚠️ Gemini ({model_path}) devolvió no-JSON: status={resp.status_code} {resp.text[:200]}")
+        return "RETRYABLE_ERROR" if resp.status_code in (429, 500, 502, 503, 504) else "ERROR"
 
     if resp.status_code == 429 or any(m in str(data) for m in RETRYABLE_MARKERS):
         return "RETRYABLE_ERROR"
 
-    if "candidates" in data and len(data["candidates"]) > 0:
-        return data["candidates"][0]["content"]["parts"][0]["text"].strip()
+    try:
+        candidate = data["candidates"][0]
+        if candidate.get("finishReason") == "SAFETY":
+            print(f"⚠️ Gemini bloqueó por SAFETY: {str(data)[:200]}")
+            return "ERROR"
+        text = candidate["content"]["parts"][0]["text"].strip()
+        text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text)  # por si envuelve en ```json
+        result = json.loads(text)
+        if not isinstance(result, dict) or "es_oferta" not in result:
+            raise ValueError("JSON sin campos esperados")
+        return result
+    except Exception as e:
+        print(f"⚠️ Respuesta inesperada de Gemini ({model_path}): {e} | {str(data)[:300]}")
+        return "ERROR"
 
-    print(f"⚠️ Respuesta inesperada de Gemini ({model_path}): {str(data)[:300]}")
-    return "ERROR"
 
-
-def analyze_deal_with_fallback(models, title, summary):
+def analyze_deal_with_fallback(models, prompt):
     for model in list(models):
-        res = query_gemini(model, title, summary)
+        res = query_gemini(model, prompt)
         if res == "RETRYABLE_ERROR":
-            print(f"⚠️ {model} no disponible ahora mismo (cuota/saturación). Probando siguiente modelo...")
+            print(f"⚠️ {model} no disponible (cuota/saturación). Probando siguiente...")
             models.remove(model)
             continue
         return res
     return "ERROR"
+    # =========================================================
+# TELEGRAM
+# =========================================================
+def esc(text):
+    """Escapa texto para parse_mode=HTML de Telegram."""
+    return html.escape(str(text or ""), quote=False)
 
 
-def send_telegram(formatted_text, link):
-    message = f"{formatted_text}\n\n🔗 [Ver publicación original]({link})"
+def build_message(deal, link, source):
+    lines = [f"🚨 <b>CHOLLO IA: {esc(deal.get('titulo') or deal.get('servicio') or 'Oferta')}</b>", ""]
+    fields = [
+        ("Servicio", deal.get("servicio")),
+        ("Beneficio", deal.get("beneficio")),
+        ("Requisitos", deal.get("requisitos")),
+        ("Instrucciones", deal.get("instrucciones")),
+        ("Países", deal.get("paises")),
+        ("Caducidad", deal.get("caducidad")),
+    ]
+    for label, value in fields:
+        v = (value or "").strip()
+        if v and v.lower() not in {"desconocido", "desconocida", "unknown", "n/a", "-"}:
+            lines.append(f"• <b>{label}:</b> {esc(v)}")
+    conf = deal.get("confianza")
+    conf_txt = f" · confianza {int(round(float(conf) * 100))}%" if isinstance(conf, (int, float)) else ""
+    lines.append("")
+    lines.append(f"📌 Fuente: {esc(source)}{conf_txt}")
+    lines.append(f'🔗 <a href="{esc(link)}">Ver publicación original</a>')
+    return "\n".join(lines)
+
+
+def telegram_post(payload):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    try:
+        return requests.post(url, json=payload, timeout=10)
+    except requests.RequestException as e:
+        print(f"❌ Error de red con Telegram: {e}")
+        return None
+
+
+def send_telegram(deal, link, source):
+    text = build_message(deal, link, source)
     payload = {
         "chat_id": CHAT_ID,
-        "text": message,
-        "parse_mode": "Markdown",
-        "disable_web_page_preview": False
+        "text": text,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": False,
     }
-    resp = requests.post(url, json=payload, timeout=10)
-    if resp.status_code != 200:
-        payload["text"] = f"{formatted_text}\n\nEnlace: {link}".replace("*", "")
-        payload.pop("parse_mode", None)
-        requests.post(url, json=payload, timeout=10)
+    resp = telegram_post(payload)
+    if resp is not None and resp.status_code == 200:
+        return True
+
+    # Fallback: texto plano sin etiquetas
+    plain = re.sub(r"<[^>]+>", "", text)
+    plain = html.unescape(plain) + f"\n\nEnlace: {link}"
+    payload = {"chat_id": CHAT_ID, "text": plain, "disable_web_page_preview": False}
+    resp = telegram_post(payload)
+    ok = resp is not None and resp.status_code == 200
+    if not ok:
+        print(f"❌ Telegram rechazó el mensaje: {getattr(resp, 'text', '')[:200]}")
+    return ok
 
 
 def send_summary(stats):
     if not (SEND_SUMMARY and BOT_TOKEN and CHAT_ID):
         return
     text = (
-        "📊 *Resumen del rastreo*\n\n"
+        "📊 <b>Resumen del rastreo</b>\n\n"
         f"• Feeds OK: {stats['feeds_ok']}/{stats['feeds_total']}\n"
         f"• Feeds con error/bloqueo: {stats['feeds_error']}\n"
         f"• Entradas nuevas revisadas: {stats['new_entries']}\n"
         f"• Descartadas por antigüedad: {stats['stale_skipped']}\n"
         f"• Candidatos analizados con IA: {stats['candidates']}\n"
         f"• Fallos de análisis (IA): {stats['ai_errors']}\n"
+        f"• Descartados por confianza baja: {stats['low_conf']}\n"
+        f"• Descartados por duplicado: {stats['duplicates']}\n"
+        f"• Descartados por región: {stats['region_skipped']}\n"
         f"• Chollos enviados: {stats['deals_sent']}"
     )
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-    requests.post(url, json={"chat_id": CHAT_ID, "text": text, "parse_mode": "Markdown"}, timeout=10)
+    telegram_post({"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML"})
 
 
+# =========================================================
+# MAIN
+# =========================================================
 def main():
     if not BOT_TOKEN or not CHAT_ID or not GEMINI_API_KEY:
         print("❌ Faltan variables de entorno.")
@@ -236,31 +451,35 @@ def main():
 
     models = get_available_models()
     print(f"🚀 Modelos en cola de uso: {models}")
+    if MY_REGIONS:
+        print(f"🌍 Filtro de región activo: {sorted(MY_REGIONS)}")
 
     seen_links = load_history()
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AIDealsTracker/1.0"}
+    recent_deals = load_recent_deals()
+    failed = load_json(FAILED_FILE, {})
 
     stats = {
-        "feeds_total": len(FEEDS),
-        "feeds_ok": 0,
-        "feeds_error": 0,
-        "new_entries": 0,
-        "stale_skipped": 0,
-        "candidates": 0,
-        "ai_errors": 0,
-        "deals_sent": 0,
+        "feeds_total": len(FEEDS), "feeds_ok": 0, "feeds_error": 0,
+        "new_entries": 0, "stale_skipped": 0, "candidates": 0,
+        "ai_errors": 0, "low_conf": 0, "duplicates": 0,
+        "region_skipped": 0, "deals_sent": 0,
     }
 
+    def mark_seen(link):
+        save_link(link)
+        seen_links.add(link)
+
     for feed_url, entry_limit in FEEDS:
-        time.sleep(DELAY_BETWEEN_FEEDS)  # evita ráfagas -> menos 429
+        time.sleep(DELAY_BETWEEN_FEEDS)
+        source = source_name(feed_url)
         try:
-            resp = requests.get(feed_url, headers=headers, timeout=12)
+            resp = fetch_feed(feed_url)
             feed = feedparser.parse(resp.content)
 
             if resp.status_code != 200 or not feed.entries:
                 stats["feeds_error"] += 1
-                print(f"⚠️ [{feed_url}] status={resp.status_code} entradas={len(feed.entries)} "
-                      f"→ posible bloqueo (403/429/anti-bot), endpoint incorrecto o feed vacío")
+                print(f"⚠️ [{source}] status={resp.status_code} entradas={len(feed.entries)} "
+                      f"→ posible bloqueo, endpoint incorrecto o feed vacío")
                 continue
 
             stats["feeds_ok"] += 1
@@ -271,64 +490,96 @@ def main():
                 if not link or link in seen_links:
                     continue
 
-                # Descarta entradas viejas sin gastar análisis en ellas
                 if not is_recent(entry):
-                    save_link(link)
-                    seen_links.add(link)
+                    mark_seen(link)
                     stats["stale_skipped"] += 1
                     continue
 
                 new_in_feed += 1
                 stats["new_entries"] += 1
 
-                title = getattr(entry, "title", "")
-                summary = getattr(entry, "summary", "")
+                title = clean_html(getattr(entry, "title", ""))
+                summary = clean_html(getattr(entry, "summary", ""))
 
-                # 1. Filtro previo sin gastar llamadas de IA: solo marcas de
-                #    IA, descartando dispositivos/hardware.
+                # 1. Filtro barato: marca de IA presente y sin hardware
                 if not is_potential_deal(title, summary):
-                    save_link(link)
-                    seen_links.add(link)
+                    mark_seen(link)
                     continue
 
-                # 2. Análisis con IA solo si es un candidato real
-                print(f"🔍 Analizando candidato: {title[:45]}...")
+                # 2. Sin modelos disponibles: no seguir gastando intentos
+                if not models:
+                    print("⛔ Ningún modelo de Gemini disponible; se pospone el resto de candidatos.")
+                    break
+
+                print(f"🔍 Analizando candidato [{source}]: {title[:50]}...")
                 stats["candidates"] += 1
-                result = analyze_deal_with_fallback(models, title, summary)
+                result = analyze_deal_with_fallback(models, build_prompt(title, summary, recent_deals))
+                time.sleep(GEMINI_PAUSE)
 
-                if result == "ERROR":
-                    # No se marca como visto: se reintentará en la próxima
-                    # ejecución (podría ser un fallo temporal de la API).
+                if not isinstance(result, dict):
                     stats["ai_errors"] += 1
-                    print(f"❌ Fallo de análisis IA para: {title[:45]} (se reintentará)")
+                    if register_failure(failed, link):
+                        print(f"❌ Descartado tras {MAX_ATTEMPTS} fallos de IA: {title[:50]}")
+                        mark_seen(link)
+                    else:
+                        print(f"❌ Fallo de análisis IA (se reintentará): {title[:50]}")
                     continue
 
-                if "NO_OFERTA" not in result:
-                    send_telegram(result, link)
+                clear_failure(failed, link)
+
+                try:
+                    confianza = float(result.get("confianza", 0))
+                except (TypeError, ValueError):
+                    confianza = 0.0
+
+                if not result.get("es_oferta"):
+                    mark_seen(link)
+                    continue
+
+                if confianza < MIN_CONFIDENCE:
+                    stats["low_conf"] += 1
+                    print(f"   ↳ Confianza baja ({confianza:.2f}) — descartado: {title[:50]}")
+                    mark_seen(link)
+                    continue
+
+                if result.get("es_duplicado"):
+                    stats["duplicates"] += 1
+                    print(f"   ↳ Duplicado de una oferta ya enviada: {title[:50]}")
+                    mark_seen(link)
+                    continue
+
+                if not passes_region_filter(result.get("paises")):
+                    stats["region_skipped"] += 1
+                    print(f"   ↳ Fuera de tu región ({result.get('paises')}): {title[:50]}")
+                    mark_seen(link)
+                    continue
+
+                if send_telegram(result, link, source):
                     stats["deals_sent"] += 1
+                    add_recent_deal(recent_deals, result, link, source)
+                    print(f"✅ Enviado: {result.get('titulo') or title[:50]}")
                     time.sleep(2)
+                else:
+                    # Si Telegram falla, no marcamos como visto para reintentar
+                    continue
 
-                save_link(link)
-                seen_links.add(link)
-                time.sleep(3)  # Pausa entre llamadas para no superar el rate limit de Gemini
+                mark_seen(link)
 
-            print(f"   → [{feed_url}] {len(feed.entries)} entradas, {new_in_feed} nuevas")
+            print(f"   → [{source}] {len(feed.entries)} entradas, {new_in_feed} nuevas")
 
         except Exception as e:
             stats["feeds_error"] += 1
-            print(f"❌ Error en feed {feed_url}: {e}")
+            print(f"❌ Error en feed [{source}] {feed_url}: {e}")
 
     print(
         "\n📊 Resumen: "
         f"feeds_ok={stats['feeds_ok']}/{stats['feeds_total']}, "
-        f"feeds_error={stats['feeds_error']}, "
-        f"nuevas={stats['new_entries']}, "
-        f"antiguas_descartadas={stats['stale_skipped']}, "
-        f"candidatos={stats['candidates']}, "
-        f"errores_ia={stats['ai_errors']}, "
-        f"chollos_enviados={stats['deals_sent']}"
+        f"feeds_error={stats['feeds_error']}, nuevas={stats['new_entries']}, "
+        f"antiguas={stats['stale_skipped']}, candidatos={stats['candidates']}, "
+        f"errores_ia={stats['ai_errors']}, conf_baja={stats['low_conf']}, "
+        f"duplicados={stats['duplicates']}, region={stats['region_skipped']}, "
+        f"enviados={stats['deals_sent']}"
     )
-
     send_summary(stats)
 
 
