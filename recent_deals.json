@@ -70,5 +70,13 @@
     "link": "https://slickdeals.net/f/20033844-chatgpt-plus?utm_source=rss&utm_content=def&utm_medium=RSS2",
     "source": "Slickdeals",
     "sent_at": "2026-09-18T21:01:09.317411"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "cache-tax: Herramienta open source gratis para Claude Code Mantenimiento de caché y optimización de costes de contexto en Claude Code con comandos personalizados y control de inactividad para desarrolladores, permitiendo mantener la caché activa durante descansos o tareas en segundo plano sin generar costes excesivos de reescritura. El servicio es de código abierto en GitHub para toda la comunidad de ingenieros de software y programadores independientes o equipos técnicos avanzados que usen el asistente en su flujo diario de trabajo con inteligencia artificial en la nube. Instrucciones: clonar el repositorio de GitHub y seguir el proceso de instalación en el entorno local de desarrollo para configurar las alertas y ventanas de tiempo deseadas con el comando especificado en la documentación oficial del proyecto. Países: Global. Caducidad: desconocida. Servicio: Claude Code Cache Tax. Beneficio: Herramienta open source y gratuita. Requisitos: cuenta de GitHub y Claude Code instalado. Instrucciones: instalar desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code Cache Tax. Beneficio: Software libre y gratuito. Requisitos: GitHub y Claude Code. Instrucciones: instalar desde el repositorio oficial. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1wk12g9/keep_claude_codes_cache_warm_on_fable_51_a_1hour/",
+    "source": "Reddit",
+    "sent_at": "2026-09-19T07:26:55.453971"
   }
 ]
