@@ -1,13 +1,5 @@
 [
   {
-    "servicio": "SKI",
-    "beneficio": "Uso gratuito sin necesidad de tarjeta",
-    "titulo": "SKI: Voice coding layer para IA gratis",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1wbrc4p/voice_coding_in_2026_how_ski_works/",
-    "source": "Reddit",
-    "sent_at": "2026-09-09T21:03:40.204054"
-  },
-  {
     "servicio": "OpenAI",
     "beneficio": "Licencias a $0 y 50% de descuento en el uso de IA",
     "titulo": "OpenAI gratis y 50% desc. para gobiernos de EE.UU.",
@@ -86,5 +78,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1wnm39h/i_connected_my_blog_to_claude_via_mcp/",
     "source": "Reddit",
     "sent_at": "2026-09-22T21:30:24.184499"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Chat Go por $8 al mes en ChatGPT Plus o similar tier intermedia al parecer por un email recibido segun reddit con detalles aun por aclarar por completo en un correo promocional reciente de prueba para usuarios de la plataforma de OpenAI con nueva opcion de suscripcion economica entre la version gratuita y la de 20 dolares por mes segun la discusion en r/ChatGPT sobre planes de pago flexibles para la inteligencia artificial conversacional mas popular del mercado actual de modelos de lenguaje avanzados para usuarios generales o avanzados en fase de despliegue comercial o prueba piloto en la nube y dispositivos compatibles con el servicio oficial de OpenAI en todo el mundo sin fecha fija de lanzamiento global definitivo pero anunciado por correo electronico a algunos usuarios seleccionados recientemente con tarifas reducidas en comparacion con la suscripcion completa tradicional de ChatGPT Plus con GPT-4 y demas herramientas avanzadas disponibles en la interfaz web y aplicaciones moviles oficiales de la compania norteamericana lider en innovacion tecnologica y desarrollo de software basado en inteligencia artificial generativa aplicada a la productividad y el entretenimiento digital de masas en la actualidad con opcion de upgrade desde la cuenta basica gratuita y menor coste mensual que la opcion premium estandar de pago mensual fijo por tarjeta de credito o metodos de pago aceptados por la pasarela oficial de facturación de la empresa creadora del modelo de lenguaje y su ecosistema de APIs para desarrolladores y clientes particulares en la red de redes a nivel global en este momento de transicion comercial de la industria de la IA conversacional avanzada de consumo masivo en internet y plataformas digitales modernas de suscripcion de pago recurrente con beneficios intermedios para usuarios que no necesitan todo el potencial de la version de veinte dolares pero buscan mas que la version gratuita limitada por cuotas de uso horario o diario en las horas punta del servicio oficial de la empresa lider del sector tecnológico actual de la inteligencia artificial conversacional y asistentes virtuales inteligentes en la nube de producción y consumo masivo en la red global de internet y dispositivos inteligentes conectados a la plataforma de OpenAI en todo el mundo occidental y otros mercados seleccionados por la compania desarrolladora de ChatGPT y GPT-4o mini o completo segun corresponda a la nueva tarifa descubierta por los usuarios en el foro de Reddit especializado en la materia tecnológica y la inteligencia artificial conversacional moderna a nivel global en la actualidad digital y comercial del sector de la tecnologia punta aplicada al usuario final en internet y redes sociales especializadas en la materia en cuestion hoy en dia de forma continua y dinamica en el mercado internacional de servicios en la nube para particulares y profesionales de la tecnologia y el software avanzado en general y la IA en particular en la red global actual.",
+    "link": "https://www.reddit.com/r/ChatGPT/comments/1woo6qn/chat_go_for_8/",
+    "source": "Reddit",
+    "sent_at": "2026-09-24T05:05:10.784195"
   }
 ]
