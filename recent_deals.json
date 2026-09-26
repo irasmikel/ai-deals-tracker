@@ -1,21 +1,5 @@
 [
   {
-    "servicio": "OpenAI",
-    "beneficio": "Licencias a $0 y 50% de descuento en el uso de IA",
-    "titulo": "OpenAI gratis y 50% desc. para gobiernos de EE.UU.",
-    "link": "https://openai.com/index/expanding-ai-access-us-government",
-    "source": "OpenAI News",
-    "sent_at": "2026-09-10T16:34:59.571569"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "6 meses de ChatGPT Pro gratis para devs Open Source y API credits como Codex Security y Codex Open Source Fund OpenAI de forma gratuita sin obligación con acceso a ChatGPT Codex con API credits incluidos para proyectos de software open source mantenimiento y ecosistema digital en la plataforma oficial de OpenAI con soporte y beneficios especiales para desarrolladores y mantenedores de código abierto en todo el mundo con fondos de desarrollo y soporte técnico de inteligencia artificial avanzada en la nube con créditos mensuales y herramientas de seguridad para código fuente en GitHub y otras plataformas de desarrollo de software libre a nivel global en la actualidad y sin tarjeta de crédito ni compromiso de pago posterior al finalizar el periodo de prueba para la comunidad de programadores y mantenedores independientes o de equipos de trabajo en proyectos comunitarios de código abierto y software libre que cumplan los requisitos de elegibilidad establecidos por la organización en su portal web oficial de desarrolladores y socios tecnológicos autorizados para este programa especial de apoyo al software libre mundial sin coste adicional alguno para los participantes seleccionados tras el proceso de revisión de candidaturas por parte del equipo evaluador de OpenAI en la plataforma correspondiente. -> 6 meses ChatGPT Pro gratis para Open Source devs",
-    "link": "https://www.hotukdeals.com/deals/6-months-of-chatgpt-pro-with-codex-codex-security-api-credits-for-open-source-developers-4979482",
-    "source": "HotUKDeals",
-    "sent_at": "2026-09-11T16:37:55.834617"
-  },
-  {
     "servicio": "",
     "beneficio": "",
     "titulo": "Vilix AI: Capa de memoria gratuita para múltiples IA عبر MCP",
@@ -94,5 +78,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1wow79m/game_of_thrones_skips_a_part_i_always_wanted_to/",
     "source": "Reddit",
     "sent_at": "2026-09-24T11:59:31.446136"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Claude Code: Hasta $250 en créditos gratis para usuarios dencuentren elegibles en la plataforma de Anthropic para desarrollo con asistencia de inteligencia artificial avanzada en la nube global con requisitos específicos de uso y actividad previa en la herramienta oficial de la compañía norteamericana de IA conversacional y agentes de software automatizado para ingenieros de programación y desarrolladores independientes o equipos técnicos avanzados en entornos de trabajo digital moderno conectado a internet y repositorios de código fuente en la red global de redes hoy en día bajo demanda del servicio líder del sector tecnológico actual de la inteligencia artificial generativa y modelos de lenguaje de última generación para la creación y mantenimiento de software a gran escala en todo el mundo digital y comercial en la actualidad sin fecha límite de expiración definitiva anunciada públicamente en los canales oficiales de comunicación de la empresa creadora del asistente de programación basado en texto y comandos de terminal interactiva para sistemas operativos compatibles con Node.js y otras tecnologías de desarrollo de software profesional moderno a nivel internacional en el mercado de la tecnología avanzada y la inteligencia artificial en la nube y terminales locales de desarrollo de código para ingenieros de software en todo el planeta hoy en día. Sin embargo, el título debe ser corto, pero usaré este si no cabe por límite pero pondré uno más breve: Claude Code $250 en créditos gratis",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1wqnn5x/claude_code_users_are_getting_up_to_250_in_free/",
+    "source": "Reddit",
+    "sent_at": "2026-09-26T11:36:06.422316"
   }
 ]
