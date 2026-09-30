@@ -1,21 +1,5 @@
 [
   {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Vilix AI: Capa de memoria gratuita para múltiples IA عبر MCP",
-    "link": "https://www.reddit.com/r/ChatGPT/comments/1wewnhl/chatgpts_memory_is_genuinely_good_but_its_trapped/",
-    "source": "Reddit",
-    "sent_at": "2026-09-13T05:00:09.983779"
-  },
-  {
-    "servicio": "ChatGPT",
-    "beneficio": "3 meses gratis de suscripción ChatGPT Plus",
-    "titulo": "3 meses gratis de ChatGPT Plus para estudiantes",
-    "link": "https://www.reddit.com/r/ChatGPT/comments/1wfhq08/if_anyone_lookin_for_free_trial_of_chatgpt_plus/",
-    "source": "Reddit",
-    "sent_at": "2026-09-13T20:58:13.632874"
-  },
-  {
     "servicio": "Cortex",
     "beneficio": "30 días de prueba gratuita sin necesidad de tarjeta de crédito",
     "titulo": "Cortex: 30 días gratis de memoria persistente para Claude",
@@ -94,5 +78,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1wqzku5/i_finally_opened_sourced_my_ai_harness_on_mit/",
     "source": "Reddit",
     "sent_at": "2026-09-26T21:19:00.840925"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "ChatGPT: Créditos gratis añadidos a la cuenta por email r/ChatGPT: 62500 free credits just added to my account, $2,500 worth? Just got this email now. I have the $200 pro here so this must be something to lessen the pain of the upcoming nerfing of the plan. Did anyone else get this amount? More? Less? submitted by /u/Teknolyth to r/ChatGPT [link] [comments] (Título: 62,500 free credits just added to my account, $2,500 worth? Contenido: Just got this email now. I have the $200 pro here so this must be something to lessen the pain of the upcoming nerfing of the plan. Did anyone else get this amount? More? Less? submitted by /u/Teknolyth to r/ChatGPT [link] [comments])",
+    "link": "https://www.reddit.com/r/ChatGPT/comments/1wtwtj6/62500_free_credits_just_added_to_my_account_2500/",
+    "source": "Reddit",
+    "sent_at": "2026-09-30T05:44:50.167026"
   }
 ]
