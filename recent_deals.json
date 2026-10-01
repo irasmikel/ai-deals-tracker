@@ -1,21 +1,5 @@
 [
   {
-    "servicio": "Cortex",
-    "beneficio": "30 días de prueba gratuita sin necesidad de tarjeta de crédito",
-    "titulo": "Cortex: 30 días gratis de memoria persistente para Claude",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1whnv7k/i_built_a_persistent_memory_layer_for_claude/",
-    "source": "Reddit",
-    "sent_at": "2026-09-16T07:48:18.269811"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "SaaS de 350+ herramientas con 7 días de prueba gratis con Claude Opus 5 y MCP Tools en r/ClaudeAI. El servicio ofrece una prueba sin coste inicial para evaluar la plataforma construida por un desarrollador independiente con integración de MCP para autenticación y pagos. Los usuarios pueden acceder a las herramientas durante una semana antes del cobro automático de la suscripción mensual o anual correspondiente. El creador indica que se actualiza y añade contenido de valor de manera mensual para toda la comunidad interesada en automatización y desarrollo con modelos avanzados de lenguaje y arquitecturas basadas en agentes y conectores modernos en la nube de producción y desarrollo comercial de software como servicio SaaS global. Requisitos: cuenta activa en la plataforma y seguir el enlace en los comentarios del post original de Reddit. Instrucciones: acceder al enlace en los comentarios y registrarse para iniciar la prueba gratuita. Países: Global. Caducidad: desconocida. Servicio: Claude Opus 5 SaaS. Beneficio: 7 días de prueba gratis. Requisitos: cuenta de usuario y enlace del post. Instrucciones: entrar al enlace del comentario y registrarse. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1widb4y/built_a_350_tool_saas_in_1_month_using_claude/",
-    "source": "Reddit",
-    "sent_at": "2026-09-17T00:40:58.939397"
-  },
-  {
     "servicio": "",
     "beneficio": "",
     "titulo": "Claude Code design skill gratis y open source (MIT)",
@@ -86,5 +70,21 @@
     "link": "https://www.reddit.com/r/ChatGPT/comments/1wtwtj6/62500_free_credits_just_added_to_my_account_2500/",
     "source": "Reddit",
     "sent_at": "2026-09-30T05:44:50.167026"
+  },
+  {
+    "servicio": "Konnate",
+    "beneficio": "Prueba gratuita de la herramienta hasta el 31 de diciembre de 2026",
+    "titulo": "Konnate: Conector MCP para Claude gratis hasta 2026",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1wuypjc/i_built_an_mcp_connector_that_lets_claude_work/",
+    "source": "Reddit",
+    "sent_at": "2026-10-01T13:34:24.882272"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Claude Code design skill gratis y open source (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1wuw1tb/a_free_skill_to_build_beautiful_onbrand_html_docs/",
+    "source": "Reddit",
+    "sent_at": "2026-10-01T13:34:42.239002"
   }
 ]
