@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Claude Code design skill gratis y open source (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1wios2f/i_opensourced_my_claude_code_skill_that_makes/",
-    "source": "Reddit",
-    "sent_at": "2026-09-17T13:37:22.781619"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "PayPal: 50% de descuento en ChatGPT Plus por 6 meses",
     "link": "https://slickdeals.net/f/20033844-chatgpt-plus?utm_source=rss&utm_content=def&utm_medium=RSS2",
     "source": "Slickdeals",
@@ -86,5 +78,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1wuw1tb/a_free_skill_to_build_beautiful_onbrand_html_docs/",
     "source": "Reddit",
     "sent_at": "2026-10-01T13:34:42.239002"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Nexusyn: Memoria persistente para Cursor vía MCP gratis hoy",
+    "link": "https://www.reddit.com/r/cursor/comments/1ww125e/cursor_kept_forgetting_my_project_rules_and/",
+    "source": "Reddit",
+    "sent_at": "2026-10-02T19:25:38.148134"
   }
 ]
