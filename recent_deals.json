@@ -166,5 +166,21 @@
     "link": "https://github.com/iterative-computer/powermove",
     "source": "Hacker News",
     "sent_at": "2026-10-13T06:55:38.774390"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "shadowclone: Convierte correcciones en skills gratis (MIT)",
+    "link": "https://github.com/theonly1me/shadowclone",
+    "source": "Hacker News",
+    "sent_at": "2026-10-13T21:22:06.498032"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Hatoba: Cliente SSH open-source con IA gratis (MIT)",
+    "link": "https://github.com/scarletkc/Hatoba",
+    "source": "Hacker News",
+    "sent_at": "2026-10-13T21:22:15.578610"
   }
 ]
