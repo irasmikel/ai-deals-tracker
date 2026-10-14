@@ -1,13 +1,5 @@
 [
   {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "ChatGPT: Créditos gratis añadidos a la cuenta por email r/ChatGPT: 62500 free credits just added to my account, $2,500 worth? Just got this email now. I have the $200 pro here so this must be something to lessen the pain of the upcoming nerfing of the plan. Did anyone else get this amount? More? Less? submitted by /u/Teknolyth to r/ChatGPT [link] [comments] (Título: 62,500 free credits just added to my account, $2,500 worth? Contenido: Just got this email now. I have the $200 pro here so this must be something to lessen the pain of the upcoming nerfing of the plan. Did anyone else get this amount? More? Less? submitted by /u/Teknolyth to r/ChatGPT [link] [comments])",
-    "link": "https://www.reddit.com/r/ChatGPT/comments/1wtwtj6/62500_free_credits_just_added_to_my_account_2500/",
-    "source": "Reddit",
-    "sent_at": "2026-09-30T05:44:50.167026"
-  },
-  {
     "servicio": "Konnate",
     "beneficio": "Prueba gratuita de la herramienta hasta el 31 de diciembre de 2026",
     "titulo": "Konnate: Conector MCP para Claude gratis hasta 2026",
@@ -182,5 +174,13 @@
     "link": "https://github.com/scarletkc/Hatoba",
     "source": "Hacker News",
     "sent_at": "2026-10-13T21:22:15.578610"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "ibh: Harness open-source para agentes de IA gratis (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x5i1s6/i_wrote_a_purely_inbrowser_harness_ibh_with/",
+    "source": "Reddit",
+    "sent_at": "2026-10-14T07:49:27.048251"
   }
 ]
