@@ -206,5 +206,21 @@
     "link": "https://stylebot.dev/",
     "source": "Hacker News",
     "sent_at": "2026-10-15T17:12:22.356062"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "ClipChop: Editor de video open source con MCP gratis (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x6x3hz/i_got_tired_of_opening_davinci_to_just_simply/",
+    "source": "Reddit",
+    "sent_at": "2026-10-15T21:32:46.571478"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Golden Thread: Plugin de memoria para Claude Code gratis (MIT open source)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x6vtld/i_built_a_free_claude_code_plugin_with_claude/",
+    "source": "Reddit",
+    "sent_at": "2026-10-15T21:32:57.051465"
   }
 ]
