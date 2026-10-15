@@ -1,21 +1,5 @@
 [
   {
-    "servicio": "Konnate",
-    "beneficio": "Prueba gratuita de la herramienta hasta el 31 de diciembre de 2026",
-    "titulo": "Konnate: Conector MCP para Claude gratis hasta 2026",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1wuypjc/i_built_an_mcp_connector_that_lets_claude_work/",
-    "source": "Reddit",
-    "sent_at": "2026-10-01T13:34:24.882272"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Claude Code design skill gratis y open source (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1wuw1tb/a_free_skill_to_build_beautiful_onbrand_html_docs/",
-    "source": "Reddit",
-    "sent_at": "2026-10-01T13:34:42.239002"
-  },
-  {
     "servicio": "",
     "beneficio": "",
     "titulo": "Nexusyn: Memoria persistente para Cursor vía MCP gratis hoy",
@@ -214,5 +198,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1x6hj48/i_built_contextsnap_with_claude_code_to_make/",
     "source": "Reddit",
     "sent_at": "2026-10-15T11:45:16.105267"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Stylebot 4 con CLI para Claude Code gratis y open source",
+    "link": "https://stylebot.dev/",
+    "source": "Hacker News",
+    "sent_at": "2026-10-15T17:12:22.356062"
   }
 ]
