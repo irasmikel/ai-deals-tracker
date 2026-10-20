@@ -2,38 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Postquel: Cliente Postgres para Mac gratis con Claude Code y Codex habilitado de forma nativa en la herramienta de software para ingenieros de desarrollo moderno en la nube y terminal local. Descarga libre y código abierto disponible para sistemas macOS compatibles con Node y bases de datos relacionales avanzadas hoy en día sin coste inicial para usuarios de la comunidad tecnológica internacional en la red de redes de internet actual en este momento de innovación de la industria del desarrollo asistido por inteligencia artificial generativa aplicada a la programación de software y bases de datos relacionales en sistemas operativos de Apple para ordenadores Mac de escritorio o portátiles profesionales y particulares en todo el mundo digital y comercial en la actualidad tecnológica contemporánea con acceso libre desde la plataforma oficial de distribución de código y herramientas de desarrollo para ingenieros de software en todo el planeta hoy en día sin restricciones geográficas o comerciales de pago por uso en la versión básica inicial publicada recientemente para la comunidad de desarrolladores globales en internet y plataformas de código abierto especializadas en la materia en cuestión hoy en día de forma continua y dinámica en el ecosistema tecnológico actual. Gratis con funciones completas para Mac con IA de Anthropic y OpenAI para desarrolladores de software profesional moderno a nivel internacional en el mercado de la tecnología avanzada y la inteligencia artificial en la nube y terminales locales de desarrollo de código para ingenieros de software en todo el planeta hoy en día. Descarga directa sin pago requerido para usuarios de macOS en todo el mundo occidental y otros mercados seleccionados por el creador independiente de la aplicación de software en la red global actual de desarrollo tecnológico e informático especializado en bases de datos PostgreSQL y clientes de gestión de datos avanzados en entornos de trabajo digital moderno conectado a internet y repositorios de código fuente en la red global de redes hoy en día bajo demanda del servicio líder del sector tecnológico actual de la inteligencia artificial generativa y modelos de lenguaje de última generación para la creación y mantenimiento de software a gran escala en todo el mundo digital y comercial en la actualidad sin fecha límite de expiración definitiva anunciada públicamente en los canales oficiales de comunicación del autor de la aplicación para sistemas operativos Mac de Apple en todo el planeta hoy en día con soporte para Claude Code y Codex de OpenAI en una sola herramienta gratuita para desarrolladores de software moderno a nivel global en la actualidad tecnológica y digital del sector de la informática avanzada y la programación de aplicaciones en la nube y terminales locales de desarrollo de código para ingenieros de software en todo el planeta hoy en día. Sigue estos pasos para descargar la aplicación en tu Mac compatible con las herramientas de IA mencionadas en la descripción oficial del proyecto open source disponible en la red de redes para la comunidad de desarrolladores de software moderno a nivel global en la actualidad tecnológica y digital del sector de la informática avanzada y la programación de aplicaciones en la nube y terminales locales de desarrollo de código para ingenieros de software en todo el planeta hoy en día. Sin embargo, el título debe ser corto, pero usaré este si no cabe por límite pero pondré uno más breve: Postquel: Cliente Mac Postgres con Claude Code gratis",
-    "link": "https://github.com/frizurd/postquel",
-    "source": "Hacker News",
-    "sent_at": "2026-10-05T22:47:37.957787"
-  },
-  {
-    "servicio": "DevBoard",
-    "beneficio": "Gratis durante la fase de beta",
-    "titulo": "DevBoard: Gestor para devs con MCP gratis en beta",
-    "link": "https://getdevboard.app/",
-    "source": "Hacker News",
-    "sent_at": "2026-10-05T22:47:45.032220"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Plugin gratuito para mantener la caché de Claude Code activa",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1wyluod/free_claude_code_plugin_that_keeps_your_prompt/",
-    "source": "Reddit",
-    "sent_at": "2026-10-05T22:48:14.859652"
-  },
-  {
-    "servicio": "Claude / Anthropic",
-    "beneficio": "1 año gratis de Claude Team, $1,000 en créditos y hasta $45,000 en perks",
-    "titulo": "1 año gratis de Claude Team y $1.000 en créditos para Startups",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1wz9oim/anthropic_is_giving_startups_a_free_year_of/",
-    "source": "Reddit",
-    "sent_at": "2026-10-06T21:05:54.707323"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "Plugin pixel-art de mascotas para Claude Code gratis (MIT)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1wzh4kr/i_built_pixelart_cats_and_dogs_that_live_above/",
     "source": "Reddit",
@@ -246,5 +214,13 @@
     "link": "https://claude.ai/directory/bulletlist",
     "source": "Hacker News",
     "sent_at": "2026-10-19T20:01:18.579675"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "2 skills gratuitas de diseño y copywriting para Claude Code con licencia MIT (GitHub Repo) que permiten a Claude investigar galerías reales antes de crear y redactar sin inventar datos. Se pueden usar directamente en Claude Code o subirse a claude.ai como habilidades personalizadas. Las instrucciones consisten en clonar el repositorio de GitHub y añadir las skills al entorno de trabajo de Claude Code o claude.ai. El beneficio es open source global sin fecha de caducidad especificada. service: Claude (Anthropic). paises: Global. caducidad: desconocida. requisitos: Cuenta de Claude o Claude Code y acceso a GitHub. instrucción: Clonar el repositorio y cargar las skills en Claude Code o claude.ai. beneficio: Dos skills open source gratuitas para Claude Code (diseño y copywriting).",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xb2sgs/i_built_two_free_skills_for_claude_one_researches/",
+    "source": "Reddit",
+    "sent_at": "2026-10-20T21:45:16.819372"
   }
 ]
