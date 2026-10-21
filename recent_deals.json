@@ -1,13 +1,5 @@
 [
   {
-    "servicio": "Claude (Anthropic)",
-    "beneficio": "Créditos mensuales gratuitos para la API de Claude",
-    "titulo": "Créditos mensuales de API gratis con Claude Max y Team",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x08rwi/this_is_incredible_value_for_max_plans/",
-    "source": "Reddit",
-    "sent_at": "2026-10-07T23:13:48.262183"
-  },
-  {
     "servicio": "",
     "beneficio": "",
     "titulo": "Unit7: Despliegue de apps open source y gratis para Claude Code",
@@ -206,5 +198,29 @@
     "link": "https://news.ycombinator.com/item?id=50182883",
     "source": "Hacker News",
     "sent_at": "2026-10-21T18:46:47.085710"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Zenpilot: Claude en navegador Zen gratis y open source (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xc2c9k/i_use_zen_not_chrome_so_i_built_a_claude_in/",
+    "source": "Reddit",
+    "sent_at": "2026-10-21T23:28:29.715380"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Clawd Mod: Animaciones open-source para Claude Code gratis (MIT), ",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xbzdyi/clawd_gets_a_book_when_hes_reading_and_confetti/",
+    "source": "Reddit",
+    "sent_at": "2026-10-21T23:28:39.663190"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "MCP open-source para Claude manage work chats gratis (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xbwirs/my_company_uses_whatsapp_to_talk_about_work_and/",
+    "source": "Reddit",
+    "sent_at": "2026-10-21T23:28:53.357525"
   }
 ]
