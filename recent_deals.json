@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Unit7: Despliegue de apps open source y gratis para Claude Code",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x0yywa/you_told_me_to_open_source_it_so_i_did_claude/",
-    "source": "Reddit",
-    "sent_at": "2026-10-08T20:01:40.175357"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "Dory: Herramienta de memoria para Claude Code gratis (MIT)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1x2sm8i/i_made_dory_to_stop_reexplaining_my_projects/",
     "source": "Reddit",
@@ -238,5 +230,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xc2yxu/i_built_rigline_an_extension_system_for_claude/",
     "source": "Reddit",
     "sent_at": "2026-10-22T05:06:13.616023"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "SKILL.md: Checklists de UI open source para Cursor y Claude Code gratis (MIT). Beneficio: Archivo SKILL.md con verificaciones para mejorar la UI generada por IA. Requisitos: Cuenta de GitHub y Cursor o Claude Code. Instrucciones: Clonar el repositorio de GitHub y usar en tu entorno de desarrollo. Paises: Global. Caducidad: desconocida. Servicio: Cursor / Claude Code.",
+    "link": "https://www.reddit.com/r/cursor/comments/1xd486o/cursor_ships_ui_that_works_but_looks_generic/",
+    "source": "Reddit",
+    "sent_at": "2026-10-23T07:44:25.061162"
   }
 ]
