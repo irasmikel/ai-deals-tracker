@@ -262,5 +262,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xdyrvh/i_built_an_mcp_server_so_my_claude_sessions_could/",
     "source": "Reddit",
     "sent_at": "2026-10-24T04:50:04.347693"
+  },
+  {
+    "servicio": "Claude Code",
+    "beneficio": "Herramienta CLI open source para optimizar costes y uso de Claude Code",
+    "titulo": "Optimaizr: Herramienta open source para Claude Code gratis",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xef4ed/built_a_tool_to_optimize_my_claude_code_usage/",
+    "source": "Reddit",
+    "sent_at": "2026-10-24T18:52:49.722685"
   }
 ]
