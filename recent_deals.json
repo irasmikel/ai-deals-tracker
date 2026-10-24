@@ -254,5 +254,13 @@
     "link": "https://www.reddit.com/r/OpenAI/comments/1xdqknp/built_a_free_tool_to_calculate_vram_overhead/",
     "source": "Reddit",
     "sent_at": "2026-10-23T23:16:09.642810"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Bellman: MCP server open-source para Claude gratis (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xdyrvh/i_built_an_mcp_server_so_my_claude_sessions_could/",
+    "source": "Reddit",
+    "sent_at": "2026-10-24T04:50:04.347693"
   }
 ]
