@@ -286,5 +286,21 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xexcs9/metis_reverse_is_an_opensource_reverseengineering/",
     "source": "Reddit",
     "sent_at": "2026-10-25T11:49:19.785637"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "AsoBeast: Rank tracker open source con MCP para Claude Code y App Store gratis (AGPL-3.0 y versión self-hosted o de pago por $10/mes). Requisitos: Repositorio GitHub y cuenta de Claude Code. Instrucciones: Clonar el repositorio open-source de GitHub y desplegarlo. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / MCP. Beneficio: Herramienta de rank tracker open source y servidor MCP gratuito para Claude Code.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xf3oo6/i_built_an_opensource_app_store_and_google_play/",
+    "source": "Reddit",
+    "sent_at": "2026-10-25T16:37:01.273543"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Vicem: Servidor MCP open-source para Cursor gratis (MIT)",
+    "link": "https://www.reddit.com/r/cursor/comments/1xf1hba/keeping_cursor_agent_mode_fast_on_long_sessions/",
+    "source": "Reddit",
+    "sent_at": "2026-10-25T16:37:15.591845"
   }
 ]
