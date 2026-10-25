@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "CTO Powersuit: 64 skills gratis para Claude Code (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x3cbyn/struggling_with_developing_vibe_coders_skip_what/",
-    "source": "Reddit",
-    "sent_at": "2026-10-11T19:01:55.205503"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "Managed agent chat interface gratis con equipos de trabajo",
     "link": "https://www.reddit.com/r/OpenAI/comments/1x3jfbg/share_your_managed_agent_with_your_teammates/",
     "source": "Reddit",
@@ -302,5 +294,29 @@
     "link": "https://www.reddit.com/r/cursor/comments/1xf1hba/keeping_cursor_agent_mode_fast_on_long_sessions/",
     "source": "Reddit",
     "sent_at": "2026-10-25T16:37:15.591845"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Servidor MCP open-source para EU VAT gratis (MIT) para Claude y Cursor",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xfcgcf/i_built_an_opensource_mcp_server_for_eu_vat/",
+    "source": "Reddit",
+    "sent_at": "2026-10-25T21:00:28.399268"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "AgentTerm: Workspace open source para Claude y agentes IA gratis (MIT). Beneficio: Espacio de trabajo de código abierto gratuito para herramientas CLI de IA. Requisitos: Repositorio GitHub y herramientas CLI de IA. Instrucciones: Clonar el repositorio y configurar el espacio de trabajo. Paises: Global. Caducidad: desconocida. Servicio: Claude / Agentes de IA. Es oferta: true. Confianza: 0.9. Es duplicado: false.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xf7stw/get_more_from_claude_a_portal_to_ai_you_can_own/",
+    "source": "Reddit",
+    "sent_at": "2026-10-25T21:01:01.963760"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Claude for Startups: 5 Max accounts y $1,500 en créditos API gratis por 1 año para startups elegibles (Anthropic/Claude Startups Program). Servicio: Claude (Anthropic). Beneficio: 5 cuentas Max por un año, 1,000 USD en créditos API iniciales y 500 USD adicionales cada mes. Requisitos: Ser una startup elegible y aplicar al programa. Instrucciones: Postularse en el programa Claude for Startups a través del sitio web oficial de Anthropic. Paises: Global. Caducidad: desconocida. Requisitos: Ser startup elegible. Instrucciones: Aplicar al programa en la web de Anthropic. Paises: Global. Caducidad: desconocida. Es oferta: true. Confianza: 0.95. Es duplicado: false.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xf5ugq/claude_for_startups_is_an_amazing_program/",
+    "source": "Reddit",
+    "sent_at": "2026-10-25T21:01:08.623445"
   }
 ]
