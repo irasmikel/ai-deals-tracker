@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Dory: Herramienta de memoria para Claude Code gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x2sm8i/i_made_dory_to_stop_reexplaining_my_projects/",
-    "source": "Reddit",
-    "sent_at": "2026-10-11T06:02:56.096551"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "CTO Powersuit: 64 skills gratis para Claude Code (MIT)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1x3cbyn/struggling_with_developing_vibe_coders_skip_what/",
     "source": "Reddit",
@@ -270,5 +262,29 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xef4ed/built_a_tool_to_optimize_my_claude_code_usage/",
     "source": "Reddit",
     "sent_at": "2026-10-24T18:52:49.722685"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Userscript open source de tabla de contenidos para ChatGPT gratis (MIT)",
+    "link": "https://www.reddit.com/r/OpenAI/comments/1xezzbo/i_got_tired_of_scrolling_through_long_chatgpt/",
+    "source": "Reddit",
+    "sent_at": "2026-10-25T11:48:51.384188"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Skill de Claude para búsqueda de empleo en Alemania gratis (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xezja1/i_built_a_claude_skill_for_job_hunting_in_germany/",
+    "source": "Reddit",
+    "sent_at": "2026-10-25T11:49:01.694464"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Metis Reverse: MCP open-source para Claude Code gratis",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xexcs9/metis_reverse_is_an_opensource_reverseengineering/",
+    "source": "Reddit",
+    "sent_at": "2026-10-25T11:49:19.785637"
   }
 ]
