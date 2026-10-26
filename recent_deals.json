@@ -326,5 +326,37 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xfghwp/i_built_a_claude_code_skill_that_makes_claude/",
     "source": "Reddit",
     "sent_at": "2026-10-26T07:57:39.694656"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Amni-CAD navegador con FEA y MCP para Claude gratis (MIT)",
+    "link": "https://amni-scient.com/amni-cad",
+    "source": "Hacker News",
+    "sent_at": "2026-10-26T15:19:26.670549"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Overheard: Grabador de llamadas open source para Claude MCP y Code gratis (MIT). Beneficio: App de Mac open source gratuita para grabar llamadas y buscar en ellas con un servidor MCP para Claude y un plugin para Claude Code. Requisitos: macOS, Claude Desktop o Claude Code y GitHub. Instrucciones: Instalar el plugin desde el marketplace con el comando proporcionado en el repositorio de GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Claude Desktop (Anthropic). Es oferta: true. Confianza: 0.9. Es duplicado: false.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xfxmvo/i_built_a_mac_meeting_recorder_with_claude_code/",
+    "source": "Reddit",
+    "sent_at": "2026-10-26T15:20:52.059024"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Vitrine: App nativa de diseño con Claude (Beta gratis )",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xfte8z/i_built_a_mac_app_with_claude_then_used_it_to/",
+    "source": "Reddit",
+    "sent_at": "2026-10-26T15:22:36.526664"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Overflow: plataforma open source gratuita para Claude y MCPs (MIT). Beneficio: Sistema abierto para delegar tareas en issues usando uso restante de Claude (Opus) sin quemar tus límites semanales, basado en créditos de puntos sin dinero ni claves. Requisitos: Cuenta de Claude o agentes IA y repositorio en GitHub. Instrucciones: Visitar el repositorio open source de Overflow en GitHub, configurar el servidor MCP y participar en el tablón de tareas. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic) / MCP / Claude Code.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xfsmfs/a_oneline_reply_on_this_sub_did_more_for_my_free/",
+    "source": "Reddit",
+    "sent_at": "2026-10-26T15:23:19.359676"
   }
 ]
