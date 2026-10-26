@@ -1,13 +1,5 @@
 [
   {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Managed agent chat interface gratis con equipos de trabajo",
-    "link": "https://www.reddit.com/r/OpenAI/comments/1x3jfbg/share_your_managed_agent_with_your_teammates/",
-    "source": "Reddit",
-    "sent_at": "2026-10-11T23:46:33.274662"
-  },
-  {
     "servicio": "Agent37",
     "beneficio": "Plan gratuito para ejecutar sandboxes de agentes de IA",
     "titulo": "Agent37: Plan gratuito para sandboxes de agentes de IA",
@@ -318,5 +310,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xf5ugq/claude_for_startups_is_an_amazing_program/",
     "source": "Reddit",
     "sent_at": "2026-10-25T21:01:08.623445"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Usage Tray: medidor open source gratuito para Codex allowance en Windows (MIT license, GitHub). Servicio: OpenAI Codex / ChatGPT. Beneficio: Herramienta de código abierto gratuita para Windows taskbar que muestra la cuota restante de Codex y tiempo de reseteo. Requisitos: Cliente oficial de Codex instalado y sistema Windows. Instrucciones: Descargar y utilizar el repositorio open source desde GitHub. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ChatGPT/comments/1xfgs3u/i_made_a_free_opensource_windows_tray_meter_for/",
+    "source": "Reddit",
+    "sent_at": "2026-10-26T00:30:48.174177"
   }
 ]
