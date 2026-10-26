@@ -358,5 +358,37 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xfsmfs/a_oneline_reply_on_this_sub_did_more_for_my_free/",
     "source": "Reddit",
     "sent_at": "2026-10-26T15:23:19.359676"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Ranwhat: Plan gratuito para agentes de IA y Claude Code open source (MIT). Beneficio: Herramienta de código abierto gratuita para verificar fugas de secretos y comandos sospechosos de agentes de código localmente. Requisitos: Entorno de desarrollo local y Python o Brew. Instrucciones: Instalar mediante pip install ranwhat, uv tool install ranwhat o brew install MatijaMiki/ranwhat/ranwhat. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Agentes de IA / Open Source.",
+    "link": "https://github.com/MatijaMiki/ranwhat",
+    "source": "Hacker News",
+    "sent_at": "2026-10-26T21:06:27.866660"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Glyphfield: Studio de diseño open-source para Claude Code gratis (MIT). Beneficio: Estudio de diseño en el navegador de código abierto con 5 skills para Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar las carpetas de habilidades en ~/.claude/skills. Paises: Global. Caducidad: desconocida. Servicio: Claude Code.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xg7nuh/claude_built_this_launch_video_for_my_opensource/",
+    "source": "Reddit",
+    "sent_at": "2026-10-26T21:06:53.071990"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Rederive: Skill open-source para Claude Code gratis (MIT). Beneficio: Herramienta de código abierto gratuita para aprender y rediseñar bases de código desde principios fundamentales con Claude Code. Requisitos: Repositorio GitHub y Claude Code o agentes compatibles. Instrucciones: Instalar mediante el comando npx skills add EricJujianZou/rederive. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Cursor. Es oferta: true. Confianza: 0.9. Es duplicado: false.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xg5pz9/built_a_claude_skill_to_redesign_any_codebase/",
+    "source": "Reddit",
+    "sent_at": "2026-10-26T21:07:07.231188"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "App Store screenshot skill open source para Claude Code gratis (MIT). Beneficio: Skill de código abierto para generar capturas de App Store con Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el repositorio de GitHub y utilizar con Claude Code. Paises: Global. Caducidad: desconocida. Servicio: Claude Code.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xg4qak/i_built_an_app_store_screenshot_skill_for_claude/",
+    "source": "Reddit",
+    "sent_at": "2026-10-26T21:07:25.039752"
   }
 ]
