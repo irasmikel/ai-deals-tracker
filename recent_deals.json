@@ -1,21 +1,5 @@
 [
   {
-    "servicio": "Agent37",
-    "beneficio": "Plan gratuito para ejecutar sandboxes de agentes de IA",
-    "titulo": "Agent37: Plan gratuito para sandboxes de agentes de IA",
-    "link": "https://news.ycombinator.com/item?id=50059096",
-    "source": "Hacker News",
-    "sent_at": "2026-10-12T23:06:26.912676"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Powermove: Editor de video open source con agente IA gratis y open source (MIT)",
-    "link": "https://github.com/iterative-computer/powermove",
-    "source": "Hacker News",
-    "sent_at": "2026-10-13T06:55:38.774390"
-  },
-  {
     "servicio": "",
     "beneficio": "",
     "titulo": "shadowclone: Convierte correcciones en skills gratis (MIT)",
@@ -390,5 +374,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xg4qak/i_built_an_app_store_screenshot_skill_for_claude/",
     "source": "Reddit",
     "sent_at": "2026-10-26T21:07:25.039752"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "paper-reel: Skill open-source para Claude Code gratis (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xglqvf/i_built_a_free_claude_code_skill_that_draws_a/",
+    "source": "Reddit",
+    "sent_at": "2026-10-27T08:03:26.476801"
   }
 ]
