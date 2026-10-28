@@ -2,22 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Template open-source de agentes de IA para dev team gratis",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x5nrel/i_built_a_free_template_that_gives_noncoders_a/",
-    "source": "Reddit",
-    "sent_at": "2026-10-14T13:52:42.433420"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Deft: Workspace open source con chat, tareas y MCPs gratis",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x5mxe7/deft_an_opensource_selfhosted_workspace_for_chat/",
-    "source": "Reddit",
-    "sent_at": "2026-10-14T13:53:02.349202"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "Stretchtext para Claude Code gratis (MIT open source)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1x66prd/stretchtext_for_claude_code_a_1967_idea_that_got/",
     "source": "Reddit",
@@ -390,5 +374,21 @@
     "link": "https://www.reddit.com/r/ChatGPT/comments/1xh6unl/us_students_4_free_months_of_chatgpt_plus_ends/",
     "source": "Reddit",
     "sent_at": "2026-10-28T08:46:49.641681"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Créditos API para suscripciones de ChatGPT elegibles beneficios",
+    "link": "https://www.reddit.com/r/OpenAI/comments/1xi1nfe/api_credits_benefit_for_eligible_chatgpt/",
+    "source": "Reddit",
+    "sent_at": "2026-10-28T22:44:10.448240"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Cutfac: App open-source para Mac con Claude Code gratis (MIT). Servicio: Claude Code (Anthropic). Beneficio: Aplicación de código abierto gratuita para editar videos mediante agentes de Claude Code. Requisitos: macOS, cuenta de Claude Code y repositorio GitHub. Instrucciones: Clonar el repositorio desde GitHub y configurar la aplicación. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xhr4th/i_built_an_opensource_mac_app_where_you_box_part/",
+    "source": "Reddit",
+    "sent_at": "2026-10-28T22:44:54.445233"
   }
 ]
