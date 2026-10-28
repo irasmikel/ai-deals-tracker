@@ -2,30 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "shadowclone: Convierte correcciones en skills gratis (MIT)",
-    "link": "https://github.com/theonly1me/shadowclone",
-    "source": "Hacker News",
-    "sent_at": "2026-10-13T21:22:06.498032"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Hatoba: Cliente SSH open-source con IA gratis (MIT)",
-    "link": "https://github.com/scarletkc/Hatoba",
-    "source": "Hacker News",
-    "sent_at": "2026-10-13T21:22:15.578610"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "ibh: Harness open-source para agentes de IA gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x5i1s6/i_wrote_a_purely_inbrowser_harness_ibh_with/",
-    "source": "Reddit",
-    "sent_at": "2026-10-14T07:49:27.048251"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "Template open-source de agentes de IA para dev team gratis",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1x5nrel/i_built_a_free_template_that_gives_noncoders_a/",
     "source": "Reddit",
@@ -398,5 +374,21 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xh0ai1/remember_that_mmo_i_vibe_coded_with_claude_in/",
     "source": "Reddit",
     "sent_at": "2026-10-27T20:50:27.828798"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Business Studio: Herramienta open-source para Claude Code gratis (MITibilidad para 1 usuario). Requisitos: Cuenta de Claude Code o MCP. Instrucciones: Usar el comando /card en Claude Code con Business Studio. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / MCP. Beneficio: Tablero de tareas open-source gratuito para integrar con Claude Code mediante MCP.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xh6zd6/i_stopped_starting_claude_code_sessions_from_a/",
+    "source": "Reddit",
+    "sent_at": "2026-10-28T08:46:42.564845"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "ChatGPT Plus 4 meses gratis para estudiantes en EE.UU. por OpenAI Back to School offer (SheerID verification). Fin: 31 de octubre de 2026. Beneficio: 4 meses gratis de Plus, luego $20/mes. Requisitos: Estudiantes universitarios y de posgrado elegibles en EE.UU., verificación con SheerID, método de pago requerido ($0 los primeros meses), no aplicable si se factura a través de App Store o Google Play hasta que venza la suscripción. Instrucciones: Reclamar antes del 31 de octubre de 2026 y verificar con SheerID en la página oficial de la oferta de estudiantes de OpenAI (chatgpt.com/students/2026/). Paises: EE.UU. Caducidad: 31 de octubre de 2026. Servicio: ChatGPT Plus (OpenAI). Es oferta: true. Confianza: 0.98. Es duplicado: false. Servicio: ChatGPT (OpenAI). Beneficio: 4 meses gratis de ChatGPT Plus. Requisitos: Estudiantes universitarios o de posgrado en EE.UU. y verificación SheerID. Instrucciones: Canjear mediante la web oficial de estudiantes de OpenAI y verificar estado de estudiante. Paises: EE.UU. Caducidad: 2026-10-31.",
+    "link": "https://www.reddit.com/r/ChatGPT/comments/1xh6unl/us_students_4_free_months_of_chatgpt_plus_ends/",
+    "source": "Reddit",
+    "sent_at": "2026-10-28T08:46:49.641681"
   }
 ]
