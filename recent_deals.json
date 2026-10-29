@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Stretchtext para Claude Code gratis (MIT open source)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x66prd/stretchtext_for_claude_code_a_1967_idea_that_got/",
-    "source": "Reddit",
-    "sent_at": "2026-10-15T04:55:10.827035"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "ContextSnap con Claude Code gratis y open source (MIT)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1x6hj48/i_built_contextsnap_with_claude_code_to_make/",
     "source": "Reddit",
@@ -390,5 +382,21 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xhr4th/i_built_an_opensource_mac_app_where_you_box_part/",
     "source": "Reddit",
     "sent_at": "2026-10-28T22:44:54.445233"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Pixtuoid: Terminal office open source para Claude Code y agentes IA gratis (MIT) - v0.21 con vista 2.5D y gráficos en terminal (kitty, iTerm2, SIXEL). Requisitos: Node.js o Brew y agentes de IA como Claude Code o Cursor. Instrucciones: Instalar mediante brew install pixtuoid o npm i -g pixtuoid. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Cursor / Agentes de IA / Terminal. Beneficio: Oficina virtual de código abierto gratuita para visualizar agentes de IA como compañeros de píxeles en el terminal.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xi7aj1/pixtuoid_got_a_new_look_real_25d_pixel_office_for/",
+    "source": "Reddit",
+    "sent_at": "2026-10-29T06:03:21.260893"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Argon-bridge: Plugin open source para Claude Code gratis (MIT). Servicio: Claude Code / Gemini. Beneficio: Plugin gratuito de código abierto para enviar planes y commits de Claude a Gemini para revisión independiente. Requisitos: Claude Code y repositorio de GitHub. Instrucciones: Clonar y configurar el repositorio open-source desde GitHub. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xi5ab4/i_built_a_claude_code_plugin_that_gives_claude_a/",
+    "source": "Reddit",
+    "sent_at": "2026-10-29T06:03:27.675087"
   }
 ]
