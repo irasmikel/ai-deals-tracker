@@ -2,22 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "ContextSnap con Claude Code gratis y open source (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x6hj48/i_built_contextsnap_with_claude_code_to_make/",
-    "source": "Reddit",
-    "sent_at": "2026-10-15T11:45:16.105267"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Stylebot 4 con CLI para Claude Code gratis y open source",
-    "link": "https://stylebot.dev/",
-    "source": "Hacker News",
-    "sent_at": "2026-10-15T17:12:22.356062"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "ClipChop: Editor de video open source con MCP gratis (MIT)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1x6x3hz/i_got_tired_of_opening_davinci_to_just_simply/",
     "source": "Reddit",
@@ -398,5 +382,29 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xi5ab4/i_built_a_claude_code_plugin_that_gives_claude_a/",
     "source": "Reddit",
     "sent_at": "2026-10-29T06:03:27.675087"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "OmniClaude: Claude Code y OpenCode con Gemini gratis y pooled keys de código abierto (MIT). Requisitos: Repositorio GitHub, Claude Code y claves de API de Gemini. Instrucciones: Clonar el repositorio y configurar las claves de Gemini compartidas. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / OpenCode / Gemini. Beneficio: Ejecución gratuita de Claude Code y OpenCode utilizando claves de Gemini agrupadas mediante una herramienta open-source.",
+    "link": "https://github.com/aton-fux/OMNICLAUDE",
+    "source": "Hacker News",
+    "sent_at": "2026-10-29T19:44:37.125657"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "HypAware: Lector open source de Claude Code sessions gratis (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xio78t/we_built_a_tool_that_reads_all_our_claude_code/",
+    "source": "Reddit",
+    "sent_at": "2026-10-29T19:45:46.152196"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "decipher: Skill open-source para Claude Code gratis (MIT). Servicio: Claude Code (Anthropic). Beneficio: Herramienta de código abierto gratuita para reescribir y simplificar especificaciones, PRs y reportes generados por agentes de IA. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar y utilizar el skill open-source desde GitHub. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1ximls8/my_agent_writes_specs_faster_than_i_can_read_them/",
+    "source": "Reddit",
+    "sent_at": "2026-10-29T19:46:08.516638"
   }
 ]
