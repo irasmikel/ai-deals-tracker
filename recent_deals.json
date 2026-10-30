@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "SHDW: Editor de video open source con Claude Code gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x77w5y/i_built_a_full_davinci_resolvestyle_video_editor/",
-    "source": "Reddit",
-    "sent_at": "2026-10-16T07:21:34.530159"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "18 MCP servers de founders gratis (MIT) para Claude Code/AI es_duplicado: false, servicio: Claude / Model Context Protocol, beneficio: 18 servidores MCP gratuitos de fuentes de fundadores, requisitos: Repositorio GitHub open source, instrucciones: Clonar el repositorio de GitHub y conectar los servidores MCP a Claude, paises: Global, caducidad: desconocida",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1x7ox1x/i_used_headless_claude_code_to_turn_18_founders/",
     "source": "Reddit",
@@ -406,5 +398,13 @@
     "link": "https://slickdeals.net/f/20228979-openai-100-00-in-codex-credits-for-eligible-students-reg-100-00-100-off-from-0-00?utm_source=rss&utm_content=def&utm_medium=RSS2",
     "source": "Slickdeals",
     "sent_at": "2026-10-30T06:03:42.537100"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "LoopGuard: control de gastos open-source para Cursor y Claude Code (MIT)",
+    "link": "https://www.reddit.com/r/cursor/comments/1xjdzwa/opensource_spend_caps_and_loop_detection_for/",
+    "source": "Reddit",
+    "sent_at": "2026-10-30T13:13:53.459618"
   }
 ]
