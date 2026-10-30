@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "ChatGPT Plus gratis por 4 meses para estudiantes en EE.UU.",
-    "link": "https://www.reddit.com/r/ChatGPT/comments/1x6ym1y/free_chatgpt_plus/",
-    "source": "Reddit",
-    "sent_at": "2026-10-16T00:31:47.188193"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "SHDW: Editor de video open source con Claude Code gratis (MIT)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1x77w5y/i_built_a_full_davinci_resolvestyle_video_editor/",
     "source": "Reddit",
@@ -406,5 +398,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xiwuki/i_do_most_of_my_work_in_claude_code_and_run_grok/",
     "source": "Reddit",
     "sent_at": "2026-10-30T00:02:14.564423"
+  },
+  {
+    "servicio": "OpenAI Codex",
+    "beneficio": "100 USD en créditos de OpenAI Codex gratis",
+    "titulo": "100$ en créditos de OpenAI Codex gratis para estudiantes",
+    "link": "https://slickdeals.net/f/20228979-openai-100-00-in-codex-credits-for-eligible-students-reg-100-00-100-off-from-0-00?utm_source=rss&utm_content=def&utm_medium=RSS2",
+    "source": "Slickdeals",
+    "sent_at": "2026-10-30T06:03:42.537100"
   }
 ]
