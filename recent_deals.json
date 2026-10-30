@@ -406,5 +406,21 @@
     "link": "https://www.reddit.com/r/cursor/comments/1xjdzwa/opensource_spend_caps_and_loop_detection_for/",
     "source": "Reddit",
     "sent_at": "2026-10-30T13:13:53.459618"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Fluidcut: MCP connector de video para Claude gratis en beta y 60 créditos/mes sin tarjeta de crédito. Servicio: Claude / MCP (Anthropic). Beneficio: 60 créditos mensuales gratuitos para editar videos mediante comandos de lenguaje natural en Claude. Requisitos: Cuenta de Claude y URL del conector MCP (fluidcut.app/mcp). Instrucciones: Añadir el conector personalizado en la configuración de Claude (settings > connectors > add custom connector) utilizando la URL del servicio. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xjl0lj/i_built_a_claude_connector_that_edits_video_you/",
+    "source": "Reddit",
+    "sent_at": "2026-10-30T19:31:42.115013"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Claude Agents Startup Workflow open source gratis (MIT) for Claude Code/Desktop (Anthropic). Beneficio: Configuración open source gratuita de 11 agentes de Claude para construir una startup completa con dashboard de oficina en tiempo real. Requisitos: Repositorio GitHub y Claude Code o Claude Desktop. Instrucciones: Clonar el repositorio open-source desde GitHub y usar el prompt incluido. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Claude Desktop (Anthropic). Es oferta: true. Confianza: 0.9. Es duplicado: false.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xjjlk8/i_set_up_11_claude_agents_to_build_my_startup/",
+    "source": "Reddit",
+    "sent_at": "2026-10-30T19:31:48.903377"
   }
 ]
