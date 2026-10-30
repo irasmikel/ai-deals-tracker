@@ -2,22 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "ClipChop: Editor de video open source con MCP gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x6x3hz/i_got_tired_of_opening_davinci_to_just_simply/",
-    "source": "Reddit",
-    "sent_at": "2026-10-15T21:32:46.571478"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Golden Thread: Plugin de memoria para Claude Code gratis (MIT open source)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x6vtld/i_built_a_free_claude_code_plugin_with_claude/",
-    "source": "Reddit",
-    "sent_at": "2026-10-15T21:32:57.051465"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "ChatGPT Plus gratis por 4 meses para estudiantes en EE.UU.",
     "link": "https://www.reddit.com/r/ChatGPT/comments/1x6ym1y/free_chatgpt_plus/",
     "source": "Reddit",
@@ -406,5 +390,21 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1ximls8/my_agent_writes_specs_faster_than_i_can_read_them/",
     "source": "Reddit",
     "sent_at": "2026-10-29T19:46:08.516638"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Grimling: Mod open source para Claude Code gratis (MIT). Servicio: Claude Code (Anthropic). Beneficio: Panel de control de código abierto gratuito para rastrear y gestionar subagentes en Claude Code. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Clonar o instalar desde el repositorio de GitHub y configurar en el directorio de Claude. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xiyf2v/i_built_a_tiny_reaper_to_keep_track_of_my_claude/",
+    "source": "Reddit",
+    "sent_at": "2026-10-30T00:02:03.958324"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Quillm: Workspace open source para Claude y agentes IA gratis (MIT). Beneficio: Espacio de trabajo de código abierto gratuito para herramientas CLI de IA. Requisitos: Repositorio GitHub y herramientas CLI de IA. Instrucciones: Clonar el repositorio y configurar el espacio de trabajo. Paises: Global. Caducidad: desconocida. Servicio: Claude / Agentes de IA. Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Quillm (MCP / Claude Code / Agentes de IA). Beneficio: Espacio de trabajo open-source gratuito para centralizar datos y vistas de múltiples agentes de IA mediante MCP. Requisitos: Repositorio GitHub y herramientas de IA compatibles con MCP (Claude Code, Grok, ChatGPT, Cursor). Instrucciones: Clonar o descargar el repositorio desde GitHub y conectar los agentes mediante MCP. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xiwuki/i_do_most_of_my_work_in_claude_code_and_run_grok/",
+    "source": "Reddit",
+    "sent_at": "2026-10-30T00:02:14.564423"
   }
 ]
