@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "18 MCP servers de founders gratis (MIT) para Claude Code/AI es_duplicado: false, servicio: Claude / Model Context Protocol, beneficio: 18 servidores MCP gratuitos de fuentes de fundadores, requisitos: Repositorio GitHub open source, instrucciones: Clonar el repositorio de GitHub y conectar los servidores MCP a Claude, paises: Global, caducidad: desconocida",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x7ox1x/i_used_headless_claude_code_to_turn_18_founders/",
-    "source": "Reddit",
-    "sent_at": "2026-10-17T00:38:28.083047"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "OpenScreen: Editor de video open source con Claude MCP gratis (MIT)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1x8oes9/i_asked_claude_for_a_kawaii_effect_when_i_click/",
     "source": "Reddit",
@@ -422,5 +414,29 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xjjlk8/i_set_up_11_claude_agents_to_build_my_startup/",
     "source": "Reddit",
     "sent_at": "2026-10-30T19:31:48.903377"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "optimAIzr: Optimizador de IA open source para VS Code gratis (MIT). Servicio: Claude Code / OpenCode. Beneficio: Extensión gratuita de código abierto para VS Code que rastrea y optimiza el uso de IA y límites en Claude Code. Requisitos: Entorno de desarrollo VS Code y repositorio GitHub. Instrucciones: Buscar optimAIzr en el VS Code Marketplace o GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / OpenCode / VS Code. Es oferta: true. Confianza: 0.9. Es duplicado: false.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xk8yqp/i_built_an_opensource_ai_usage_optimizer_with/",
+    "source": "Reddit",
+    "sent_at": "2026-10-31T12:50:38.018454"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Cloader: Script open source para Claude Code gratis (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xk8bkc/i_built_cloader_with_claude_code_so_every_claude/",
+    "source": "Reddit",
+    "sent_at": "2026-10-31T12:51:07.541967"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "living-canvas: Skill open source gratuita para Claude Code (MITIOCANALIZACIÓN DE REPOSO O IDEAS A ANIMACIÓN SVG/HTML). Consigue una herramienta de código abierto gratuita para convertir cualquier repositorio, sitio o idea en un explicador animado mediante Claude Code o Claude Desktop (Anthropic). Requisitos: Repositorio GitHub, URL o idea, y Claude Code o habilidad compatible con Claude. Instrucciones: Clonar o descargar el repositorio open-source desde GitHub y añadir la skill a Claude Code. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic) / Claude Code. Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Skill open-source gratuita para Claude que convierte repositorios o ideas en gráficos animados interactivos y SVGs explicativos con un solo cuadro estático. Requisitos: Claude Code o Claude Desktop y repositorio GitHub. Instrucciones: Instalar la skill desde el repositorio de código abierto en GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude / Claude Code (Anthropic). Beneficio: Habilidad de código abierto gratuita para generar infografías animadas y explicadores visuales con Claude. Requisitos: Claude Code o Claude Desktop y URL o repositorio GitHub. Instrucciones: Usar la skill descargada desde GitHub con Claude Code. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Claude Desktop (Anthropic). Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Herramienta open-source gratuita para transformar conceptos o código en animaciones explicativas mediante Claude. Requisitos: Claude Code o Claude Desktop y proyecto en GitHub. Instrucciones: Descargar la skill open-source desde GitHub y configurar en Claude. Paises: Global. Caducidad: desconocida. Servicio: Claude / Claude Code (Anthropic). Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Skill open source gratuita para Claude que convierte cualquier repo, sitio o idea en un explicador animado. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar o instalar desde el repositorio open source de GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic) / Claude Code. Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude / Claude Code (Anthropic). Beneficio: Habilidad de código abierto gratuita para generar explicadores animados desde texto o código usando Claude. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Instalar la skill desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic) / Claude Code. Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Skill open-source gratuita para Claude que transforma repositorios, URLs o ideas en gráficos animados explicativos. Requisitos: Claude Code y repositorio GitHub. Instrucciones: Instalar el skill open source desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic) / Claude Code. Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Skill de código abierto gratuita para transformar ideas, URLs o repositorios en animaciones explicativas con Claude Code. Requisitos: Claude Code o Claude Desktop y repositorio GitHub. Instrucciones: Descargar la skill desde GitHub y usarla con Claude. Paises: Global. Caducidad: desconocida. Servicio: Claude / Claude Code (Anthropic). Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Herramienta de código abierto gratuita para convertir ideas y repositorios en explicadores animados con Claude. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el repositorio open-source de living-canvas en GitHub y añadirlo como skill en Claude Code. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xk6vgv/i_built_livingcanvas_a_free_claude_skill_that/",
+    "source": "Reddit",
+    "sent_at": "2026-10-31T12:51:23.926069"
   }
 ]
