@@ -1,13 +1,5 @@
 [
   {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "OpenScreen: Editor de video open source con Claude MCP gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x8oes9/i_asked_claude_for_a_kawaii_effect_when_i_click/",
-    "source": "Reddit",
-    "sent_at": "2026-10-18T04:48:23.449865"
-  },
-  {
     "servicio": "Benzi",
     "beneficio": "Uso gratuito del sistema de inteligencia de código y agente IA Benzi",
     "titulo": "Benzi: Agente de inteligencia de código con IA gratis",
@@ -446,5 +438,13 @@
     "link": "https://slickdeals.net/f/20237055-paypal-chatgpt-plus-50-off-cashback-for-6-months-select-accounts-10?utm_source=rss&utm_content=def&utm_medium=RSS2",
     "source": "Slickdeals",
     "sent_at": "2026-10-31T23:29:42.046947"
+  },
+  {
+    "servicio": "ChatGPT Pro (OpenAI)",
+    "beneficio": "Duplicación del límite de uso en los planes Pro de ChatGPT",
+    "titulo": "ChatGPT Pro: El doble de uso y allowance",
+    "link": "https://www.reddit.com/r/ChatGPT/comments/1xl6ez2/more_usage_and_a_simpler_way_to_work/",
+    "source": "Reddit",
+    "sent_at": "2026-11-01T20:38:51.911795"
   }
 ]
