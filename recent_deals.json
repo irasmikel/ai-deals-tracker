@@ -1,13 +1,5 @@
 [
   {
-    "servicio": "Benzi",
-    "beneficio": "Uso gratuito del sistema de inteligencia de código y agente IA Benzi",
-    "titulo": "Benzi: Agente de inteligencia de código con IA gratis",
-    "link": "https://www.reddit.com/r/ArtificialInteligence/comments/1x9eg6w/benzi_compiler_backed_agent_cuts_source_code/",
-    "source": "Reddit",
-    "sent_at": "2026-10-18T22:29:59.948231"
-  },
-  {
     "servicio": "",
     "beneficio": "",
     "titulo": "Prismantis para Claude Code gratis (MIT open source)",
@@ -446,5 +438,13 @@
     "link": "https://www.reddit.com/r/ChatGPT/comments/1xl6ez2/more_usage_and_a_simpler_way_to_work/",
     "source": "Reddit",
     "sent_at": "2026-11-01T20:38:51.911795"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Claude Certs Study Game gratis para beta testers de Claude Code",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xlgqdt/claude_study_game_for_claude_free_beta_testers/",
+    "source": "Reddit",
+    "sent_at": "2026-11-02T01:37:43.643886"
   }
 ]
