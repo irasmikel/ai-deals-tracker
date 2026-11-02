@@ -2,22 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Prismantis para Claude Code gratis (MIT open source)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1x9upbm/claude_code_now_draws_pie_charts_gantt_charts_and/",
-    "source": "Reddit",
-    "sent_at": "2026-10-19T13:40:45.390175"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Bulletlist: Outliner gratuito con conector para Claude MCP",
-    "link": "https://claude.ai/directory/bulletlist",
-    "source": "Hacker News",
-    "sent_at": "2026-10-19T20:01:18.579675"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "2 skills gratuitas de diseño y copywriting para Claude Code con licencia MIT (GitHub Repo) que permiten a Claude investigar galerías reales antes de crear y redactar sin inventar datos. Se pueden usar directamente en Claude Code o subirse a claude.ai como habilidades personalizadas. Las instrucciones consisten en clonar el repositorio de GitHub y añadir las skills al entorno de trabajo de Claude Code o claude.ai. El beneficio es open source global sin fecha de caducidad especificada. service: Claude (Anthropic). paises: Global. caducidad: desconocida. requisitos: Cuenta de Claude o Claude Code y acceso a GitHub. instrucción: Clonar el repositorio y cargar las skills en Claude Code o claude.ai. beneficio: Dos skills open source gratuitas para Claude Code (diseño y copywriting).",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xb2sgs/i_built_two_free_skills_for_claude_one_researches/",
     "source": "Reddit",
@@ -446,5 +430,37 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xlgqdt/claude_study_game_for_claude_free_beta_testers/",
     "source": "Reddit",
     "sent_at": "2026-11-02T01:37:43.643886"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Smalt - Talk to Claude Code by voice free (MIT/GitHub) on Mac via open-source tool with voice command integration for Claude Code assistance. Requisitos: Mac y Claude Code. Instrucciones: Clonar el repositorio desde GitHub y configurar la herramienta. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Herramienta de código abierto gratuita para hablar con Claude Code por voz en Mac de manera manos libres. Requisitos: Repositorio GitHub y Claude Code en macOS. Instrucciones: Descargar el proyecto open-source desde GitHub e instalarlo localmente. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / macOS. Es oferta: true. Confianza: 0.85. Es duplicado: false. Servicio: Smalt / Claude Code (Anthropic). Beneficio: Utilidad open-source gratuita para controlar Claude Code por voz en Mac. Requisitos: macOS y Claude Code. Instrucciones: Clonar el repositorio de GitHub y seguir los pasos de instalación. Paises: Global. Caducidad: desconocida.",
+    "link": "https://getsmalt.com/",
+    "source": "Hacker News",
+    "sent_at": "2026-11-02T20:26:49.512244"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Claude Folders: Extensión open-source gratis para Chrome/Brave/Chromium con organización de chats offline (MIT). Requisitos: Navegador compatible y cuenta de Claude. Instrucciones: Instalar la extensión desde el repositorio de GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic). Beneficio: Herramienta de código abierto gratuita para ordenar y ver chats de Claude sin conexión con almacenamiento local en carpetas. Requisitos: Navegador basado en Chromium (Chrome, Brave, etc.) y Claude. Instrucciones: Descargar e instalar desde GitHub (github.com/lso2/claude-folders). Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xm6puc/major_updates_to_claude_folders_extension_for/",
+    "source": "Reddit",
+    "sent_at": "2026-11-02T20:27:23.479397"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "CCC: Dashboard open-source gratis para Claude Code (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xm66j5/i_built_ccc_for_claude_code_a_shared_inbox_for/",
+    "source": "Reddit",
+    "sent_at": "2026-11-02T20:27:31.552320"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Modelpeers: Feed open-source para Claude Code gratis (MITibilidad para 1 usuario). Requisitos: Cuenta de Claude Code. Instrucciones: Visitar modelpeers y seguir los modelos y herramientas. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Feed de actualizaciones gratuito para herramientas y modelos de IA como Claude Code y Opus.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xm471k/i_couldnt_keep_up_with_claude_changes_so_i_built/",
+    "source": "Reddit",
+    "sent_at": "2026-11-02T20:27:53.547252"
   }
 ]
