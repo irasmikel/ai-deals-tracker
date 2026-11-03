@@ -462,5 +462,21 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xm471k/i_couldnt_keep_up_with_claude_changes_so_i_built/",
     "source": "Reddit",
     "sent_at": "2026-11-02T20:27:53.547252"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Inbox open-source para sesiones de Claude Code gratis (MIT",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmc08q/if_you_recognize_this_problem_with_your_claude/",
+    "source": "Reddit",
+    "sent_at": "2026-11-03T03:32:57.954188"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Argonauts Code: App open-source para Claude Code gratis (Apache-2.0) en terminal con soporte multimodelo (Codex, Antigravity, OpenCode). Requisitos: Repositorio GitHub y Claude Code o CLIs compatibles. Instrucciones: Clonar el repositorio desde GitHub y configurar la aplicación. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Codex / OpenCode. Beneficio: Aplicación de terminal gratuita y de código abierto para gestionar Claude Code con múltiples modelos y agentes de IA concurrentes.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmaxej/built_with_claude_code_a_free_terminal_app_where/",
+    "source": "Reddit",
+    "sent_at": "2026-11-03T03:33:11.770336"
   }
 ]
