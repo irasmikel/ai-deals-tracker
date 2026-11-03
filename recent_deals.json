@@ -486,5 +486,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmp6kt/i_built_an_opensource_tool_that_lets_claude_code/",
     "source": "Reddit",
     "sent_at": "2026-11-03T12:07:23.321211"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "acswi: Account switcher open source para Claude Code gratis (MIT). Servicio: Claude Code / CLI (Anthropic). Beneficio: Herramienta de código abierto gratuita para alternar cuentas de Claude Code y otras CLIs sin necesidad de cerrar sesión. Requisitos: Repositorio GitHub y Claude Code o CLIs compatibles. Instrucciones: Clonar el repositorio y usar los comandos de acswi. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmteq5/i_built_a_seamless_account_switcher_for_claude/",
+    "source": "Reddit",
+    "sent_at": "2026-11-03T19:40:02.089554"
   }
 ]
