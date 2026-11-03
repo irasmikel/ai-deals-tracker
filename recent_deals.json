@@ -478,5 +478,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmaxej/built_with_claude_code_a_free_terminal_app_where/",
     "source": "Reddit",
     "sent_at": "2026-11-03T03:33:11.770336"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Screenplay: Herramienta open-source para Claude Code gratis (MIT). Servicio: Claude Code (Anthropic). Beneficio: Utilidad de código abierto gratuita para grabar y editar vídeos de sitios web y apps mediante Claude Code. Requisitos: Repositorio GitHub y Claude Code o Cursor. Instrucciones: Ejecutar npx agent-screenplay init desde la terminal. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmp6kt/i_built_an_opensource_tool_that_lets_claude_code/",
+    "source": "Reddit",
+    "sent_at": "2026-11-03T12:07:23.321211"
   }
 ]
