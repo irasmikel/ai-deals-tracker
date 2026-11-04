@@ -2,46 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "2 skills gratuitas de diseño y copywriting para Claude Code con licencia MIT (GitHub Repo) que permiten a Claude investigar galerías reales antes de crear y redactar sin inventar datos. Se pueden usar directamente en Claude Code o subirse a claude.ai como habilidades personalizadas. Las instrucciones consisten en clonar el repositorio de GitHub y añadir las skills al entorno de trabajo de Claude Code o claude.ai. El beneficio es open source global sin fecha de caducidad especificada. service: Claude (Anthropic). paises: Global. caducidad: desconocida. requisitos: Cuenta de Claude o Claude Code y acceso a GitHub. instrucción: Clonar el repositorio y cargar las skills en Claude Code o claude.ai. beneficio: Dos skills open source gratuitas para Claude Code (diseño y copywriting).",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xb2sgs/i_built_two_free_skills_for_claude_one_researches/",
-    "source": "Reddit",
-    "sent_at": "2026-10-20T21:45:16.819372"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Beacon: Herramienta de memoria open-source para agentes IA (MIT)",
-    "link": "https://news.ycombinator.com/item?id=50182883",
-    "source": "Hacker News",
-    "sent_at": "2026-10-21T18:46:47.085710"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Zenpilot: Claude en navegador Zen gratis y open source (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xc2c9k/i_use_zen_not_chrome_so_i_built_a_claude_in/",
-    "source": "Reddit",
-    "sent_at": "2026-10-21T23:28:29.715380"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Clawd Mod: Animaciones open-source para Claude Code gratis (MIT), ",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xbzdyi/clawd_gets_a_book_when_hes_reading_and_confetti/",
-    "source": "Reddit",
-    "sent_at": "2026-10-21T23:28:39.663190"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "MCP open-source para Claude manage work chats gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xbwirs/my_company_uses_whatsapp_to_talk_about_work_and/",
-    "source": "Reddit",
-    "sent_at": "2026-10-21T23:28:53.357525"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "Opendesigner: Skill de diseño para Claude gratis (MIT)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xc6km6/showcase_i_used_claude_to_build_a_skill_that/",
     "source": "Reddit",
@@ -494,5 +454,21 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmteq5/i_built_a_seamless_account_switcher_for_claude/",
     "source": "Reddit",
     "sent_at": "2026-11-03T19:40:02.089554"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Anthropic: 100$ o 250$ en créditos de cloud session gratis (Claude Code/AI)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xo35yp/psa_free_cloud_session_credits_expiring_soon/",
+    "source": "Reddit",
+    "sent_at": "2026-11-04T23:48:23.946129"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Sawbuck: plugin open-source para Claude Code gratis (Apache 2.0). Servicio: Claude Code (Anthropic). Beneficio: Plugin gratuito de código abierto para firmar y crear contratos en agentes de Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Ejecutar /plugin marketplace add sawbuck-ai/reins o instalar el plugin en Claude Code. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xo0h14/sawbuck_sign_your_agents_to_contracts/",
+    "source": "Reddit",
+    "sent_at": "2026-11-04T23:48:42.198077"
   }
 ]
