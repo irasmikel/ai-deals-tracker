@@ -2,22 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Opendesigner: Skill de diseño para Claude gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xc6km6/showcase_i_used_claude_to_build_a_skill_that/",
-    "source": "Reddit",
-    "sent_at": "2026-10-22T05:05:54.691594"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Rigline para Claude Code gratis y open source (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xc2yxu/i_built_rigline_an_extension_system_for_claude/",
-    "source": "Reddit",
-    "sent_at": "2026-10-22T05:06:13.616023"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "SKILL.md: Checklists de UI open source para Cursor y Claude Code gratis (MIT). Beneficio: Archivo SKILL.md con verificaciones para mejorar la UI generada por IA. Requisitos: Cuenta de GitHub y Cursor o Claude Code. Instrucciones: Clonar el repositorio de GitHub y usar en tu entorno de desarrollo. Paises: Global. Caducidad: desconocida. Servicio: Cursor / Claude Code.",
     "link": "https://www.reddit.com/r/cursor/comments/1xd486o/cursor_ships_ui_that_works_but_looks_generic/",
     "source": "Reddit",
@@ -470,5 +454,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xo0h14/sawbuck_sign_your_agents_to_contracts/",
     "source": "Reddit",
     "sent_at": "2026-11-04T23:48:42.198077"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Doubt Mode: panel lateral gratis para ChatGPT en Chrome (MIT)",
+    "link": "https://www.reddit.com/r/ChatGPT/comments/1xobc9a/i_made_a_free_chatgpt_side_panel_for_why_this/",
+    "source": "Reddit",
+    "sent_at": "2026-11-05T07:02:38.769267"
   }
 ]
