@@ -470,5 +470,21 @@
     "link": "https://mooring.sh/download",
     "source": "Hacker News",
     "sent_at": "2026-11-05T16:34:52.641302"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Ski: Voice-First Coding Harness open-source gratis (MIT)",
+    "link": "https://justski.it/",
+    "source": "Hacker News",
+    "sent_at": "2026-11-05T23:44:02.184995"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Portfolio template open source para Claude Code gratis (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xouyjy/i_made_a_free_portfolio_template_that_claude_code/",
+    "source": "Reddit",
+    "sent_at": "2026-11-05T23:44:52.555349"
   }
 ]
