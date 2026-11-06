@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "SKILL.md: Checklists de UI open source para Cursor y Claude Code gratis (MIT). Beneficio: Archivo SKILL.md con verificaciones para mejorar la UI generada por IA. Requisitos: Cuenta de GitHub y Cursor o Claude Code. Instrucciones: Clonar el repositorio de GitHub y usar en tu entorno de desarrollo. Paises: Global. Caducidad: desconocida. Servicio: Cursor / Claude Code.",
-    "link": "https://www.reddit.com/r/cursor/comments/1xd486o/cursor_ships_ui_that_works_but_looks_generic/",
-    "source": "Reddit",
-    "sent_at": "2026-10-23T07:44:25.061162"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "Claude Duet: Reset gratuito hasta el 30 de noviembre",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xdhrmj/free_reset_with_claude_duet/",
     "source": "Reddit",
@@ -502,5 +494,13 @@
     "link": "https://www.reddit.com/r/OpenAI/comments/1xozidg/i_made_chatgpt_claude_gemini_etc_into_free/",
     "source": "Reddit",
     "sent_at": "2026-11-06T07:03:29.553856"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Fatsearch: Herramienta open-source para búsqueda web en IA gratis (Rust/GitHub). Servicio: Fatsearch (Rust / Web Search for AI Agents). Beneficio: Herramienta de código abierto gratuita para optimizar la búsqueda web de agentes de IA y reducir costes de tokens. Requisitos: Entorno Rust y repositorio GitHub. Instrucciones: Clonar el repositorio desde GitHub y configurar la herramienta. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xpf4nc/annoyed_of_wasted_tokens_money_by_agents_on_web/",
+    "source": "Reddit",
+    "sent_at": "2026-11-06T16:02:19.264497"
   }
 ]
