@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Claude Duet: Reset gratuito hasta el 30 de noviembre",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xdhrmj/free_reset_with_claude_duet/",
-    "source": "Reddit",
-    "sent_at": "2026-10-23T18:32:28.328924"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "ModelAnalysis.si: Herramienta de VRAM y ROI de IA gratis y open source (MIT)",
     "link": "https://www.reddit.com/r/OpenAI/comments/1xdqknp/built_a_free_tool_to_calculate_vram_overhead/",
     "source": "Reddit",
@@ -502,5 +494,29 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xpf4nc/annoyed_of_wasted_tokens_money_by_agents_on_web/",
     "source": "Reddit",
     "sent_at": "2026-11-06T16:02:19.264497"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "SmarterCompact: optimizador de sesiones Claude Code gratis (Apache-2.0) en local con SQLite y herramientas MCP para reducir coste y alucinaciones sin llamadas de resumen por LLM manteniendo caché de prompt, compatible con Codex, OpenCode y Pi. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el repositorio y configurar localmente. Países: Global. Caducidad: desconocida. Servicio: Claude Code / MCP (Anthropic). Beneficio: Herramienta open-source gratuita para gestionar el historial de sesiones de Claude Code localmente mediante SQLite y MCP sin gastar tokens en resúmenes.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xplxhw/smartercompact_reducing_cost_and_hallucination_by/",
+    "source": "Reddit",
+    "sent_at": "2026-11-06T21:40:04.957595"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "agent-eta: Plugin open-source gratis para Claude Code (MIT)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xpkjqd/claude_says_23_days_your_agents_finish_in_an_hour/",
+    "source": "Reddit",
+    "sent_at": "2026-11-06T21:40:18.849616"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Duct: AI marketing agent open source para Claude Code gratis (MIT). Requisitos: Repositorio GitHub y clave de modelo propia (BYOK). Instrucciones: Clonar o descargar el repositorio desde GitHub y configurar la aplicación. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Duct. Beneficio: Agente de marketing open-source gratuito para conectar herramientas como Google Ads, GA4 y Stripe mediante Claude Code. Requisitos: Claude Code y modelo propio. Instrucciones: Instalar desde el repositorio open source de GitHub (github.com/5hirish/duct). Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Duct. Beneficio: Agente de marketing de código abierto gratuito para integrar analíticas y automatizar tareas con Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar desde GitHub y ejecutar la aplicación. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Duct. Beneficio: Herramienta open-source gratuita para gestionar marketing mediante Claude Code y clave de API propia. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Clonar el proyecto open source desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Duct. Beneficio: Agente de código abierto gratuito para conectar plataformas de marketing y trabajar con Claude Code. Requisitos: Repositorio GitHub, Claude Code y BYOK (Bring Your Own Key). Instrucciones: Usar el código abierto disponible en GitHub. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xpgrdr/i_built_an_opensource_marketing_agent_with_claude/",
+    "source": "Reddit",
+    "sent_at": "2026-11-06T21:40:53.955699"
   }
 ]
