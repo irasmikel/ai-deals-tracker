@@ -486,5 +486,21 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xouyjy/i_made_a_free_portfolio_template_that_claude_code/",
     "source": "Reddit",
     "sent_at": "2026-11-05T23:44:52.555349"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Still: Navegador open-source para Claude Code gratis (MIT/GitHub) en Windows y Mac, con companions integrados para tareas de navegador en pestañas secundarias con permisos por sitio y control mediante Claude Code sin requerir claves de API adicionales ni wrappers externos. Es una herramienta de código abierto gratuita para Windows y Mac que se integra nativamente con Claude Code utilizando la suscripción activa del usuario para realizar investigación en múltiples páginas, rellenar formularios, preparar respuestas y probar aplicaciones web mediante WebView2. Requisitos: Windows o Mac, Claude Code instalado y configurado. Instrucciones: Clonar o descargar el repositorio desde GitHub e instalar la aplicación. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Still Browser. Beneficio: Navegador de código abierto gratuito para ejecutar tareas web con Claude Code en segundo plano. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar desde GitHub y configurar con la cuenta existente de Claude Code. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Still (Windows y Mac). Beneficio: Utilidad open-source gratuita para integrar Claude Code en la navegación web automatizada. Requisitos: macOS o Windows y Claude Code. Instrucciones: Descargar el proyecto open-source desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Still Browser. Beneficio: Navegador open source gratuito que permite a Claude Code controlar pestañas en segundo plano. Requisitos: Repositorio GitHub, Windows/Mac y Claude Code. Instrucciones: Descargar la app desde GitHub y conectar con Claude Code. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Still (Anthropic). Beneficio: Herramienta de código abierto gratuita para automatizar tareas en el navegador mediante Claude Code. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Instalar la aplicación desde el repositorio open source. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Still Browser. Beneficio: Navegador open-source gratuito para que Claude Code interactue con páginas web de forma segura. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el proyecto open source de Still en GitHub y ejecutarlo. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Still. Beneficio: Aplicación de código abierto gratuita para integrar Claude Code con la navegación web automatizada. Requisitos: Claude Code y entorno Windows/Mac. Instrucciones: Descargar el software open-source desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Still Browser. Beneficio: Navegador open-source gratuito para la automatización de tareas web con Claude Code. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Clonar el repositorio desde GitHub y configurar la aplicación. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Still Browser. Beneficio: Navegador open-source gratuito para integrar Claude Code en tareas web en segundo plano. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar la herramienta de código abierto desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Still Browser. Beneficio: Navegador open source gratuito que permite a Claude Code ejecutar tareas en pestañas secundarias. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el repositorio y configurar la herramienta de código abierto. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xp3x04/built_with_claude_code_still_lets_claude_code/",
+    "source": "Reddit",
+    "sent_at": "2026-11-06T07:03:02.949799"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "AI-Readers: Text-to-Speech gratis en ChatGPT y Claude",
+    "link": "https://www.reddit.com/r/OpenAI/comments/1xozidg/i_made_chatgpt_claude_gemini_etc_into_free/",
+    "source": "Reddit",
+    "sent_at": "2026-11-06T07:03:29.553856"
   }
 ]
