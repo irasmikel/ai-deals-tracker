@@ -518,5 +518,21 @@
     "link": "https://wordpress.com/blog/2026/11/03/free-chatgpt-claude/",
     "source": "Hacker News",
     "sent_at": "2026-11-07T08:59:17.290444"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Humanizer: Skill open-source para Claude Code gratis (MIT",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xq5rg6/tried_the_humanizer_skill_on_a_launch_post/",
+    "source": "Reddit",
+    "sent_at": "2026-11-07T16:33:43.888448"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Berlin Job Search: Claude skill gratis para buscar empleo en Alemania (open source) con asistente de IA en Claude Code para encontrar ofertas ocultas, redactar CV estilo Lebenslauf y cartas de presentación en inglés y alemán. Requisitos: Claude Code y repositorio GitHub. Instrucciones: Descargar la skill open-source desde GitHub. Países: Alemania (Global). Caducidad: desconocida. Servicio: Claude Code / Berlin Job Search (Anthropic). Beneficio: Skill de código abierto gratuita para automatizar la búsqueda de empleo en Alemania y adaptar CVs con Claude Code. Requisitos: Repositorio GitHub y Claude Code instalado. Instrucciones: Clonar el proyecto open-source y configurarlo en Claude Code. Paises: Alemania (Global). Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Berlin Job Search. Beneficio: Utilidad de código abierto gratuita para buscar trabajo en el mercado alemán mediante Claude Code. Requisitos: Claude Code y GitHub. Instrucciones: Usar el código abierto disponible en el repositorio de GitHub. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Herramienta open-source gratuita para gestionar búsquedas laborales, CVs alemanes y cartas de presentación con Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar desde GitHub y añadir como skill en Claude Code. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code / Berlin Job Search. Beneficio: Skill open-source gratuita para optimizar la búsqueda de empleo técnica en Alemania con Claude Code. Requisitos: Claude Code y GitHub. Instrucciones: Clonar el repositorio open source en el entorno local. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Asistente open-source gratuito para encontrar trabajo y redactar CVs en Alemania usando Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar desde GitHub y configurar la skill. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Berlin Job Search. Beneficio: Herramienta de código abierto gratuita para automatizar procesos de contratación y búsqueda de empleo en Alemania mediante Claude Code. Requisitos: Claude Code instalado y repositorio GitHub. Instrucciones: Clonar el repositorio open-source y seguir las instrucciones de instalación. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code / Berlin Job Search (Anthropic). Beneficio: Skill open-source gratuita para buscar ofertas de trabajo y adaptar currículums en Alemania con Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Instalar la skill desde el proyecto de código abierto en GitHub. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Utilidad open-source gratuita para facilitar la búsqueda de empleo y la creación de CVs alemanes con Claude Code. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Descargar la herramienta de código abierto desde GitHub. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code / Berlin Job Search. Beneficio: Herramienta de código abierto gratuita para encontrar empleo tecnológico en Alemania utilizando Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el repositorio y configurar la skill de Claude Code. Paises: Alemania. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xq33ju/i_built_a_free_claude_skill_for_job_hunting_in/",
+    "source": "Reddit",
+    "sent_at": "2026-11-07T16:34:16.372111"
   }
 ]
