@@ -2,14 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "ModelAnalysis.si: Herramienta de VRAM y ROI de IA gratis y open source (MIT)",
-    "link": "https://www.reddit.com/r/OpenAI/comments/1xdqknp/built_a_free_tool_to_calculate_vram_overhead/",
-    "source": "Reddit",
-    "sent_at": "2026-10-23T23:16:09.642810"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "Bellman: MCP server open-source para Claude gratis (MIT)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xdyrvh/i_built_an_mcp_server_so_my_claude_sessions_could/",
     "source": "Reddit",
@@ -518,5 +510,13 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xpgrdr/i_built_an_opensource_marketing_agent_with_claude/",
     "source": "Reddit",
     "sent_at": "2026-11-06T21:40:53.955699"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "ails xray: X-ray open source para Claude Code gratis (MITIIDAZO O ANÁLISIS DE CONTEXTO DE SESIÓN). Consigue una herramienta de código abierto gratuita para inspeccionar el contexto de carga de Claude Code archivo por archivo y turno a turno en una página local. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar o descargar el repositorio open-source desde GitHub y ejecutar la herramienta. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Herramienta open-source gratuita para ver qué archivos, reglas, memorias y servidores MCP llenan el contexto de Claude Code en cada sesión local. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar desde GitHub y ejecutar localmente. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Utilidad de código abierto gratuita para auditar el uso de contexto en Claude Code. Requisitos: Claude Code y entorno local. Instrucciones: Instalar desde el repositorio open source en GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / ails xray (Anthropic). Beneficio: Herramienta open-source gratuita para diagnosticar y visualizar el uso de contexto en sesiones de Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el proyecto de GitHub y seguir las instrucciones de configuración. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Visor de código abierto gratuito para analizar las fuentes cargadas en el contexto de Claude Code. Requisitos: Claude Code y Node o entorno compatible. Instrucciones: Descargar la app open source desde GitHub. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xpph4c/how_to_see_what_filled_your_claude_code_context/",
+    "source": "Reddit",
+    "sent_at": "2026-11-07T02:03:30.367153"
   }
 ]
