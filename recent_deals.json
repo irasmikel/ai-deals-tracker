@@ -2,30 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Servidor MCP open-source para EU VAT gratis (MIT) para Claude y Cursor",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xfcgcf/i_built_an_opensource_mcp_server_for_eu_vat/",
-    "source": "Reddit",
-    "sent_at": "2026-10-25T21:00:28.399268"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "AgentTerm: Workspace open source para Claude y agentes IA gratis (MIT). Beneficio: Espacio de trabajo de código abierto gratuito para herramientas CLI de IA. Requisitos: Repositorio GitHub y herramientas CLI de IA. Instrucciones: Clonar el repositorio y configurar el espacio de trabajo. Paises: Global. Caducidad: desconocida. Servicio: Claude / Agentes de IA. Es oferta: true. Confianza: 0.9. Es duplicado: false.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xf7stw/get_more_from_claude_a_portal_to_ai_you_can_own/",
-    "source": "Reddit",
-    "sent_at": "2026-10-25T21:01:01.963760"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Claude for Startups: 5 Max accounts y $1,500 en créditos API gratis por 1 año para startups elegibles (Anthropic/Claude Startups Program). Servicio: Claude (Anthropic). Beneficio: 5 cuentas Max por un año, 1,000 USD en créditos API iniciales y 500 USD adicionales cada mes. Requisitos: Ser una startup elegible y aplicar al programa. Instrucciones: Postularse en el programa Claude for Startups a través del sitio web oficial de Anthropic. Paises: Global. Caducidad: desconocida. Requisitos: Ser startup elegible. Instrucciones: Aplicar al programa en la web de Anthropic. Paises: Global. Caducidad: desconocida. Es oferta: true. Confianza: 0.95. Es duplicado: false.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xf5ugq/claude_for_startups_is_an_amazing_program/",
-    "source": "Reddit",
-    "sent_at": "2026-10-25T21:01:08.623445"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "Usage Tray: medidor open source gratuito para Codex allowance en Windows (MIT license, GitHub). Servicio: OpenAI Codex / ChatGPT. Beneficio: Herramienta de código abierto gratuita para Windows taskbar que muestra la cuota restante de Codex y tiempo de reseteo. Requisitos: Cliente oficial de Codex instalado y sistema Windows. Instrucciones: Descargar y utilizar el repositorio open source desde GitHub. Paises: Global. Caducidad: desconocida.",
     "link": "https://www.reddit.com/r/ChatGPT/comments/1xfgs3u/i_made_a_free_opensource_windows_tray_meter_for/",
     "source": "Reddit",
@@ -518,5 +494,21 @@
     "link": "https://www.reddit.com/r/ChatGPT/comments/1xqz8mm/chatgpt_wouldnt_let_me_upload_images_after_my/",
     "source": "Reddit",
     "sent_at": "2026-11-08T16:46:28.683358"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Analítica local y mapa de proyectos gratis para Claude Coderoute me to project mapping and analytics tool for Claude Code, run locally and free of charge. Provides entity relationship mapping and context drift flagging to optimize token usage. Requisitos: Claude Code e instalación en entorno local. Instrucciones: Descargar o clonar el proyecto y ejecutarlo localmente en tu entorno de desarrollo. Países: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr5xhy/like_google_analytics_but_for_your_claude_code/",
+    "source": "Reddit",
+    "sent_at": "2026-11-08T22:17:58.707162"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Clean Development: Herramienta open-source para Claude Code gratis (macOS) - Gestión de cachés y almacenamiento externo de sesiones locales de desarrollo con verificación de seguridad autónoma y dry-run de configuración JSON. Requisitos: macOS, Claude Code y repositorio GitHub. Instrucciones: Clonar el repositorio desde GitHub y configurar la ruta de almacenamiento. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Clean Development. Beneficio: Utilidad de código abierto gratuita para gestionar los archivos temporales y cachés de Claude Code en Mac liberando espacio de disco y configurando almacenamiento externo con fail-safe local. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar el proyecto open source desde GitHub y seguir las indicaciones de configuración. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Clean Development (Anthropic). Beneficio: Herramienta open-source gratuita para optimizar el almacenamiento de sesiones de Claude Code en macOS. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Clonar el repositorio y fusionar el fragmento de hook en la configuración. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Clean Development. Beneficio: Utilidad de código abierto gratuita para redirigir y limpiar cachés y archivos temporales de Claude Code en macOS. Requisitos: Repositorio GitHub y Claude Code instalado. Instrucciones: Descargar la herramienta open-source desde GitHub y configurar el archivo de ajustes local. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Clean Development. Beneficio: Gestor de almacenamiento open-source gratuito para evitar la acumulación de archivos residuales de Claude Code en Mac. Requisitos: Claude Code y entorno macOS. Instrucciones: Instalar el código abierto desde el repositorio de GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Clean Development. Beneficio: Herramienta de código abierto gratuita para automatizar la limpieza de cachés y archivos de compilación de Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el proyecto open source en Mac. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Clean Development. Beneficio: Utilidad open-source gratuita para gestionar el almacenamiento y cachés de Claude Code de forma segura en macOS. Requisitos: Claude Code y repositorio GitHub. Instrucciones: Descargar desde GitHub y configurar los hooks locales. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Clean Development. Beneficio: Herramienta de código abierto gratuita para desviar y depurar archivos temporales de Claude Code en Mac. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Clonar el repositorio open-source y seguir el procedimiento de configuración local. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Clean Development. Beneficio: Aplicación open-source gratuita para mantener limpio el disco duro al usar Claude Code en macOS. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar la herramienta desde GitHub y aplicar los ajustes locales. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Clean Development. Beneficio: Herramienta de código abierto gratuita para optimizar la gestión de ficheros y cachés de Claude Code en ordenadores Mac. Requisitos: Claude Code y macOS. Instrucciones: Obtener el software open-source desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Clean Development (Anthropic). Beneficio: Utilidad open-source gratuita para controlar el almacenamiento de sesiones de Claude Code en macOS con seguridad de borrado fallido cerrado. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el proyecto open source y configurar la integración en los ajustes. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr3qah/i_built_clean_development_for_my_own_claude_code/",
+    "source": "Reddit",
+    "sent_at": "2026-11-08T22:18:23.751109"
   }
 ]
