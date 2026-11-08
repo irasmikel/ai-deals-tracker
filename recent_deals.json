@@ -1,53 +1,5 @@
 [
   {
-    "servicio": "Claude Code",
-    "beneficio": "Herramienta CLI open source para optimizar costes y uso de Claude Code",
-    "titulo": "Optimaizr: Herramienta open source para Claude Code gratis",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xef4ed/built_a_tool_to_optimize_my_claude_code_usage/",
-    "source": "Reddit",
-    "sent_at": "2026-10-24T18:52:49.722685"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Userscript open source de tabla de contenidos para ChatGPT gratis (MIT)",
-    "link": "https://www.reddit.com/r/OpenAI/comments/1xezzbo/i_got_tired_of_scrolling_through_long_chatgpt/",
-    "source": "Reddit",
-    "sent_at": "2026-10-25T11:48:51.384188"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Skill de Claude para búsqueda de empleo en Alemania gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xezja1/i_built_a_claude_skill_for_job_hunting_in_germany/",
-    "source": "Reddit",
-    "sent_at": "2026-10-25T11:49:01.694464"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Metis Reverse: MCP open-source para Claude Code gratis",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xexcs9/metis_reverse_is_an_opensource_reverseengineering/",
-    "source": "Reddit",
-    "sent_at": "2026-10-25T11:49:19.785637"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "AsoBeast: Rank tracker open source con MCP para Claude Code y App Store gratis (AGPL-3.0 y versión self-hosted o de pago por $10/mes). Requisitos: Repositorio GitHub y cuenta de Claude Code. Instrucciones: Clonar el repositorio open-source de GitHub y desplegarlo. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / MCP. Beneficio: Herramienta de rank tracker open source y servidor MCP gratuito para Claude Code.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xf3oo6/i_built_an_opensource_app_store_and_google_play/",
-    "source": "Reddit",
-    "sent_at": "2026-10-25T16:37:01.273543"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Vicem: Servidor MCP open-source para Cursor gratis (MIT)",
-    "link": "https://www.reddit.com/r/cursor/comments/1xf1hba/keeping_cursor_agent_mode_fast_on_long_sessions/",
-    "source": "Reddit",
-    "sent_at": "2026-10-25T16:37:15.591845"
-  },
-  {
     "servicio": "",
     "beneficio": "",
     "titulo": "Servidor MCP open-source para EU VAT gratis (MIT) para Claude y Cursor",
@@ -534,5 +486,37 @@
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xq33ju/i_built_a_free_claude_skill_for_job_hunting_in/",
     "source": "Reddit",
     "sent_at": "2026-11-07T16:34:16.372111"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Floating Mac app para Claude Code gratis (Open Source/Tmux)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr2ly8/floating_mac_app_to_keep_an_eye_on_your_claudes_w/",
+    "source": "Reddit",
+    "sent_at": "2026-11-08T16:45:27.584137"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "ASE: Toolkit open source gratis para Claude Code CLI (v2.0)",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr07xt/advanced_software_specification_and_development/",
+    "source": "Reddit",
+    "sent_at": "2026-11-08T16:46:07.075114"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Orchestra: Terminal libre para sesiones de Claude Code en Windows (Tauri+Svelte, Open Source). Gestiona múltiples cuentas y sesiones paralelas con control de tokens y uso semanal. Requisitos: Windows, Claude Code. Instrucciones: Descargar instalador desde GitHub o fuentes oficiales. Países: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Utilidad de código abierto gratuita para gestionar múltiples terminales y sesiones de Claude Code en Windows de forma visual.",
+    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr0616/i_built_orchestra_a_free_windows_terminal_for/",
+    "source": "Reddit",
+    "sent_at": "2026-11-08T16:46:13.755679"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Extension open source para borrar imagenes de ChatGPT gratis",
+    "link": "https://www.reddit.com/r/ChatGPT/comments/1xqz8mm/chatgpt_wouldnt_let_me_upload_images_after_my/",
+    "source": "Reddit",
+    "sent_at": "2026-11-08T16:46:28.683358"
   }
 ]
