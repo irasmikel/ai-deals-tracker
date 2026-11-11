@@ -422,5 +422,21 @@
     "link": "https://openai.com/index/chatgpt-plus-for-veterans",
     "source": "OpenAI News",
     "sent_at": "2026-11-11T09:37:26.158209"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Skills gratis para Claude Code con FN2 AI por API key",
+    "link": "https://fn2.ai/claude",
+    "source": "Hacker News",
+    "sent_at": "2026-11-11T17:57:29.010402"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Whisperstream – Dictado local open source para Windows gratis (MIT)",
+    "link": "https://whisperstream.io",
+    "source": "Hacker News",
+    "sent_at": "2026-11-11T17:57:35.737323"
   }
 ]
