@@ -1,77 +1,5 @@
 [
   {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Créditos API para suscripciones de ChatGPT elegibles beneficios",
-    "link": "https://www.reddit.com/r/OpenAI/comments/1xi1nfe/api_credits_benefit_for_eligible_chatgpt/",
-    "source": "Reddit",
-    "sent_at": "2026-10-28T22:44:10.448240"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Cutfac: App open-source para Mac con Claude Code gratis (MIT). Servicio: Claude Code (Anthropic). Beneficio: Aplicación de código abierto gratuita para editar videos mediante agentes de Claude Code. Requisitos: macOS, cuenta de Claude Code y repositorio GitHub. Instrucciones: Clonar el repositorio desde GitHub y configurar la aplicación. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xhr4th/i_built_an_opensource_mac_app_where_you_box_part/",
-    "source": "Reddit",
-    "sent_at": "2026-10-28T22:44:54.445233"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Pixtuoid: Terminal office open source para Claude Code y agentes IA gratis (MIT) - v0.21 con vista 2.5D y gráficos en terminal (kitty, iTerm2, SIXEL). Requisitos: Node.js o Brew y agentes de IA como Claude Code o Cursor. Instrucciones: Instalar mediante brew install pixtuoid o npm i -g pixtuoid. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Cursor / Agentes de IA / Terminal. Beneficio: Oficina virtual de código abierto gratuita para visualizar agentes de IA como compañeros de píxeles en el terminal.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xi7aj1/pixtuoid_got_a_new_look_real_25d_pixel_office_for/",
-    "source": "Reddit",
-    "sent_at": "2026-10-29T06:03:21.260893"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Argon-bridge: Plugin open source para Claude Code gratis (MIT). Servicio: Claude Code / Gemini. Beneficio: Plugin gratuito de código abierto para enviar planes y commits de Claude a Gemini para revisión independiente. Requisitos: Claude Code y repositorio de GitHub. Instrucciones: Clonar y configurar el repositorio open-source desde GitHub. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xi5ab4/i_built_a_claude_code_plugin_that_gives_claude_a/",
-    "source": "Reddit",
-    "sent_at": "2026-10-29T06:03:27.675087"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "OmniClaude: Claude Code y OpenCode con Gemini gratis y pooled keys de código abierto (MIT). Requisitos: Repositorio GitHub, Claude Code y claves de API de Gemini. Instrucciones: Clonar el repositorio y configurar las claves de Gemini compartidas. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / OpenCode / Gemini. Beneficio: Ejecución gratuita de Claude Code y OpenCode utilizando claves de Gemini agrupadas mediante una herramienta open-source.",
-    "link": "https://github.com/aton-fux/OMNICLAUDE",
-    "source": "Hacker News",
-    "sent_at": "2026-10-29T19:44:37.125657"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "HypAware: Lector open source de Claude Code sessions gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xio78t/we_built_a_tool_that_reads_all_our_claude_code/",
-    "source": "Reddit",
-    "sent_at": "2026-10-29T19:45:46.152196"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "decipher: Skill open-source para Claude Code gratis (MIT). Servicio: Claude Code (Anthropic). Beneficio: Herramienta de código abierto gratuita para reescribir y simplificar especificaciones, PRs y reportes generados por agentes de IA. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar y utilizar el skill open-source desde GitHub. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1ximls8/my_agent_writes_specs_faster_than_i_can_read_them/",
-    "source": "Reddit",
-    "sent_at": "2026-10-29T19:46:08.516638"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Grimling: Mod open source para Claude Code gratis (MIT). Servicio: Claude Code (Anthropic). Beneficio: Panel de control de código abierto gratuito para rastrear y gestionar subagentes en Claude Code. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Clonar o instalar desde el repositorio de GitHub y configurar en el directorio de Claude. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xiyf2v/i_built_a_tiny_reaper_to_keep_track_of_my_claude/",
-    "source": "Reddit",
-    "sent_at": "2026-10-30T00:02:03.958324"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Quillm: Workspace open source para Claude y agentes IA gratis (MIT). Beneficio: Espacio de trabajo de código abierto gratuito para herramientas CLI de IA. Requisitos: Repositorio GitHub y herramientas CLI de IA. Instrucciones: Clonar el repositorio y configurar el espacio de trabajo. Paises: Global. Caducidad: desconocida. Servicio: Claude / Agentes de IA. Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Quillm (MCP / Claude Code / Agentes de IA). Beneficio: Espacio de trabajo open-source gratuito para centralizar datos y vistas de múltiples agentes de IA mediante MCP. Requisitos: Repositorio GitHub y herramientas de IA compatibles con MCP (Claude Code, Grok, ChatGPT, Cursor). Instrucciones: Clonar o descargar el repositorio desde GitHub y conectar los agentes mediante MCP. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xiwuki/i_do_most_of_my_work_in_claude_code_and_run_grok/",
-    "source": "Reddit",
-    "sent_at": "2026-10-30T00:02:14.564423"
-  },
-  {
     "servicio": "OpenAI Codex",
     "beneficio": "100 USD en créditos de OpenAI Codex gratis",
     "titulo": "100$ en créditos de OpenAI Codex gratis para estudiantes",
@@ -438,5 +366,13 @@
     "link": "https://whisperstream.io",
     "source": "Hacker News",
     "sent_at": "2026-11-11T17:57:35.737323"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Cliente API iOS y Mac gratis con sincronización iCloud y MCP para Claude Code/Postman alternative (Open Source/Gratis). Servicio: API Client para iOS y Mac. Beneficio: Cliente nativo de 5MB gratuito y open source para pruebas de API con sincronización en iCloud y soporte MCP para Claude. Requisitos: Dispositivo iOS o Mac. Instrucciones: Descargar y utilizar el cliente open source. Paises: Global. Caducidad: desconocida.",
+    "link": "https://www.pokharel.net/2026/11/12/api-man-a-native-ios-mac-postman-like-client-without-electron/",
+    "source": "Hacker News",
+    "sent_at": "2026-11-13T01:14:14.278250"
   }
 ]
