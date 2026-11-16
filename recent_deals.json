@@ -1,85 +1,5 @@
 [
   {
-    "servicio": "OpenAI Codex",
-    "beneficio": "100 USD en créditos de OpenAI Codex gratis",
-    "titulo": "100$ en créditos de OpenAI Codex gratis para estudiantes",
-    "link": "https://slickdeals.net/f/20228979-openai-100-00-in-codex-credits-for-eligible-students-reg-100-00-100-off-from-0-00?utm_source=rss&utm_content=def&utm_medium=RSS2",
-    "source": "Slickdeals",
-    "sent_at": "2026-10-30T06:03:42.537100"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "LoopGuard: control de gastos open-source para Cursor y Claude Code (MIT)",
-    "link": "https://www.reddit.com/r/cursor/comments/1xjdzwa/opensource_spend_caps_and_loop_detection_for/",
-    "source": "Reddit",
-    "sent_at": "2026-10-30T13:13:53.459618"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Fluidcut: MCP connector de video para Claude gratis en beta y 60 créditos/mes sin tarjeta de crédito. Servicio: Claude / MCP (Anthropic). Beneficio: 60 créditos mensuales gratuitos para editar videos mediante comandos de lenguaje natural en Claude. Requisitos: Cuenta de Claude y URL del conector MCP (fluidcut.app/mcp). Instrucciones: Añadir el conector personalizado en la configuración de Claude (settings > connectors > add custom connector) utilizando la URL del servicio. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xjl0lj/i_built_a_claude_connector_that_edits_video_you/",
-    "source": "Reddit",
-    "sent_at": "2026-10-30T19:31:42.115013"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Claude Agents Startup Workflow open source gratis (MIT) for Claude Code/Desktop (Anthropic). Beneficio: Configuración open source gratuita de 11 agentes de Claude para construir una startup completa con dashboard de oficina en tiempo real. Requisitos: Repositorio GitHub y Claude Code o Claude Desktop. Instrucciones: Clonar el repositorio open-source desde GitHub y usar el prompt incluido. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Claude Desktop (Anthropic). Es oferta: true. Confianza: 0.9. Es duplicado: false.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xjjlk8/i_set_up_11_claude_agents_to_build_my_startup/",
-    "source": "Reddit",
-    "sent_at": "2026-10-30T19:31:48.903377"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "optimAIzr: Optimizador de IA open source para VS Code gratis (MIT). Servicio: Claude Code / OpenCode. Beneficio: Extensión gratuita de código abierto para VS Code que rastrea y optimiza el uso de IA y límites en Claude Code. Requisitos: Entorno de desarrollo VS Code y repositorio GitHub. Instrucciones: Buscar optimAIzr en el VS Code Marketplace o GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / OpenCode / VS Code. Es oferta: true. Confianza: 0.9. Es duplicado: false.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xk8yqp/i_built_an_opensource_ai_usage_optimizer_with/",
-    "source": "Reddit",
-    "sent_at": "2026-10-31T12:50:38.018454"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Cloader: Script open source para Claude Code gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xk8bkc/i_built_cloader_with_claude_code_so_every_claude/",
-    "source": "Reddit",
-    "sent_at": "2026-10-31T12:51:07.541967"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "living-canvas: Skill open source gratuita para Claude Code (MITIOCANALIZACIÓN DE REPOSO O IDEAS A ANIMACIÓN SVG/HTML). Consigue una herramienta de código abierto gratuita para convertir cualquier repositorio, sitio o idea en un explicador animado mediante Claude Code o Claude Desktop (Anthropic). Requisitos: Repositorio GitHub, URL o idea, y Claude Code o habilidad compatible con Claude. Instrucciones: Clonar o descargar el repositorio open-source desde GitHub y añadir la skill a Claude Code. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic) / Claude Code. Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Skill open-source gratuita para Claude que convierte repositorios o ideas en gráficos animados interactivos y SVGs explicativos con un solo cuadro estático. Requisitos: Claude Code o Claude Desktop y repositorio GitHub. Instrucciones: Instalar la skill desde el repositorio de código abierto en GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude / Claude Code (Anthropic). Beneficio: Habilidad de código abierto gratuita para generar infografías animadas y explicadores visuales con Claude. Requisitos: Claude Code o Claude Desktop y URL o repositorio GitHub. Instrucciones: Usar la skill descargada desde GitHub con Claude Code. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Claude Desktop (Anthropic). Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Herramienta open-source gratuita para transformar conceptos o código en animaciones explicativas mediante Claude. Requisitos: Claude Code o Claude Desktop y proyecto en GitHub. Instrucciones: Descargar la skill open-source desde GitHub y configurar en Claude. Paises: Global. Caducidad: desconocida. Servicio: Claude / Claude Code (Anthropic). Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Skill open source gratuita para Claude que convierte cualquier repo, sitio o idea en un explicador animado. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar o instalar desde el repositorio open source de GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic) / Claude Code. Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude / Claude Code (Anthropic). Beneficio: Habilidad de código abierto gratuita para generar explicadores animados desde texto o código usando Claude. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Instalar la skill desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic) / Claude Code. Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Skill open-source gratuita para Claude que transforma repositorios, URLs o ideas en gráficos animados explicativos. Requisitos: Claude Code y repositorio GitHub. Instrucciones: Instalar el skill open source desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic) / Claude Code. Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Skill de código abierto gratuita para transformar ideas, URLs o repositorios en animaciones explicativas con Claude Code. Requisitos: Claude Code o Claude Desktop y repositorio GitHub. Instrucciones: Descargar la skill desde GitHub y usarla con Claude. Paises: Global. Caducidad: desconocida. Servicio: Claude / Claude Code (Anthropic). Es oferta: true. Confianza: 0.9. Es duplicado: false. Servicio: Claude (Anthropic) / Claude Code. Beneficio: Herramienta de código abierto gratuita para convertir ideas y repositorios en explicadores animados con Claude. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el repositorio open-source de living-canvas en GitHub y añadirlo como skill en Claude Code. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xk6vgv/i_built_livingcanvas_a_free_claude_skill_that/",
-    "source": "Reddit",
-    "sent_at": "2026-10-31T12:51:23.926069"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "ChatGPT Plus 50% de cashback por PayPal durante 6 meses",
-    "link": "https://slickdeals.net/f/20237055-paypal-chatgpt-plus-50-off-cashback-for-6-months-select-accounts-10?utm_source=rss&utm_content=def&utm_medium=RSS2",
-    "source": "Slickdeals",
-    "sent_at": "2026-10-31T23:29:42.046947"
-  },
-  {
-    "servicio": "ChatGPT Pro (OpenAI)",
-    "beneficio": "Duplicación del límite de uso en los planes Pro de ChatGPT",
-    "titulo": "ChatGPT Pro: El doble de uso y allowance",
-    "link": "https://www.reddit.com/r/ChatGPT/comments/1xl6ez2/more_usage_and_a_simpler_way_to_work/",
-    "source": "Reddit",
-    "sent_at": "2026-11-01T20:38:51.911795"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Claude Certs Study Game gratis para beta testers de Claude Code",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xlgqdt/claude_study_game_for_claude_free_beta_testers/",
-    "source": "Reddit",
-    "sent_at": "2026-11-02T01:37:43.643886"
-  },
-  {
     "servicio": "",
     "beneficio": "",
     "titulo": "Smalt - Talk to Claude Code by voice free (MIT/GitHub) on Mac via open-source tool with voice command integration for Claude Code assistance. Requisitos: Mac y Claude Code. Instrucciones: Clonar el repositorio desde GitHub y configurar la herramienta. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Herramienta de código abierto gratuita para hablar con Claude Code por voz en Mac de manera manos libres. Requisitos: Repositorio GitHub y Claude Code en macOS. Instrucciones: Descargar el proyecto open-source desde GitHub e instalarlo localmente. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / macOS. Es oferta: true. Confianza: 0.85. Es duplicado: false. Servicio: Smalt / Claude Code (Anthropic). Beneficio: Utilidad open-source gratuita para controlar Claude Code por voz en Mac. Requisitos: macOS y Claude Code. Instrucciones: Clonar el repositorio de GitHub y seguir los pasos de instalación. Paises: Global. Caducidad: desconocida.",
@@ -374,5 +294,13 @@
     "link": "https://www.pokharel.net/2026/11/12/api-man-a-native-ios-mac-postman-like-client-without-electron/",
     "source": "Hacker News",
     "sent_at": "2026-11-13T01:14:14.278250"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "ChatGPT para investigadores académicos gratis 200k plazas",
+    "link": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+    "source": "OpenAI News",
+    "sent_at": "2026-11-16T18:42:05.977611"
   }
 ]
