@@ -2,62 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Smalt - Talk to Claude Code by voice free (MIT/GitHub) on Mac via open-source tool with voice command integration for Claude Code assistance. Requisitos: Mac y Claude Code. Instrucciones: Clonar el repositorio desde GitHub y configurar la herramienta. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Herramienta de código abierto gratuita para hablar con Claude Code por voz en Mac de manera manos libres. Requisitos: Repositorio GitHub y Claude Code en macOS. Instrucciones: Descargar el proyecto open-source desde GitHub e instalarlo localmente. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / macOS. Es oferta: true. Confianza: 0.85. Es duplicado: false. Servicio: Smalt / Claude Code (Anthropic). Beneficio: Utilidad open-source gratuita para controlar Claude Code por voz en Mac. Requisitos: macOS y Claude Code. Instrucciones: Clonar el repositorio de GitHub y seguir los pasos de instalación. Paises: Global. Caducidad: desconocida.",
-    "link": "https://getsmalt.com/",
-    "source": "Hacker News",
-    "sent_at": "2026-11-02T20:26:49.512244"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Claude Folders: Extensión open-source gratis para Chrome/Brave/Chromium con organización de chats offline (MIT). Requisitos: Navegador compatible y cuenta de Claude. Instrucciones: Instalar la extensión desde el repositorio de GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude (Anthropic). Beneficio: Herramienta de código abierto gratuita para ordenar y ver chats de Claude sin conexión con almacenamiento local en carpetas. Requisitos: Navegador basado en Chromium (Chrome, Brave, etc.) y Claude. Instrucciones: Descargar e instalar desde GitHub (github.com/lso2/claude-folders). Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xm6puc/major_updates_to_claude_folders_extension_for/",
-    "source": "Reddit",
-    "sent_at": "2026-11-02T20:27:23.479397"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "CCC: Dashboard open-source gratis para Claude Code (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xm66j5/i_built_ccc_for_claude_code_a_shared_inbox_for/",
-    "source": "Reddit",
-    "sent_at": "2026-11-02T20:27:31.552320"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Modelpeers: Feed open-source para Claude Code gratis (MITibilidad para 1 usuario). Requisitos: Cuenta de Claude Code. Instrucciones: Visitar modelpeers y seguir los modelos y herramientas. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Feed de actualizaciones gratuito para herramientas y modelos de IA como Claude Code y Opus.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xm471k/i_couldnt_keep_up_with_claude_changes_so_i_built/",
-    "source": "Reddit",
-    "sent_at": "2026-11-02T20:27:53.547252"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Inbox open-source para sesiones de Claude Code gratis (MIT",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmc08q/if_you_recognize_this_problem_with_your_claude/",
-    "source": "Reddit",
-    "sent_at": "2026-11-03T03:32:57.954188"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Argonauts Code: App open-source para Claude Code gratis (Apache-2.0) en terminal con soporte multimodelo (Codex, Antigravity, OpenCode). Requisitos: Repositorio GitHub y Claude Code o CLIs compatibles. Instrucciones: Clonar el repositorio desde GitHub y configurar la aplicación. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Codex / OpenCode. Beneficio: Aplicación de terminal gratuita y de código abierto para gestionar Claude Code con múltiples modelos y agentes de IA concurrentes.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmaxej/built_with_claude_code_a_free_terminal_app_where/",
-    "source": "Reddit",
-    "sent_at": "2026-11-03T03:33:11.770336"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Screenplay: Herramienta open-source para Claude Code gratis (MIT). Servicio: Claude Code (Anthropic). Beneficio: Utilidad de código abierto gratuita para grabar y editar vídeos de sitios web y apps mediante Claude Code. Requisitos: Repositorio GitHub y Claude Code o Cursor. Instrucciones: Ejecutar npx agent-screenplay init desde la terminal. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmp6kt/i_built_an_opensource_tool_that_lets_claude_code/",
-    "source": "Reddit",
-    "sent_at": "2026-11-03T12:07:23.321211"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "acswi: Account switcher open source para Claude Code gratis (MIT). Servicio: Claude Code / CLI (Anthropic). Beneficio: Herramienta de código abierto gratuita para alternar cuentas de Claude Code y otras CLIs sin necesidad de cerrar sesión. Requisitos: Repositorio GitHub y Claude Code o CLIs compatibles. Instrucciones: Clonar el repositorio y usar los comandos de acswi. Paises: Global. Caducidad: desconocida.",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmteq5/i_built_a_seamless_account_switcher_for_claude/",
     "source": "Reddit",
@@ -302,5 +246,13 @@
     "link": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
     "source": "OpenAI News",
     "sent_at": "2026-11-16T18:42:05.977611"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Wake: App macOS open-source para monitorizar tokens Claude Code gratis (MIT). Servicio: Wake / Claude Code. Beneficio: Aplicación open-source gratuita para macOS para optimizar el uso de tokens y rastrear peticiones en Claude Code. Requisitos: macOS y Claude Code. Instrucciones: Descargar desde GitHub y configurar localmente. Paises: Global. Caducidad: desconocida.",
+    "link": "https://rcruz.dev/wake/",
+    "source": "Hacker News",
+    "sent_at": "2026-11-17T13:40:01.938735"
   }
 ]
