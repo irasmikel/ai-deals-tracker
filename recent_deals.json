@@ -2,142 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "acswi: Account switcher open source para Claude Code gratis (MIT). Servicio: Claude Code / CLI (Anthropic). Beneficio: Herramienta de código abierto gratuita para alternar cuentas de Claude Code y otras CLIs sin necesidad de cerrar sesión. Requisitos: Repositorio GitHub y Claude Code o CLIs compatibles. Instrucciones: Clonar el repositorio y usar los comandos de acswi. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xmteq5/i_built_a_seamless_account_switcher_for_claude/",
-    "source": "Reddit",
-    "sent_at": "2026-11-03T19:40:02.089554"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Anthropic: 100$ o 250$ en créditos de cloud session gratis (Claude Code/AI)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xo35yp/psa_free_cloud_session_credits_expiring_soon/",
-    "source": "Reddit",
-    "sent_at": "2026-11-04T23:48:23.946129"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Sawbuck: plugin open-source para Claude Code gratis (Apache 2.0). Servicio: Claude Code (Anthropic). Beneficio: Plugin gratuito de código abierto para firmar y crear contratos en agentes de Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Ejecutar /plugin marketplace add sawbuck-ai/reins o instalar el plugin en Claude Code. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xo0h14/sawbuck_sign_your_agents_to_contracts/",
-    "source": "Reddit",
-    "sent_at": "2026-11-04T23:48:42.198077"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Doubt Mode: panel lateral gratis para ChatGPT en Chrome (MIT)",
-    "link": "https://www.reddit.com/r/ChatGPT/comments/1xobc9a/i_made_a_free_chatgpt_side_panel_for_why_this/",
-    "source": "Reddit",
-    "sent_at": "2026-11-05T07:02:38.769267"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Mooring: Entorno de desarrollo gratis para Claude Code (MIT)",
-    "link": "https://mooring.sh/download",
-    "source": "Hacker News",
-    "sent_at": "2026-11-05T16:34:52.641302"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Ski: Voice-First Coding Harness open-source gratis (MIT)",
-    "link": "https://justski.it/",
-    "source": "Hacker News",
-    "sent_at": "2026-11-05T23:44:02.184995"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Portfolio template open source para Claude Code gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xouyjy/i_made_a_free_portfolio_template_that_claude_code/",
-    "source": "Reddit",
-    "sent_at": "2026-11-05T23:44:52.555349"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Still: Navegador open-source para Claude Code gratis (MIT/GitHub) en Windows y Mac, con companions integrados para tareas de navegador en pestañas secundarias con permisos por sitio y control mediante Claude Code sin requerir claves de API adicionales ni wrappers externos. Es una herramienta de código abierto gratuita para Windows y Mac que se integra nativamente con Claude Code utilizando la suscripción activa del usuario para realizar investigación en múltiples páginas, rellenar formularios, preparar respuestas y probar aplicaciones web mediante WebView2. Requisitos: Windows o Mac, Claude Code instalado y configurado. Instrucciones: Clonar o descargar el repositorio desde GitHub e instalar la aplicación. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Still Browser. Beneficio: Navegador de código abierto gratuito para ejecutar tareas web con Claude Code en segundo plano. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar desde GitHub y configurar con la cuenta existente de Claude Code. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Still (Windows y Mac). Beneficio: Utilidad open-source gratuita para integrar Claude Code en la navegación web automatizada. Requisitos: macOS o Windows y Claude Code. Instrucciones: Descargar el proyecto open-source desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Still Browser. Beneficio: Navegador open source gratuito que permite a Claude Code controlar pestañas en segundo plano. Requisitos: Repositorio GitHub, Windows/Mac y Claude Code. Instrucciones: Descargar la app desde GitHub y conectar con Claude Code. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Still (Anthropic). Beneficio: Herramienta de código abierto gratuita para automatizar tareas en el navegador mediante Claude Code. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Instalar la aplicación desde el repositorio open source. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Still Browser. Beneficio: Navegador open-source gratuito para que Claude Code interactue con páginas web de forma segura. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el proyecto open source de Still en GitHub y ejecutarlo. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Still. Beneficio: Aplicación de código abierto gratuita para integrar Claude Code con la navegación web automatizada. Requisitos: Claude Code y entorno Windows/Mac. Instrucciones: Descargar el software open-source desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Still Browser. Beneficio: Navegador open-source gratuito para la automatización de tareas web con Claude Code. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Clonar el repositorio desde GitHub y configurar la aplicación. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Still Browser. Beneficio: Navegador open-source gratuito para integrar Claude Code en tareas web en segundo plano. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar la herramienta de código abierto desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Still Browser. Beneficio: Navegador open source gratuito que permite a Claude Code ejecutar tareas en pestañas secundarias. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el repositorio y configurar la herramienta de código abierto. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xp3x04/built_with_claude_code_still_lets_claude_code/",
-    "source": "Reddit",
-    "sent_at": "2026-11-06T07:03:02.949799"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "AI-Readers: Text-to-Speech gratis en ChatGPT y Claude",
-    "link": "https://www.reddit.com/r/OpenAI/comments/1xozidg/i_made_chatgpt_claude_gemini_etc_into_free/",
-    "source": "Reddit",
-    "sent_at": "2026-11-06T07:03:29.553856"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Fatsearch: Herramienta open-source para búsqueda web en IA gratis (Rust/GitHub). Servicio: Fatsearch (Rust / Web Search for AI Agents). Beneficio: Herramienta de código abierto gratuita para optimizar la búsqueda web de agentes de IA y reducir costes de tokens. Requisitos: Entorno Rust y repositorio GitHub. Instrucciones: Clonar el repositorio desde GitHub y configurar la herramienta. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xpf4nc/annoyed_of_wasted_tokens_money_by_agents_on_web/",
-    "source": "Reddit",
-    "sent_at": "2026-11-06T16:02:19.264497"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "SmarterCompact: optimizador de sesiones Claude Code gratis (Apache-2.0) en local con SQLite y herramientas MCP para reducir coste y alucinaciones sin llamadas de resumen por LLM manteniendo caché de prompt, compatible con Codex, OpenCode y Pi. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el repositorio y configurar localmente. Países: Global. Caducidad: desconocida. Servicio: Claude Code / MCP (Anthropic). Beneficio: Herramienta open-source gratuita para gestionar el historial de sesiones de Claude Code localmente mediante SQLite y MCP sin gastar tokens en resúmenes.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xplxhw/smartercompact_reducing_cost_and_hallucination_by/",
-    "source": "Reddit",
-    "sent_at": "2026-11-06T21:40:04.957595"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "agent-eta: Plugin open-source gratis para Claude Code (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xpkjqd/claude_says_23_days_your_agents_finish_in_an_hour/",
-    "source": "Reddit",
-    "sent_at": "2026-11-06T21:40:18.849616"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Duct: AI marketing agent open source para Claude Code gratis (MIT). Requisitos: Repositorio GitHub y clave de modelo propia (BYOK). Instrucciones: Clonar o descargar el repositorio desde GitHub y configurar la aplicación. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Duct. Beneficio: Agente de marketing open-source gratuito para conectar herramientas como Google Ads, GA4 y Stripe mediante Claude Code. Requisitos: Claude Code y modelo propio. Instrucciones: Instalar desde el repositorio open source de GitHub (github.com/5hirish/duct). Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Duct. Beneficio: Agente de marketing de código abierto gratuito para integrar analíticas y automatizar tareas con Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar desde GitHub y ejecutar la aplicación. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Duct. Beneficio: Herramienta open-source gratuita para gestionar marketing mediante Claude Code y clave de API propia. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Clonar el proyecto open source desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Duct. Beneficio: Agente de código abierto gratuito para conectar plataformas de marketing y trabajar con Claude Code. Requisitos: Repositorio GitHub, Claude Code y BYOK (Bring Your Own Key). Instrucciones: Usar el código abierto disponible en GitHub. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xpgrdr/i_built_an_opensource_marketing_agent_with_claude/",
-    "source": "Reddit",
-    "sent_at": "2026-11-06T21:40:53.955699"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "ails xray: X-ray open source para Claude Code gratis (MITIIDAZO O ANÁLISIS DE CONTEXTO DE SESIÓN). Consigue una herramienta de código abierto gratuita para inspeccionar el contexto de carga de Claude Code archivo por archivo y turno a turno en una página local. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar o descargar el repositorio open-source desde GitHub y ejecutar la herramienta. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Herramienta open-source gratuita para ver qué archivos, reglas, memorias y servidores MCP llenan el contexto de Claude Code en cada sesión local. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar desde GitHub y ejecutar localmente. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Utilidad de código abierto gratuita para auditar el uso de contexto en Claude Code. Requisitos: Claude Code y entorno local. Instrucciones: Instalar desde el repositorio open source en GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / ails xray (Anthropic). Beneficio: Herramienta open-source gratuita para diagnosticar y visualizar el uso de contexto en sesiones de Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el proyecto de GitHub y seguir las instrucciones de configuración. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Visor de código abierto gratuito para analizar las fuentes cargadas en el contexto de Claude Code. Requisitos: Claude Code y Node o entorno compatible. Instrucciones: Descargar la app open source desde GitHub. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xpph4c/how_to_see_what_filled_your_claude_code_context/",
-    "source": "Reddit",
-    "sent_at": "2026-11-07T02:03:30.367153"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Conexión de ChatGPT o Claude a WordPress.com gratis en nov.",
-    "link": "https://wordpress.com/blog/2026/11/03/free-chatgpt-claude/",
-    "source": "Hacker News",
-    "sent_at": "2026-11-07T08:59:17.290444"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Humanizer: Skill open-source para Claude Code gratis (MIT",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xq5rg6/tried_the_humanizer_skill_on_a_launch_post/",
-    "source": "Reddit",
-    "sent_at": "2026-11-07T16:33:43.888448"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Berlin Job Search: Claude skill gratis para buscar empleo en Alemania (open source) con asistente de IA en Claude Code para encontrar ofertas ocultas, redactar CV estilo Lebenslauf y cartas de presentación en inglés y alemán. Requisitos: Claude Code y repositorio GitHub. Instrucciones: Descargar la skill open-source desde GitHub. Países: Alemania (Global). Caducidad: desconocida. Servicio: Claude Code / Berlin Job Search (Anthropic). Beneficio: Skill de código abierto gratuita para automatizar la búsqueda de empleo en Alemania y adaptar CVs con Claude Code. Requisitos: Repositorio GitHub y Claude Code instalado. Instrucciones: Clonar el proyecto open-source y configurarlo en Claude Code. Paises: Alemania (Global). Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Berlin Job Search. Beneficio: Utilidad de código abierto gratuita para buscar trabajo en el mercado alemán mediante Claude Code. Requisitos: Claude Code y GitHub. Instrucciones: Usar el código abierto disponible en el repositorio de GitHub. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Herramienta open-source gratuita para gestionar búsquedas laborales, CVs alemanes y cartas de presentación con Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar desde GitHub y añadir como skill en Claude Code. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code / Berlin Job Search. Beneficio: Skill open-source gratuita para optimizar la búsqueda de empleo técnica en Alemania con Claude Code. Requisitos: Claude Code y GitHub. Instrucciones: Clonar el repositorio open source en el entorno local. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Asistente open-source gratuito para encontrar trabajo y redactar CVs en Alemania usando Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar desde GitHub y configurar la skill. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Berlin Job Search. Beneficio: Herramienta de código abierto gratuita para automatizar procesos de contratación y búsqueda de empleo en Alemania mediante Claude Code. Requisitos: Claude Code instalado y repositorio GitHub. Instrucciones: Clonar el repositorio open-source y seguir las instrucciones de instalación. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code / Berlin Job Search (Anthropic). Beneficio: Skill open-source gratuita para buscar ofertas de trabajo y adaptar currículums en Alemania con Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Instalar la skill desde el proyecto de código abierto en GitHub. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Utilidad open-source gratuita para facilitar la búsqueda de empleo y la creación de CVs alemanes con Claude Code. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Descargar la herramienta de código abierto desde GitHub. Paises: Alemania. Caducidad: desconocida. Servicio: Claude Code / Berlin Job Search. Beneficio: Herramienta de código abierto gratuita para encontrar empleo tecnológico en Alemania utilizando Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el repositorio y configurar la skill de Claude Code. Paises: Alemania. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xq33ju/i_built_a_free_claude_skill_for_job_hunting_in/",
-    "source": "Reddit",
-    "sent_at": "2026-11-07T16:34:16.372111"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "Floating Mac app para Claude Code gratis (Open Source/Tmux)",
     "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr2ly8/floating_mac_app_to_keep_an_eye_on_your_claudes_w/",
     "source": "Reddit",
@@ -254,5 +118,13 @@
     "link": "https://rcruz.dev/wake/",
     "source": "Hacker News",
     "sent_at": "2026-11-17T13:40:01.938735"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "agent-mcts para Claude Code gratis (Open Source)",
+    "link": "https://github.com/natsu0529/agent-mcts",
+    "source": "Hacker News",
+    "sent_at": "2026-11-21T20:37:01.608162"
   }
 ]
