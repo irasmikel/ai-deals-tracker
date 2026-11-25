@@ -2,78 +2,6 @@
   {
     "servicio": "",
     "beneficio": "",
-    "titulo": "Floating Mac app para Claude Code gratis (Open Source/Tmux)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr2ly8/floating_mac_app_to_keep_an_eye_on_your_claudes_w/",
-    "source": "Reddit",
-    "sent_at": "2026-11-08T16:45:27.584137"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "ASE: Toolkit open source gratis para Claude Code CLI (v2.0)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr07xt/advanced_software_specification_and_development/",
-    "source": "Reddit",
-    "sent_at": "2026-11-08T16:46:07.075114"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Orchestra: Terminal libre para sesiones de Claude Code en Windows (Tauri+Svelte, Open Source). Gestiona múltiples cuentas y sesiones paralelas con control de tokens y uso semanal. Requisitos: Windows, Claude Code. Instrucciones: Descargar instalador desde GitHub o fuentes oficiales. Países: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic). Beneficio: Utilidad de código abierto gratuita para gestionar múltiples terminales y sesiones de Claude Code en Windows de forma visual.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr0616/i_built_orchestra_a_free_windows_terminal_for/",
-    "source": "Reddit",
-    "sent_at": "2026-11-08T16:46:13.755679"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Extension open source para borrar imagenes de ChatGPT gratis",
-    "link": "https://www.reddit.com/r/ChatGPT/comments/1xqz8mm/chatgpt_wouldnt_let_me_upload_images_after_my/",
-    "source": "Reddit",
-    "sent_at": "2026-11-08T16:46:28.683358"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Analítica local y mapa de proyectos gratis para Claude Coderoute me to project mapping and analytics tool for Claude Code, run locally and free of charge. Provides entity relationship mapping and context drift flagging to optimize token usage. Requisitos: Claude Code e instalación en entorno local. Instrucciones: Descargar o clonar el proyecto y ejecutarlo localmente en tu entorno de desarrollo. Países: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr5xhy/like_google_analytics_but_for_your_claude_code/",
-    "source": "Reddit",
-    "sent_at": "2026-11-08T22:17:58.707162"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Clean Development: Herramienta open-source para Claude Code gratis (macOS) - Gestión de cachés y almacenamiento externo de sesiones locales de desarrollo con verificación de seguridad autónoma y dry-run de configuración JSON. Requisitos: macOS, Claude Code y repositorio GitHub. Instrucciones: Clonar el repositorio desde GitHub y configurar la ruta de almacenamiento. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Clean Development. Beneficio: Utilidad de código abierto gratuita para gestionar los archivos temporales y cachés de Claude Code en Mac liberando espacio de disco y configurando almacenamiento externo con fail-safe local. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar el proyecto open source desde GitHub y seguir las indicaciones de configuración. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Clean Development (Anthropic). Beneficio: Herramienta open-source gratuita para optimizar el almacenamiento de sesiones de Claude Code en macOS. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Clonar el repositorio y fusionar el fragmento de hook en la configuración. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Clean Development. Beneficio: Utilidad de código abierto gratuita para redirigir y limpiar cachés y archivos temporales de Claude Code en macOS. Requisitos: Repositorio GitHub y Claude Code instalado. Instrucciones: Descargar la herramienta open-source desde GitHub y configurar el archivo de ajustes local. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Clean Development. Beneficio: Gestor de almacenamiento open-source gratuito para evitar la acumulación de archivos residuales de Claude Code en Mac. Requisitos: Claude Code y entorno macOS. Instrucciones: Instalar el código abierto desde el repositorio de GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Clean Development. Beneficio: Herramienta de código abierto gratuita para automatizar la limpieza de cachés y archivos de compilación de Claude Code. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el proyecto open source en Mac. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Clean Development. Beneficio: Utilidad open-source gratuita para gestionar el almacenamiento y cachés de Claude Code de forma segura en macOS. Requisitos: Claude Code y repositorio GitHub. Instrucciones: Descargar desde GitHub y configurar los hooks locales. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Clean Development. Beneficio: Herramienta de código abierto gratuita para desviar y depurar archivos temporales de Claude Code en Mac. Requisitos: Claude Code y repositorio en GitHub. Instrucciones: Clonar el repositorio open-source y seguir el procedimiento de configuración local. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Clean Development. Beneficio: Aplicación open-source gratuita para mantener limpio el disco duro al usar Claude Code en macOS. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Descargar la herramienta desde GitHub y aplicar los ajustes locales. Paises: Global. Caducidad: desconocida. Servicio: Claude Code (Anthropic) / Clean Development. Beneficio: Herramienta de código abierto gratuita para optimizar la gestión de ficheros y cachés de Claude Code en ordenadores Mac. Requisitos: Claude Code y macOS. Instrucciones: Obtener el software open-source desde GitHub. Paises: Global. Caducidad: desconocida. Servicio: Claude Code / Clean Development (Anthropic). Beneficio: Utilidad open-source gratuita para controlar el almacenamiento de sesiones de Claude Code en macOS con seguridad de borrado fallido cerrado. Requisitos: Repositorio GitHub y Claude Code. Instrucciones: Clonar el proyecto open source y configurar la integración en los ajustes. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xr3qah/i_built_clean_development_for_my_own_claude_code/",
-    "source": "Reddit",
-    "sent_at": "2026-11-08T22:18:23.751109"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": ".sct: Reemplazo open-source para .env seguro con Claude Code",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xsbn52/i_built_something_so_claude_code_can_never_read/",
-    "source": "Reddit",
-    "sent_at": "2026-11-10T04:13:31.398874"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Double Trouble: App open source para cuentas duales de Claude Mac gratis (MIT). Servicio: Claude Desktop App (Anthropic). Beneficio: Aplicación gratuita de código abierto para ejecutar múltiples cuentas de Claude (personal y de trabajo) en paralelo en macOS. Requisitos: macOS y Claude Desktop. Instrucciones: Descargar desde GitHub y configurar las rutas de configuración. Paises: Global. Caducidad: desconocida.",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xs6i8m/i_built_double_trouble_a_free_opensource_mac_app/",
-    "source": "Reddit",
-    "sent_at": "2026-11-10T04:14:10.906243"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
-    "titulo": "Plugin multimodelo open-source para Claude Code gratis (MIT)",
-    "link": "https://www.reddit.com/r/ClaudeAI/comments/1xs60xo/i_built_a_claude_code_plugin_with_claude_code/",
-    "source": "Reddit",
-    "sent_at": "2026-11-10T04:14:20.967252"
-  },
-  {
-    "servicio": "",
-    "beneficio": "",
     "titulo": "ChatGPT Plus gratis 1 año para veteranos y militares militarizado en transición, principalmente enfocado en EE.UU., para facilitar su inserción laboral civil. Requisitos: Acreditar estatus de veterano o militar en transición. Instrucciones: Inscribirse y verificar la condición militar a través del programa oficial de OpenAI. Países: EE.UU. Caducidad: desconocida. Servicio: ChatGPT Plus (OpenAI). Beneficio: 1 año gratis de suscripción a ChatGPT Plus. Requisitos: Estatus de veterano o militar en servicio activo en transición. Instrucciones: Acceder al portal de la iniciativa de OpenAI y validar la identidad militar. Países: EE.UU. Caducidad: desconocida.",
     "link": "https://openai.com/index/chatgpt-plus-for-veterans",
     "source": "OpenAI News",
@@ -134,5 +62,13 @@
     "link": "https://slickdeals.net/f/20365704-google-gemini-ai-annual-plans-50-off-during-their-black-friday-sale?utm_source=rss&utm_content=def&utm_medium=RSS2",
     "source": "Slickdeals",
     "sent_at": "2026-11-22T02:23:01.597991"
+  },
+  {
+    "servicio": "",
+    "beneficio": "",
+    "titulo": "Gemini AI Pro con 5TB Google One por $99.99/año\",",
+    "link": "https://slickdeals.net/f/20388732-ymmv-gemini-ai-pro-youtube-premium-lite-5tb-google-one-much-more-99-99?utm_source=rss&utm_content=def&utm_medium=RSS2",
+    "source": "Slickdeals",
+    "sent_at": "2026-11-25T02:38:22.492013"
   }
 ]
